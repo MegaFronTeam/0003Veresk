@@ -3,27 +3,27 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContactMain/_sContactMain.pug
-include ../blocks/sCatalogMain/_sCatalogMain.pug
-include ../blocks/sSearch/_sSearch.pug
+include ../blocks/sObjects/_sObjects.pug
+//- include ../blocks/sSearch/_sSearch.pug
 include ../blocks/sBestDeals/_sBestDeals.pug
-include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sAbout/_sAbout.pug
 
 block variables
-	- let  mainPage= 'main-page' 
+	- let  mainPage= null 
 	- let  bg= null
 
 block title
-	- let  title= 'Главная'
+	- let  title= 'О компании'
 	title= title
 block pagecontent
 	//- +mob-mnu()
 	+header()
 		+top-nav()
 	+headerBlock()
-	+sCatalogMain()
-	+sSearch()
+	+sObjects()
 	+sBestDeals()
-	+sAbout()
+	+sForm()
 	+sContactMain()
 	+footer()
 

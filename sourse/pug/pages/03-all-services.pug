@@ -1,0 +1,35 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContactMain/_sContactMain.pug
+//- include ../blocks/sObjects/_sObjects.pug
+//- include ../blocks/sSearch/_sSearch.pug
+//- include ../blocks/sBestDeals/_sBestDeals.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sServices/_sServices.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= 'Все услуги'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+header()
+		+top-nav()
+	+headerBlock()
+	+sServices()
+	+sServices()
+	+sServices()
+	+sServices()
+	+sServices()
+	+sForm()
+	+sContactMain()
+	+footer()
+
+
+
+
