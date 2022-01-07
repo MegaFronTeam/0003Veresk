@@ -13,7 +13,7 @@ $rfs-breakpoint: 1200px !default;
 // ) !default;
 
 $font-family-sans-serif: $default-font, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default; $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-
+$font-family-sans-serif-2: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default; $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
 $utilities: ("opacity": (
     property: opacity,
@@ -107,19 +107,18 @@ $dark: $gray-900 !default;
 $theme-colors: (
   "primary": $primary,
   "secondary": $secondary,
-  "secondary-light": $secondary-light,
+  // "secondary-light": $secondary-light,
   "success": $success,
   "info": $info,
   "warning": $warning,
   "danger": $danger,
   "light": $light,
-  "light-gray": $light-gray,
+  // "light-gray": $light-gray,
   "dark": $dark) !default;
 // scss-docs-end theme-colors-map
 
 $theme-colors: map-remove($theme-colors, 
 "info", 
-"light", 
 "dark",  
 "success",
 'warning', 
@@ -374,7 +373,7 @@ sans-serif,
 "Segoe UI Emoji",
 "Segoe UI Symbol",
 "Noto Color Emoji" !default;
-$font-family-monospace: SFMono-Regular,
+$font-family-monospace: "Sitka", SFMono-Regular,
 Menlo,
 Monaco,
 Consolas,
