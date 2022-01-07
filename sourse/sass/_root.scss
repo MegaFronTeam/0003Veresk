@@ -5,14 +5,14 @@
 
 	@include media-breakpoint-up(md) {
 
-		--sPT: #{rem(80)};
-		--sPB: #{rem(90)};
-		--sTPB: #{rem(40)};
+		--sPT: #{rem(100)};
+		--sPB: #{rem(100)};
+		--sTPB: #{rem(30)};
 	}
 
-	--sPT: #{rem(80 * .5)};
-	--sPB: #{rem(90 * .5)};
-	--sTPB: #{rem(40 * .5)};
+	--sPT: #{rem(65)};
+	--sPB: #{rem(65)};
+	--sTPB: #{rem(30)};
 
 
 		--swiperArrowSize: #{rem(68)};
