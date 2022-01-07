@@ -10,7 +10,7 @@ $file-format: woff2;
 @include font-face ($default-font, $addr + "Gilroy-Semibold", 600, $file-formats: $file-format);
 @include font-face ("Montserrat", $addr + "Montserrat-Regular", 400, $file-formats: $file-format);
 @include font-face ("Montserrat", $addr + "Montserrat-SemiBold", 600, $file-formats: $file-format);
-@include font-face ("Sitka", $addr + "Sitka-Small", 400, $file-formats: $file-format);
+@include font-face ("Sitka Text", $addr + "SitkaText", 400, $file-formats: $file-format);
 
 // font-weight helper:
 // 100 Thin
