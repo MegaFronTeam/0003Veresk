@@ -1,14 +1,120 @@
 // start .sCatalogMain
 .sCatalogMain {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
-
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	--sPT: #{rem(85)};
+	--sPB: #{rem(80)};
+	--sTPB: #{rem(45)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(110)};
+		--sPB: #{rem(115)};
+		--sTPB: #{rem(60)};
+	}
+	.section-title {
+		text-align: left;
+		@include media-breakpoint-up(md) {
+			text-align: center;
+		}
+		h2 {
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(md) {
+				margin-bottom: rem(16);
+			}
+		}
+		p {
+			font-size: rem(15);
+			max-width: 30em;
+			@include media-breakpoint-up(md) {
+				font-size: rem(20);
+				margin-left: auto;
+				margin-right: auto;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.container > .row {
+		--bs-gutter-x: #{rem(20)};
+		--bs-gutter-y: var(--bs-gutter-x);
+		@include media-breakpoint-up(xl) {
+			--bs-gutter-x: #{rem(30)};
+		}
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+		color: $body-color;
+		height: 100%;
+		border-radius: $border-radius-lg;
+		background-color: $light;
+		max-width: rem(380);
+		// margin-left: auto;
+		// margin-right: auto;
+		padding: 5% 5% 7%;
+		@media (min-width: 428px) {
+			padding: rem(20) rem(20) rem(32);
+		}
+		&:hover {
+			filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+		}
+		picture {
+			@include block(340, 200);
+			margin-bottom: rem(25);
+			border-radius: $border-radius-lg;
+			overflow: hidden;
+			img {
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		}
+		h5 {
+			font-size: rem(23);
+			flex-grow: 1;
+			font-family: "Sitka Text";
+			margin-bottom: rem(16);
+			@media (min-width: 428px) {
+				font-size: rem(24);
+			}
+			@include media-breakpoint-only(lg) {
+				font-size: rem(22);
+			}
+		}
+	}
+	&__number {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		span {
+			&:first-child {
+				display: inline-block;
+				font-size: rem(34);
+				line-height: calc(37 / 34);
+				font-weight: 700;
+				color: $primary;
+				white-space: nowrap;
+				padding: rem(5) rem(12);
+				background-color: $white;
+				border-radius: $border-radius-lg;
+			}
+			&:last-child {
+				font-size: rem(14);
+				line-height: 112%;
+				margin-left: rem(11);
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sCatalogMain
