@@ -41,6 +41,9 @@
 			max-width: 100%;
 		}
 	}
+	&__slide {
+		height: auto;
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {

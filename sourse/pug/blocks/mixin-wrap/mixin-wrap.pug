@@ -30,10 +30,10 @@ mixin addblock()
 		+e.btn--plus(type="button")
 
 
-mixin product-item()
+mixin product-item(t)
 	+b.product-item
 		+pic(`product-item-1.png`, `bg`, 0)
-		h6 Pellentesque mollis nibh non nibh laoreet
+		h6!= t
 		table
 			tr
 				td Тип
