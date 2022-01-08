@@ -305,6 +305,7 @@ ul {
 	}
 
 	.icon {
+		@include a-cent;
 		font-size: rem(12);
 	}
 
@@ -329,7 +330,7 @@ ul {
 		width: 8px;
 		height: 8px;
 		border-radius: 50%;
-		background-color: #e6e6e6;
+		background-color: #c4c4c4;
 		outline: none !important;
 		@include mt;
 		margin-left: rem(8);
@@ -343,6 +344,8 @@ ul {
 		}
 	}
 }
+
+
 
 @include media-breakpoint-up(lg) {
 	.wow {
@@ -473,4 +476,8 @@ h1 {
 }
 h2 {
 	font-family: "Sitka Text";
+}
+
+.btn {
+	box-shadow: none !important;
 }

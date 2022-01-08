@@ -77,11 +77,18 @@
 	background-color: $white;
 	border-radius: $border-radius-lg;
 	height: 100%;
+	@media (min-width: 428px) and (max-width: 500px) {
+		padding: rem(10) rem(10) rem(15);
+	}
 	picture {
 		@include block(240, 220);
 		border-radius: $border-radius-lg;
 		overflow: hidden;
 		margin-bottom: rem(22);
+		@media (min-width: 428px) and (max-width: 500px) {
+			margin-bottom: rem(15);
+
+		}
 		img {
 			position: absolute;
 			left: 0;
@@ -93,12 +100,19 @@
 		font-weight: 600;
 		max-width: 13em;
 		flex-grow: 1;
+		@media (min-width: 428px) and (max-width: 500px) {
+			font-size: rem(14);
+			margin-bottom: rem(15);
+		}
 	}
 	table {
 		width: 100%;
 		font-size: rem(13);
 		line-height: 110%;
 		margin-bottom: rem(15);
+		@media (min-width: 428px) and (max-width: 500px) {
+			font-size: rem(10);
+		}
 		tr {
 			border-bottom: 1px solid $secondary-light;
 			&:last-child {
@@ -108,6 +122,13 @@
 		td {
 			padding-top: rem(15);
 			padding-bottom: rem(15);
+			@media (min-width: 428px) and (max-width: 500px) {
+				padding-top: rem(10);
+				padding-bottom: rem(10);
+			}
+			&:first-child {
+				padding-right: rem(5);
+			}
 		}
 	}
 	&__price {
@@ -115,10 +136,62 @@
 		font-size: rem(24);
 		line-height: 93%;
 		margin-bottom: rem(30);
+		@media (min-width: 428px) and (max-width: 500px) {
+			font-size: rem(18);
+			margin-bottom: rem(20);
+		}
 	}
 	&__btn {
 		@extend .btn, .btn-primary;
 		width: 100%;
 		font-weight: 600;
+		@media (min-width: 428px) and (max-width: 500px) {
+			font-size: rem(14);
+			padding: rem(10);
+		}
+	}
+}
+
+.slider-controls {
+	display: flex;
+	align-items: center;
+	.swiper-button-hand {
+		position: relative;
+		min-width: var(--swiperArrowSize);
+		--swiperArrowPosition: 0;
+		--swiperArrowSize: #{rem(32)};
+		@include media-breakpoint-up(md) {
+			--swiperArrowSize: #{rem(43)};
+		}
+	}
+	.swiper-pagination {
+		display: inline-flex;
+		align-items: center;
+		width: auto;
+		margin-left: rem(5);
+		margin-right: rem(5);
+		@include media-breakpoint-up(md) {
+			margin-left: rem(18);
+			margin-right: rem(18);
+		}
+		&-bullet {
+			background-color: #c4c4c4;
+			border: 1.73px solid #c4c4c4;
+			width: rem(10);
+			height: rem(10);
+			margin-left: rem(7);
+			margin-right: rem(7);
+			@include media-breakpoint-up(md) {
+				width: rem(17);
+				height: rem(17);
+				margin-left: rem(10);
+				margin-right: rem(10);
+				border: 3px solid #c4c4c4;
+			}
+			&-active,
+			&:hover {
+				background-color: var(--bs-primary);
+			}
+		}
 	}
 }

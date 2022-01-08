@@ -44,6 +44,14 @@
 	&__slide {
 		height: auto;
 	}
+	.slider-controls {
+		justify-content: center;
+		margin-top: rem(32);
+		@include media-breakpoint-up(md) {
+			justify-content: flex-start;
+			margin-top: rem(30);
+		}
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {

@@ -347,14 +347,9 @@ function eventHandler() {
 	}
 
 	const sBestDealsSlider = new Swiper('.sBestDeals__slider--js', {
-		// slidesPerView: 5,
-		// ...defaultSl,
 		slidesPerView: 1,
-		// freeMode: true,
-		// loopFillGroupWithBlank: true,
-		// touchRatio: 0.2,
+		loop: true,
 		slideToClickedSlide: true,
-		// freeModeMomentum: true,
 		watchOverflow: true,
 		spaceBetween: 30,
 		lazy: {
@@ -369,21 +364,18 @@ function eventHandler() {
 			// }
 		},
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.sBestDeals .swiper-button-next',
+			prevEl: '.sBestDeals .swiper-button-prev',
 		},
 		breakpoints: {
-			// when window width is >= 320px
 			428: {
 				slidesPerView: 2,
 				spaceBetween: 20
 			},
-			// when window width is >= 480px
 			768: {
 				slidesPerView: 3,
 				spaceBetween: 20
 			},
-			// when window width is >= 640px
 			992: {
 				slidesPerView: 4,
 				spaceBetween: 20
