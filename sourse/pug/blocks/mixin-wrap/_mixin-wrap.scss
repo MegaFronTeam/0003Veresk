@@ -1,32 +1,26 @@
- 
-	  
-.soc{
+.soc {
 	@include roww(10px, m);
 	display: flex;
-	&__item{
-		text-decoration: none !important; 
+	&__item {
+		text-decoration: none !important;
 		vertical-align: middle;
 		@include mt;
 		display: grid;
 		place-items: center;
-		&:hover{
-		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
+		&:hover {
+			// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			// opacity: .6 ;
 		}
-		
 	}
-	.icon{
+	.icon {
 		font-size: rem(30);
 	}
-
-
 }
 
-
-.counter{
+.counter {
 	counter-reset: num;
 	&__item {
-		position: relative; 
+		position: relative;
 		&::before {
 			content: counter(num);
 			counter-increment: num;
@@ -34,23 +28,20 @@
 	}
 }
 
-
-
-
-.addBlock{
+.addBlock {
 	color: var(--color, #{$primary});
 	border: 1px solid;
 	border-radius: 23px;
 	display: flex;
 	position: relative;
 	overflow: hidden;
-	input{
+	input {
 		color: inherit;
 		text-align: center;
 		border: none;
 		height: rem(45);
 	}
-	&__btn{
+	&__btn {
 		color: inherit;
 		height: rem(45);
 		position: relative;
@@ -64,16 +55,70 @@
 		// padding-right: rem(8);
 		width: rem(26);
 		&::before,
-		&::after{
-			content: '';
+		&::after {
+			content: "";
 			width: 10px;
-			height: 2px; 
+			height: 2px;
 			background-color: currentColor;
 			@include a-cent;
 			position: absolute;
 		}
-		&--plus::after{
+		&--plus::after {
 			transform: rotate(90deg);
 		}
+	}
+}
+
+.product-item {
+	display: flex;
+	flex-direction: column;
+	// max-width: rem(270);
+	padding: rem(15) rem(15) rem(20);
+	background-color: $white;
+	border-radius: $border-radius-lg;
+	height: 100%;
+	picture {
+		@include block(240, 220);
+		border-radius: $border-radius-lg;
+		overflow: hidden;
+		margin-bottom: rem(22);
+		img {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+	h6 {
+		margin-bottom: rem(24);
+		font-weight: 600;
+		max-width: 13em;
+		flex-grow: 1;
+	}
+	table {
+		width: 100%;
+		font-size: rem(13);
+		line-height: 110%;
+		margin-bottom: rem(15);
+		tr {
+			border-bottom: 1px solid $secondary-light;
+			&:last-child {
+				border: none;
+			}
+		}
+		td {
+			padding-top: rem(15);
+			padding-bottom: rem(15);
+		}
+	}
+	&__price {
+		font-weight: 600;
+		font-size: rem(24);
+		line-height: 93%;
+		margin-bottom: rem(30);
+	}
+	&__btn {
+		@extend .btn, .btn-primary;
+		width: 100%;
+		font-weight: 600;
 	}
 }

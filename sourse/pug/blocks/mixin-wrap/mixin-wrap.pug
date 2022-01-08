@@ -28,3 +28,21 @@ mixin addblock()
 		+e.btn--minus(type="button")
 		input(type="text" value="1")
 		+e.btn--plus(type="button")
+
+
+mixin product-item()
+	+b.product-item
+		+pic(`product-item-1.png`, `bg`, 0)
+		h6 Pellentesque mollis nibh non nibh laoreet
+		table
+			tr
+				td Тип
+				td Lorem ipsum <br> dolor sit amet
+			tr
+				td Адрес
+				td Lorem ipsum <br> dolor sit amet
+			tr
+				td Площадь
+				td 000 м2
+		+e.price 35 000 000 ₽
+		+e.btn(href="#") Подробнее

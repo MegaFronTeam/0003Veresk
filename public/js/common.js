@@ -346,16 +346,53 @@ function eventHandler() {
 		},
 	}
 
-	const swiper4 = new Swiper('.sBanners__slider--js', {
+	const sBestDealsSlider = new Swiper('.sBestDeals__slider--js', {
 		// slidesPerView: 5,
-		...defaultSl,
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
+		// ...defaultSl,
+		slidesPerView: 1,
+		// freeMode: true,
+		// loopFillGroupWithBlank: true,
+		// touchRatio: 0.2,
 		slideToClickedSlide: true,
-		freeModeMomentum: true,
-
+		// freeModeMomentum: true,
+		watchOverflow: true,
+		spaceBetween: 30,
+		lazy: {
+			loadPrevNext: true,
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+			// renderBullet: function (index, className) {
+			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+			// }
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		breakpoints: {
+			// when window width is >= 320px
+			428: {
+				slidesPerView: 2,
+				spaceBetween: 20
+			},
+			// when window width is >= 480px
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 20
+			},
+			// when window width is >= 640px
+			992: {
+				slidesPerView: 4,
+				spaceBetween: 20
+			},
+			1200: {
+				slidesPerView: 4,
+				spaceBetween: 30
+			}
+		}
 	});
 	// modal window
 

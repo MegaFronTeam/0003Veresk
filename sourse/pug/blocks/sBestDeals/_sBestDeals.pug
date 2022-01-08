@@ -2,8 +2,23 @@ mixin sBestDeals(data)
 	// start sBestDeals
 	+b.SECTION.sBestDeals.section#sBestDeals&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sBestDeals
-				
-			.row
+			+b.section-title
+				h2 Лучшие предложения
+				p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis.
+			+e.slider--js.swiper
+				.swiper-wrapper
+					+e.slide.swiper-slide
+						+product-item()
+					+e.slide.swiper-slide
+						+product-item()
+					+e.slide.swiper-slide
+						+product-item()
+					+e.slide.swiper-slide
+						+product-item()
+					+e.slide.swiper-slide
+						+product-item()
+					+e.slide.swiper-slide
+						+product-item()
+				.swiper-pagination
+				+arrow()
 	// end sBestDeals
