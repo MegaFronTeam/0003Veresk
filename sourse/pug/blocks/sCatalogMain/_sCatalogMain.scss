@@ -47,8 +47,8 @@
 		border-radius: $border-radius-lg;
 		background-color: $light;
 		max-width: rem(380);
-		// margin-left: auto;
-		// margin-right: auto;
+		margin-left: auto;
+		margin-right: auto;
 		padding: 5% 5% 7%;
 		@media (min-width: 428px) {
 			padding: rem(20) rem(20) rem(32);
