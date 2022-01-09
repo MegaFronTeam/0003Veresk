@@ -2,8 +2,31 @@ mixin sContactMain(data)
 	// start sContactMain
 	+b.SECTION.sContactMain.section#sContactMain&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContactMain
-				
-			.row
+			+b.section-title
+				h2 Контактная информация
+			+e.row.row
+				.col
+					ul
+						li
+							+e.subtitle Телефон
+							+e.tel(href="tel:+79876543210") +7 987 654 32 10
+							+e.btn(href="#") Обратный звонок
+						li
+							+e.subtitle Режим работы
+							p Без выходных с 10:00 до 20:00
+						li
+							+e.subtitle Адрес офиса
+							p Москва, улица Первая, дом 20, офис 303
+						li
+							+e.subtitle Мессенджеры и соцсети
+							+soc()
+								+item-sos('telegram')
+								+item-sos('viber')
+								+item-sos('whatsapp')
+								+item-sos('facebook')
+
+				+e.col.col-lg-auto
+					+e.map
+						script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c' type='text/javascript')
+						+e.map-widget#map
 	// end sContactMain

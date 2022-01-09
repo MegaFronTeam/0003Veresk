@@ -7,13 +7,26 @@
 		@include mt;
 		display: grid;
 		place-items: center;
+		border: 2px solid transparent;
+		color: $white;
+		background-color: $primary;
+		border-radius: 50%;
+		width: rem(38);
+		height: rem(38);
 		&:hover {
+			border-color: $primary;
+			color: $primary;
+			background-color: $white;
 			// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			// opacity: .6 ;
 		}
 	}
 	.icon {
-		font-size: rem(30);
+		font-size: rem(15);
+		&.icon-viber {
+			margin-top: 2px;
+			font-size: rem(17);
+		}
 	}
 }
 
@@ -87,7 +100,6 @@
 		margin-bottom: rem(22);
 		@media (min-width: 428px) and (max-width: 500px) {
 			margin-bottom: rem(15);
-
 		}
 		img {
 			position: absolute;
