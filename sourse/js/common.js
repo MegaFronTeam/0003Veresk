@@ -351,7 +351,7 @@ function eventHandler() {
 		loop: true,
 		slideToClickedSlide: true,
 		watchOverflow: true,
-		spaceBetween: 30,
+		spaceBetween: 20,
 		lazy: {
 			loadPrevNext: true,
 		},
@@ -385,6 +385,21 @@ function eventHandler() {
 				spaceBetween: 30
 			}
 		}
+	});
+	const sAboutSlider = new Swiper('.sAbout__slider--js', {
+		slidesPerView: 'auto',
+		loop: true,
+		slideToClickedSlide: true,
+		watchOverflow: true,
+		spaceBetween: 0,
+		lazy: {
+			loadPrevNext: true,
+		},
+		
+		navigation: {
+			nextEl: '.sAbout .swiper-button-next',
+			prevEl: '.sAbout .swiper-button-prev',
+		},
 	});
 	// modal window
 

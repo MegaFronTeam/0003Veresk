@@ -25,12 +25,13 @@
 		p {
 			font-size: rem(15);
 			// max-width: 30em;
+			margin-bottom: 0;
 			@include media-breakpoint-up(md) {
 				font-size: rem(20);
 			}
-			&:last-child {
-				margin-bottom: 0;
-			}
+			// &:last-child {
+			// 	margin-bottom: 0;
+			// }
 		}
 	}
 	.product-item {

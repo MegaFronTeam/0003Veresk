@@ -2,8 +2,49 @@ mixin sAbout(data)
 	// start sAbout
 	+b.SECTION.sAbout.section#sAbout&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sAbout
-				
-			.row
+			+b.section-title
+				h2 О&nbsp;компании 
+					span Veresk Group
+				p Pellentesque mollis nibh non nibh laoreet vulputate. 
+				p Mauris id metus dignissim, efficitur nulla quis, fermentum. 
+			+e.row.row
+				.col
+					.row
+						.col-6
+							+e.item
+								h4 > 250
+								span Pellentesque mollis nibh non nibh laoreet vulputate.
+						.col-6
+							+e.item
+								h4 > 250
+								span Pellentesque mollis nibh non nibh laoreet vulputate.
+						.col-6
+							+e.item
+								h4 > 250
+								span Pellentesque mollis nibh non nibh laoreet vulputate.
+						.col-6
+							+e.item
+								h4 > 250
+								span Pellentesque mollis nibh non nibh laoreet vulputate.
+						.col-6
+							+e.item
+								h4 > 250
+								span Pellentesque mollis nibh non nibh laoreet vulputate.
+						.col-6
+							+e.item
+								h4 > 250
+								span Pellentesque mollis nibh non nibh laoreet vulputate.
+						
+				+e.col.col-lg-auto.order-lg-first
+					+e.slider--js.swiper
+						.swiper-wrapper
+							+e.slide.swiper-slide
+								+pic(`sAbout-1.png`, `bg`, 0)
+							+e.slide.swiper-slide
+								+pic(`product-item-1.png`, `bg`, 0)
+							+e.slide.swiper-slide
+								+pic(`sAbout-1.png`, `bg`, 0)
+							+e.slide.swiper-slide
+								+pic(`product-item-1.png`, `bg`, 0)
+						+arrow
 	// end sAbout
