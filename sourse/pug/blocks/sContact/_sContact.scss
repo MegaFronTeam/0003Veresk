@@ -19,7 +19,6 @@
 	}
 	&__row {
 		--bs-gutter-y: #{rem(50)};
-		
 	}
 	&__btn {
 		@extend .btn, .btn-primary;
@@ -125,6 +124,9 @@
 	}
 	.soc {
 		margin-top: rem(22);
+	}
+	.request {
+		max-width: rem(470);
 	}
 	@include media-breakpoint-up(xl) {
 	}

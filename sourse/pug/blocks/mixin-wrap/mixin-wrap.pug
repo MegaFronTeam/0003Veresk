@@ -67,11 +67,39 @@ mixin request()
 				.col-6
 					input#option2.btn-check(type='radio' name='name1' autocomplete='off')
 					label.btn.btn-outline-primary(for='option2') Продажа
-			+input("Ваше имя", "text")
-			+input("Номер телефона", "tel")
-			+input("Email", "email")
-			+e.BUTTON.btn Отправить заявку
-			+e.agreement Отправляя заявку, вы&nbsp;даете свое согласие на&nbsp;обработку #[a(href="#") персональных данных]
+				.col-12
+					+input("Ваше имя", "text")
+				.col-12
+					+input("Номер телефона", "tel")
+				.col-12
+					+input("Email", "email")
+				.col-12
+					+e.BUTTON.btn Отправить заявку
+				.col-12
+					+e.agreement Отправляя заявку, вы&nbsp;даете свое согласие на&nbsp;обработку #[a(href="#") персональных данных]
+
+mixin request2()
+	+b.request--lg
+		+form-wrap
+			h2 Подбор или продажа земельного участка
+			+e.subtitle Перезвоним вам в&nbsp;течение 15&nbsp;минут в&nbsp;рабочее время
+			+e.row.row
+				.col-6
+					input#option1.btn-check(type='radio' name='name2' autocomplete='off')
+					label.btn.btn-outline-primary(for='option1') Подбор
+				.col-6
+					input#option2.btn-check(type='radio' name='name2' autocomplete='off')
+					label.btn.btn-outline-primary(for='option2') Продажа
+				.col-md-4
+					+input("Ваше имя", "text")
+				.col-md-4
+					+input("Номер телефона", "tel")
+				.col-md-4
+					+input("Email", "email")
+				+e.col.col-md-auto
+					+e.BUTTON.btn Отправить заявку
+				.col
+					+e.agreement Отправляя заявку, вы&nbsp;даете свое согласие на&nbsp;обработку #[a(href="#") персональных данных]
 
 mixin breadcrumb-wrap()
 	+b.breadcrumb-wrap
