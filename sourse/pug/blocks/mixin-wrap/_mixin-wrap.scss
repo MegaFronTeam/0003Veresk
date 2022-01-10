@@ -286,3 +286,42 @@
 		}
 	}
 }
+
+.breadcrumb-wrap {
+	position: absolute;
+	width: 100%;
+	pointer-events: none;
+}
+.breadcrumb {
+	display: inline-flex;
+	pointer-events: all;
+	padding-top: rem(35);
+	@include media-breakpoint-up(md) {
+		padding-top: rem(20);
+	}
+	.breadcrumb-item {
+		padding-right: 1.25rem;
+		padding-left: 0;
+		margin-bottom: rem(5);
+		a {
+			&:not(:hover) {
+				color: $body-color;
+				text-decoration: underline;
+			}
+		}
+		&.active {
+			a {
+				color: $breadcrumb-active-color;
+				pointer-events: none;
+				text-decoration: none;
+			}
+		}
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+	.breadcrumb-item + .breadcrumb-item {
+		padding-left: 0;
+	}
+}
