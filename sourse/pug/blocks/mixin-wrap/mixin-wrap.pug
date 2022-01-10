@@ -54,3 +54,23 @@ mixin slider-controls
 		.swiper-pagination
 		.swiper-button-hand.swiper-button-hand-next.swiper-button-next
 			+icon('arrow-right')
+
+mixin request()
+	+b.request
+		+form-wrap
+			h4 Подбор или продажа земельного участка
+			+e.subtitle Перезвоним вам в&nbsp;течение 15&nbsp;минут <br> в&nbsp;рабочее время
+			+e.row.row
+				.col-6
+					input#option1.btn-check(type='radio' name='name1' autocomplete='off')
+					label.btn.btn-outline-primary(for='option1') Подбор
+				.col-6
+					input#option2.btn-check(type='radio' name='name1' autocomplete='off')
+					label.btn.btn-outline-primary(for='option2') Продажа
+			+input("Ваше имя", "text")
+			+input("Номер телефона", "tel")
+			+input("Email", "email")
+			+e.BUTTON.btn Отправить заявку
+			+e.agreement Отправляя заявку, вы&nbsp;даете свое согласие на&nbsp;обработку #[a(href="#") персональных данных]
+
+			

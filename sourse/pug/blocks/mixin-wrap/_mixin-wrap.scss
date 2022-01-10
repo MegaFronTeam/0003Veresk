@@ -207,3 +207,82 @@
 		}
 	}
 }
+
+.request {
+	border-radius: $border-radius-lg;
+	background-color: $white;
+	padding: rem(9.5) rem(8);
+	max-width: rem(470);
+	@include media-breakpoint-up(md) {
+		padding: rem(10);
+	}
+	.form-wrap {
+		border: 1px solid $light-gray;
+		border-radius: $border-radius-lg;
+		padding: rem(28) rem(25);
+		// filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+		@include media-breakpoint-up(md) {
+			padding: rem(30);
+		}
+		h4 {
+			font-family: "Sitka Text";
+			line-height: 120%;
+			margin-bottom: rem(10);
+		}
+		&__subtitle {
+			font-size: rem(15);
+			line-height: 120%;
+			margin-bottom: rem(16);
+			@include media-breakpoint-up(md) {
+				font-size: rem(16);
+			}
+		}
+		&__row {
+			--bs-gutter-x: #{rem(10)};
+			margin-bottom: rem(9);
+			@include media-breakpoint-up(md) {
+				margin-bottom: rem(10);
+			}
+			.btn {
+				border-radius: $border-radius;
+				font-size: rem(14);
+				line-height: 115%;
+				padding: rem(14) rem(18);
+			}
+		}
+		&__btn {
+			@extend .btn, .btn-primary;
+			font-size: rem(18);
+			width: 100%;
+			margin-top: rem(16);
+			margin-bottom: rem(15);
+			@include media-breakpoint-up(md) {
+				margin-top: rem(9);
+				margin-bottom: rem(22);
+			}
+		}
+		&__agreement {
+			font-size: rem(12);
+			line-height: calc(15 / 12);
+			a {
+				position: relative;
+				&:not(:hover) {
+					color: $body-color;
+					&::after {
+						background-color: currentColor;
+					}
+				}
+				&::after {
+					content: "";
+					@include mt;
+					position: absolute;
+					width: 100%;
+					height: 1px;
+					left: 0;
+					bottom: 1px;
+					background-color: transparent;
+				}
+			}
+		}
+	}
+}

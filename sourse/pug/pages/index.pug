@@ -10,7 +10,7 @@ include ../blocks/sAbout/_sAbout.pug
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg= null
+	- let  bg= 'main.jpg'
 
 block title
 	- let  title= 'Главная'
@@ -20,6 +20,7 @@ block pagecontent
 	+header()
 		+top-nav()
 	//- +headerBlock()
+	
 	+sCatalogMain()
 	+sSearch()
 	+sBestDeals()
