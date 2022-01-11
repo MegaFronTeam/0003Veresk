@@ -1,9 +1,79 @@
-mixin sServices(data)
+mixin sServices(h, ...items)
 	// start sServices
 	+b.SECTION.sServices.section#sServices&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sServices
-				
-			.row
+			+b.section-title
+				h2!= h
+				each item in items
+					p!= item
+			block
+			+e.btn(href="#") Отправить заявку
 	// end sServices
+
+
+mixin small-cards()
+	+e.content--small-cards
+		.row
+			.col-6.col-lg-3
+				+e.small-card
+					h4 > 250
+					span Pellentesque mollis nibh non nibh laoreet vulputate.
+			.col-6.col-lg-3
+				+e.small-card
+					h4 > 250
+					span Pellentesque mollis nibh non nibh laoreet vulputate.
+			.col-6.col-lg-3
+				+e.small-card
+					h4 > 250
+					span Pellentesque mollis nibh non nibh laoreet vulputate.
+			.col-6.col-lg-3
+				+e.small-card
+					h4 > 250
+					span Pellentesque mollis nibh non nibh laoreet vulputate.
+
+mixin docs()
+	+e.content--docs
+		h3 Документы
+		.row
+			.col-md-6
+				+e.download(href="#" download)
+					.row
+						.col-auto
+							+icon('document')
+						.col
+							span Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis 
+			.col-md-6
+				+e.download(href="#" download)
+					.row
+						.col-auto
+							+icon('document')
+						.col
+							span Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis 
+			.col-md-6
+				+e.download(href="#" download)
+					.row
+						.col-auto
+							+icon('document')
+						.col
+							span Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis 
+			.col-md-6
+				+e.download(href="#" download)
+					.row
+						.col-auto
+							+icon('document')
+						.col
+							span Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis 
+			.col-md-6
+				+e.download(href="#" download)
+					.row
+						.col-auto
+							+icon('document')
+						.col
+							span Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis 
+			.col-md-6
+				+e.download(href="#" download)
+					.row
+						.col-auto
+							+icon('document')
+						.col
+							span Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis 
