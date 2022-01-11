@@ -32,7 +32,7 @@
 	&__content {
 		margin-bottom: rem(25);
 		& > h3 {
-			margin-bottom: rem(13);
+			margin-bottom: rem(16);
 			@include media-breakpoint-up(md) {
 				margin-bottom: rem(30);
 			}
@@ -74,7 +74,7 @@
 			.icon {
 				opacity: 0.7;
 			}
-			span {
+			p {
 				color: $body-color;
 				text-decoration: underline;
 			}
@@ -104,11 +104,12 @@
 				font-size: rem(70);
 			}
 		}
-		span {
+		p {
 			@include mt(0.2s);
 			@extend .mons;
 			font-size: rem(16);
 			line-height: 145%;
+			margin-bottom: 0;
 			@include media-breakpoint-only(md) {
 				font-size: rem(14);
 				line-height: 120%;
@@ -157,6 +158,12 @@
 			@media (max-width: 427.98px) {
 				font-size: rem(14);
 			}
+		}
+	}
+	&__btn-wrap {
+		text-align: center;
+		@include media-breakpoint-up(md) {
+			text-align: left;
 		}
 	}
 	&__btn {
