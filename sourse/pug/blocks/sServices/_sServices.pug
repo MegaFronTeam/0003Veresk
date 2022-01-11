@@ -1,9 +1,96 @@
-mixin sServices(data)
+mixin sServices(h, ...items)
 	// start sServices
 	+b.SECTION.sServices.section#sServices&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sServices
-				
-			.row
+			+b.section-title
+				h2!= h
+				each item in items
+					p!= item
+			block
+			+e.btn-wrap
+				+e.btn(href="#") Отправить заявку
 	// end sServices
+
+
+mixin cards()
+	+e.content--cards
+		.row
+			.col-6.col-lg-3
+				+e.card
+					h4 > 250
+					p Pellentesque mollis nibh non nibh laoreet vulputate.
+			.col-6.col-lg-3
+				+e.card
+					h4 > 250
+					p Pellentesque mollis nibh non nibh laoreet vulputate.
+			.col-6.col-lg-3
+				+e.card
+					h4 > 250
+					p Pellentesque mollis nibh non nibh laoreet vulputate.
+			.col-6.col-lg-3
+				+e.card
+					h4 > 250
+					p Pellentesque mollis nibh non nibh laoreet vulputate.
+
+mixin cards2()
+	+e.content--cards-lg
+		.row
+			.col-lg-4
+				+e.card--lg
+					h4 Заголовок
+					p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. 
+			.col-lg-4
+				+e.card--lg
+					h4 Заголовок
+					p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. 
+			.col-lg-4
+				+e.card--lg
+					h4 Заголовок
+					p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. 
+
+mixin docs()
+	+e.content--docs
+		h3 Документы
+		.row
+			.col-md-6
+				+e.download(href="#" download)
+					.row
+						.col-auto
+							+icon('document')
+						.col
+							p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis
+			.col-md-6
+				+e.download(href="#" download)
+					.row
+						.col-auto
+							+icon('document')
+						.col
+							p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis
+			.col-md-6
+				+e.download(href="#" download)
+					.row
+						.col-auto
+							+icon('document')
+						.col
+							p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis
+			.col-md-6
+				+e.download(href="#" download)
+					.row
+						.col-auto
+							+icon('document')
+						.col
+							p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis
+			.col-md-6
+				+e.download(href="#" download)
+					.row
+						.col-auto
+							+icon('document')
+						.col
+							p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis
+			.col-md-6
+				+e.download(href="#" download)
+					.row
+						.col-auto
+							+icon('document')
+						.col
+							p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis
