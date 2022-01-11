@@ -284,12 +284,60 @@
 			</section>
 			<!-- end sBestDeals-->
 			<!-- start sForm-->
-			<section class="sForm section" id="sForm">
+			<section class="sForm bg-wrap section" id="sForm">
+				<!-- picture-->
+				<picture class="picture-bg"> 
+					<source type="image/avif" srcset="img/@2x/avif/sFormBg.avif" media="(min-width:576px)"/>
+					<source type="image/avif" srcset="img/@1x/avif/sFormBg.avif"/>
+					<source type="image/webp" srcset="img/@2x/webp/sFormBg.webp" media="(min-width:576px)"/>
+					<source type="image/webp" srcset="img/@1x/webp/sFormBg.webp"/>
+					<source type="image/jpg" srcset="img/@2x/avif/sFormBg.jpg" media="(min-width:576px)"/>
+					<source type="image/jpg" srcset="img/@1x/avif/sFormBg.jpg"/><img class="object-fit-js" src="img/@2x/sFormBg.jpg" alt="" loading="lazy"/>
+				</picture>
+				<!-- /picture-->
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>sForm</h2>
+					<div class="request request--lg">
+						<div class="form-wrap">
+							<form>
+								<h2>Подбор или продажа земельного участка</h2>
+								<div class="form-wrap__subtitle">Перезвоним вам в&nbsp;течение 15&nbsp;минут в&nbsp;рабочее время
+								</div>
+								<div class="form-wrap__row row">
+									<div class="col-6">
+										<input class="btn-check" id="option1" type="radio" name="name2" autocomplete="off"/>
+										<label class="btn btn-outline-primary" for="option1">Подбор</label>
+									</div>
+									<div class="col-6">
+										<input class="btn-check" id="option2" type="radio" name="name2" autocomplete="off"/>
+										<label class="btn btn-outline-primary" for="option2">Продажа</label>
+									</div>
+									<div class="col-md-4">
+										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя"/>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-md-4">
+										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Номер телефона"/>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="col-md-4">
+										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="email" type="email" placeholder="Email"/>
+										</div>
+										<!-- +e.input-wrap-->
+									</div>
+									<div class="form-wrap__col col-md-auto">
+										<button class="form-wrap__btn">Отправить заявку
+										</button>
+									</div>
+									<div class="col">
+										<div class="form-wrap__agreement">Отправляя заявку, вы&nbsp;даете свое согласие на&nbsp;обработку <a href="#">персональных данных</a>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
 					</div>
-					<div class="row"></div>
 				</div>
 			</section>
 			<!-- end sForm-->

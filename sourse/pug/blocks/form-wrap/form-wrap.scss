@@ -7,12 +7,12 @@
 		//  outline: 0 !important;
 		resize: none;
 	}
-	&__input-wrap {
-		margin-bottom: rem(9);
-		@include media-breakpoint-up(md) {
-			margin-bottom: rem(10);
-		}
-	}
+	// &__input-wrap {
+	// 	margin-bottom: rem(9);
+	// 	@include media-breakpoint-up(md) {
+	// 		margin-bottom: rem(10);
+	// 	}
+	// }
 	&__btn {
 		cursor: pointer;
 	}

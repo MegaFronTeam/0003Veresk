@@ -1,9 +1,7 @@
 mixin sForm()
 	// start sForm
-	+b.SECTION.sForm.section#sForm&attributes(attributes)
+	+b.SECTION.sForm.bg-wrap.section#sForm&attributes(attributes)
+		+pic('sFormBg.jpg', 'bg').picture-bg
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			.row
+			+request2()
 	// end sForm
