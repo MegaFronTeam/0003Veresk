@@ -12,25 +12,41 @@ mixin sServices(h, ...items)
 	// end sServices
 
 
-mixin small-cards()
-	+e.content--small-cards
+mixin cards()
+	+e.content--cards
 		.row
 			.col-6.col-lg-3
-				+e.small-card
+				+e.card
 					h4 > 250
-					span Pellentesque mollis nibh non nibh laoreet vulputate.
+					p Pellentesque mollis nibh non nibh laoreet vulputate.
 			.col-6.col-lg-3
-				+e.small-card
+				+e.card
 					h4 > 250
-					span Pellentesque mollis nibh non nibh laoreet vulputate.
+					p Pellentesque mollis nibh non nibh laoreet vulputate.
 			.col-6.col-lg-3
-				+e.small-card
+				+e.card
 					h4 > 250
-					span Pellentesque mollis nibh non nibh laoreet vulputate.
+					p Pellentesque mollis nibh non nibh laoreet vulputate.
 			.col-6.col-lg-3
-				+e.small-card
+				+e.card
 					h4 > 250
-					span Pellentesque mollis nibh non nibh laoreet vulputate.
+					p Pellentesque mollis nibh non nibh laoreet vulputate.
+
+mixin cards2()
+	+e.content--cards-lg
+		.row
+			.col-lg-4
+				+e.card--lg
+					h4 Заголовок
+					p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. 
+			.col-lg-4
+				+e.card--lg
+					h4 Заголовок
+					p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. 
+			.col-lg-4
+				+e.card--lg
+					h4 Заголовок
+					p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. 
 
 mixin docs()
 	+e.content--docs
