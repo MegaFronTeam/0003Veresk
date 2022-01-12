@@ -1,10 +1,17 @@
 mixin headerBlock()
 	// start headerBlock
-	+b.headerBlock.section#headerBlock&attributes(attributes)
+	+b.headerBlock.section.bg-wrap#headerBlock&attributes(attributes)
+		+e.slider--js.swiper
+			.swiper
+				+e.slide.swiper-slide.bg-wrap
+					+pic("slide.jpg",'bg',0).picture-bg
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
 			.row
-						
+				.col
+					+e.text-block
+						h1 Продажа земельных участков в Москве
+						p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis. 
+				.col-auto
+					+request()
+
 	// end headerBlock

@@ -1,17 +1,26 @@
+.main-wrapper{
+	margin-top: var(--topH);
+}
 .top-nav {
-	// background: svg-load('../svg/check.svg',  stroke=$primary); 
-	// 
-	@include media-breakpoint-up(xl) {
-		background-color: #000;
-		border: 1px solid #000;
-	}
+	background-color: #fff;
+	padding-top: rem(18);
+	padding-bottom: rem(18);
+	position: fixed;
+	width: 100vw;
+	top: 0;
+	left: 0;
+	.logo-link{
+		display: inline-block;
+		@include media-breakpoint-up(md) {
 
-	@include media-breakpoint-up(lg) {
-		background-color: red;
-
+			margin-right: 40px;
+		}
+		img{
+			width: 56px;
+		}
 	}
-	p{
-		@include ell();
+	.row{
+		align-items: center;
 	}
 
 	@include media-breakpoint-up(md) {}
@@ -46,4 +55,18 @@
 	@include media-breakpoint-down(xs) {}
 }
 
+
+.contactBlock{
+	display: flex;
+	flex-direction: column;
+	a{
+		@extend .text-body;
+		line-height: 1;
+	}
+	&__tel{
+		font-weight: 600;
+		font-size: rem(20);
+
+	}
+}
 

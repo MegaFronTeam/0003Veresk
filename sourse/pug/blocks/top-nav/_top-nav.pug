@@ -17,16 +17,26 @@ mixin mob-mnu()
 		+e.inner
 			+mnu()
 	//  мобильное меню
+mixin contactblock()
+	+b.contactBlock
+		+e.tel(href="tel:+7(900)1234444") +7 (900) 123 44 44 
+		a(href="#") Обратный звонок
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
 			.row
-				.col-auto.d-lg-none
-					+menu-toggle()
+				+e.logo-col.col-auto 
+					+logo()
 				.col
 					.menu-mobile.menu-mobile--js
 						+menu-toggle()
 						+mnu()
+				.col-auto
+					+contactblock()
+				.col-auto
+					+soc
+				.col-auto.d-lg-none
+					+menu-toggle()
 					
 	// end top-nav
