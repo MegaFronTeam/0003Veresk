@@ -321,7 +321,7 @@ $border-color: $gray-300 !default;
 
 // scss-docs-start border-radius-variables
 $border-radius: rem(4) !default;
-$border-radius-sm: .2rem !default;
+$border-radius-sm: rem(4) !default;
 $border-radius-lg: rem(10) !default;
 $border-radius-pill: 50rem !default;
 // scss-docs-end border-radius-variables
@@ -393,7 +393,7 @@ $font-family-code: var(--#{$variable-prefix}font-monospace) !default;
 // $font-size-base affects the font size of the body text
 $font-size-root: null !default;
 $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
-$font-size-sm: $font-size-base * .875 !default;
+$font-size-sm: rem(14) !default;
 $font-size-lg: $font-size-base * 1.25 !default;
 
 $font-weight-lighter: lighter !default;
@@ -558,7 +558,7 @@ $input-btn-focus-blur: 0 !default;
 // $input-btn-focus-box-shadow: 0 0 $input-btn-focus-blur $input-btn-focus-width $input-btn-focus-color !default;
 $input-btn-focus-box-shadow: none !default;
 
-$input-btn-padding-y-sm: .25rem !default;
+$input-btn-padding-y-sm: rem(12.6) !default;
 $input-btn-padding-x-sm: .5rem !default;
 $input-btn-font-size-sm: $font-size-sm !default;
 
