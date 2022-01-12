@@ -87,11 +87,13 @@ mixin request2()
 			+e.subtitle Перезвоним вам в&nbsp;течение 15&nbsp;минут в&nbsp;рабочее время
 			+e.row.row
 				.col-6
-					input#option1.btn-check(type='radio' name='name2' autocomplete='off')
-					label.btn.btn-outline-primary(for='option1') Подбор
+					label
+						input.btn-check(name='name1' type='radio' autocomplete='off')
+						.btn.btn-sm.w-100.btn-outline-primary( ) Подбор
 				.col-6
-					input#option2.btn-check(type='radio' name='name2' autocomplete='off')
-					label.btn.btn-outline-primary(for='option2') Продажа
+					label
+						input.btn-check(name='name1' type='radio' autocomplete='off')
+						.btn.btn-sm.w-100.btn-outline-primary() Продажа
 				.col-md-4
 					+input("Ваше имя", "text")
 				.col-md-4

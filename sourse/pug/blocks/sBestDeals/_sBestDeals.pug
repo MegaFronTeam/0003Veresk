@@ -7,18 +7,8 @@ mixin sBestDeals(data)
 				p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis.
 			+e.slider--js.swiper
 				.swiper-wrapper
-					+e.slide.swiper-slide
-						+product-item(`Pellentesque mollis nibh non nibh laoreet`)
-					+e.slide.swiper-slide
-						+product-item(`Pellentesque mollis nibh non nibh laoreet`)
-					+e.slide.swiper-slide
-						+product-item(`Pellentesque mollis nibh non nibh laoreet`)
-					+e.slide.swiper-slide
-						+product-item(`Pellentesque mollis nibh non nibh laoreet`)
-					+e.slide.swiper-slide
-						+product-item(`Pellentesque mollis nibh non nibh laoreet`)
-					+e.slide.swiper-slide
-						+product-item(`Pellentesque mollis nibh non nibh laoreet`)
-					
+					- for (var x = 0; x < 6; x++)
+						+e.slide.swiper-slide
+							+product-item(`Pellentesque mollis nibh non nibh laoreet`)
 			+slider-controls()
 	// end sBestDeals
