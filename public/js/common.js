@@ -353,6 +353,17 @@ function eventHandler() {
 			prevEl: '.sAbout .swiper-button-prev',
 		},
 	});
+	const swiper4 = new Swiper('.bread-slider-js', {
+		slidesPerView: 'auto',
+		freeMode: true,
+		watchOverflow: true,
+		spaceBetween: 0,
+		// loopFillGroupWithBlank: true,
+		// touchRatio: 0.2,
+		// slideToClickedSlide: true,
+		// freeModeMomentum: true,
+
+	});
 	// modal window
 
 };

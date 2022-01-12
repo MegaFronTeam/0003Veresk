@@ -361,10 +361,17 @@
 }
 .breadcrumb {
 	display: inline-flex;
-	pointer-events: all;
 	padding-top: rem(35);
+	flex-wrap: nowrap;
 	@include media-breakpoint-up(md) {
 		padding-top: rem(20);
+	}
+	.swiper-wrapper {
+		pointer-events: none;
+	}
+	.swiper-slide {
+		pointer-events: all;
+		width: auto;
 	}
 	.breadcrumb-item {
 		padding-right: 1.25rem;
