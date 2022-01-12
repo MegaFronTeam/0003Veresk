@@ -1,6 +1,6 @@
-mixin paragraph( ...texts)
-	each text in texts 
-		p!= text
+//- mixin paragraph( ...texts)
+//- 	each text in texts 
+//- 		p!= text
 
 mixin sObjects(cards, title, text)
 	// start sObjects
@@ -15,23 +15,25 @@ mixin sObjects(cards, title, text)
 						+small-card('> 250', 'Pellentesque mollis nibh non nibh laoreet vulputate.')
 						+small-card('> 250', 'Pellentesque mollis nibh non nibh laoreet vulputate.')
 						+small-card('> 250', 'Pellentesque mollis nibh non nibh laoreet vulputate.')
-					.col-6.col-lg-9
-						+pic('sObjects-1.jpg', 'bg', 0)
-				else
-					+e.col-full-img.col
-						+pic('sObjects-1.jpg', 'bg', 0)
+					.col.col-lg-9
+						+pic('sObjects-1.jpg', 'bg').bg-wrap
+				//- else
+				//- 	+e.col-full-img.col
+				//- 		+pic('sObjects-1.jpg', 'bg', 0)
 			.row
-				if cards
-				else
-					+b.section-title.--indent.--sObject
-						h2!= title
-						p!= text
+				//- if cards
+				//- else
+				//- 	+b.section-title.--indent.--sObject
+				//- 		h2!= title
+				//- 		p!= text
 				.col-12.col-md-6
 					+e.objects-paragraph
 						h4 Заголовок
-						+paragraph('Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.','Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.','Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.','Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.','Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.','Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.','Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.','Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.')
+						p Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate.
+						//- +paragraph('Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.','Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.','Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.','Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.','Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.','Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.','Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.','Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.')
 				.col-12.col-md-6
 					+e.objects-paragraph
 						h4 Заголовок
-						+paragraph('Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.','Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.','Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.','Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.','Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.','Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.','Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.','Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.')
-	// end sObjects
+						p Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate.
+						//- +paragraph('Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.','Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.','Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.','Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.','Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.','Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.','Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.','Pellentesque mollis nibh non nibh laoreet vulputate.', 'Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.')
+						// end sObjects

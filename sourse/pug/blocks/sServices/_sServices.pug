@@ -35,10 +35,27 @@ mixin cards3()
 	+e.content--cards&attributes(attributes)
 		.row
 			- for (var x = 0; x < 2; x++)
-				.col-lg-6
+				.col-md-6
 					+e.card--text
 						h4 Заголовок
 						p Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum.
+
+//- mixin cards4(i)
+//- 	+e.content--cards&attributes(attributes)
+//- 		.row
+//- 			.col-auto
+//- 				- for (var x = 0; x < 3; x++)
+//- 					+e.card--sm
+//- 						h4 > 250
+//- 						p Pellentesque mollis nibh non nibh laoreet vulputate.
+//- 			.col
+//- 				+pic(`sServices-${i}.jpg`, `bg`).bg-wrap
+//- 		.row
+//- 			- for (var x = 0; x < 2; x++)
+//- 				.col-lg-6
+//- 					+e.card--text
+//- 						h4 Заголовок
+//- 						p Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum.
 
 mixin docs()
 	+e.content--docs&attributes(attributes)
@@ -52,3 +69,7 @@ mixin docs()
 								+icon('document')
 							.col
 								p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis
+
+mixin picture(i)
+	+e.content--picture&attributes(attributes)
+		+pic(`sServices-${i}.jpg`, `bg`).bg-wrap

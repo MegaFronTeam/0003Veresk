@@ -33,6 +33,17 @@
 	}
 	&__content {
 		margin-bottom: rem(25);
+		picture {
+			border-radius: $border-radius-lg;
+			overflow: hidden;
+			min-height: rem(388);
+			@include media-breakpoint-up(lg) {
+				min-height: rem(450);
+			}
+			img {
+				position: absolute;
+			}
+		}
 		& > h3 {
 			margin-bottom: rem(16);
 			@include media-breakpoint-up(md) {
@@ -64,6 +75,14 @@
 		&--docs {
 			@include media-breakpoint-up(md) {
 				margin-bottom: rem(40);
+			}
+		}
+		&--picture {
+			picture {
+				min-height: rem(388);
+				@include media-breakpoint-up(lg) {
+					min-height: rem(450);
+				}
 			}
 		}
 	}
@@ -175,7 +194,7 @@
 		&--lg {
 			padding: rem(37) rem(30);
 			@include media-breakpoint-up(md) {
-				padding: rem(37) rem(30) rem(55);
+				padding: rem(37) rem(30);
 			}
 			h4 {
 				margin-bottom: rem(27);
@@ -183,6 +202,7 @@
 			p {
 				font-size: rem(14) !important;
 				line-height: 155%;
+				margin-bottom: 1em;
 			}
 		}
 		&--text {
@@ -197,8 +217,12 @@
 			p {
 				font-size: rem(12) !important;
 				line-height: 155%;
+				margin-bottom: 1em;
 				@include media-breakpoint-up(sm) {
 					font-size: rem(18) !important;
+				}
+				@include media-breakpoint-only(md) {
+					font-size: rem(13) !important;
 				}
 				@include media-breakpoint-up(xl) {
 					font-size: rem(20) !important;
