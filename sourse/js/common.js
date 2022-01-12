@@ -308,7 +308,7 @@ function eventHandler() {
 			loadPrevNext: true,
 		},
 		pagination: {
-			el: ' .swiper-pagination',
+			el: ' .sBestDeals  .swiper-pagination',
 			type: 'bullets',
 			clickable: true,
 			// renderBullet: function (index, className) {
@@ -338,6 +338,7 @@ function eventHandler() {
 			}
 		}
 	});
+
 	const sAboutSlider = new Swiper('.sAbout__slider--js', {
 		slidesPerView: 'auto',
 		loop: true,
@@ -354,6 +355,22 @@ function eventHandler() {
 		},
 	});
 	// modal window
+
+
+	const headerBlockSlider = new Swiper('.headerBlock__slider--js', {
+		slidesPerView: 1,
+		loop: true,  
+		pagination: {
+			el: ' .headerBlock .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.headerBlock .swiper-button-next',
+			prevEl: '.headerBlock .swiper-button-prev',
+		},
+	});
+
 
 };
 if (document.readyState !== 'loading') {

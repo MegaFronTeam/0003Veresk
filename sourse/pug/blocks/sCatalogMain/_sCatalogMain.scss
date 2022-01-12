@@ -9,11 +9,15 @@
 		--sTPB: #{rem(60)};
 	}
 	.section-title {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(960);
 		@include media-breakpoint-up(md) {
 			text-align: center;
 		}
 		h2 {
 			margin-bottom: rem(20);
+
 			@include media-breakpoint-up(md) {
 				margin-bottom: rem(16);
 			}
