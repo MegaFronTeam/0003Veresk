@@ -241,6 +241,9 @@
 		width: rem(240);
 		max-width: 100%;
 	}
+	&__slide {
+		height: calc((100% - 30px) / 2) !important;
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
@@ -255,6 +258,7 @@
 	}
 	@include media-breakpoint-down(xl) {
 	}
+	
 } // end.sServices
 
 .single-service {
