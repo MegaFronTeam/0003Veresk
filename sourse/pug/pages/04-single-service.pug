@@ -3,7 +3,7 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContactMain/_sContactMain.pug
-//- include ../blocks/sObjects/_sObjects.pug
+include ../blocks/sObjects/_sObjects.pug
 //- include ../blocks/sSearch/_sSearch.pug
 //- include ../blocks/sBestDeals/_sBestDeals.pug
 include ../blocks/sForm/_sForm.pug
@@ -22,6 +22,7 @@ block pagecontent
 	+header()
 		+top-nav()
 	+headerBlock()
+	+sObjects('', 'Земельный участок на перекрестке Прусикина', 'Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, fermentum. Mauris id metus dignissim, efficitur nulla quis, fermentum.')
 	+sServices()
 	+sServices()
 	+sServices()
