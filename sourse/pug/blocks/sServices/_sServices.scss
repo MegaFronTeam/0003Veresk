@@ -9,6 +9,7 @@
 		--sTPB: #{rem(30)};
 	}
 	&.bg-light {
+		--cardColor: #{$white};
 		.sServices__download,
 		.sServices__card {
 			background-color: $white;
@@ -70,7 +71,7 @@
 		@include mt(0.2s);
 		display: flex;
 		padding: rem(25);
-		background-color: $light;
+		background-color: var(--cardColor, #{$light});
 		border-radius: $border-radius-lg;
 		height: 100%;
 		@include media-breakpoint-up(lg) {
@@ -135,7 +136,7 @@
 		flex-direction: column;
 		justify-content: center;
 		padding: rem(22) rem(16);
-		background-color: $light;
+		background-color: var(--cardColor, #{$light});
 		height: 100%;
 		border-radius: $border-radius-lg;
 		@include media-breakpoint-up(md) {
@@ -184,6 +185,26 @@
 				line-height: 155%;
 			}
 		}
+		&--text {
+			background-color: $white;
+			padding: 0;
+			@include media-breakpoint-up(md) {
+				padding: 0;
+			}
+			h4 {
+				margin-bottom: rem(27);
+			}
+			p {
+				font-size: rem(12) !important;
+				line-height: 155%;
+				@include media-breakpoint-up(sm) {
+					font-size: rem(18) !important;
+				}
+				@include media-breakpoint-up(xl) {
+					font-size: rem(20) !important;
+				}
+			}
+		}
 	}
 	&__btn-wrap {
 		text-align: center;
@@ -211,3 +232,38 @@
 	@include media-breakpoint-down(xl) {
 	}
 } // end.sServices
+
+.single-service {
+	.service-wrap {
+		.sServices {
+			--sPT: #{rem(40)};
+			--sPB: #{rem(40)};
+			--sTPB: #{rem(45)};
+			@include media-breakpoint-up(md) {
+				--sPT: #{rem(60)};
+				--sPB: #{rem(60)};
+				--sTPB: #{rem(40)};
+			}
+			&:first-child {
+				--sPT: #{rem(85)};
+				@include media-breakpoint-up(md) {
+					--sPT: #{rem(100)};
+				}
+			}
+			&:last-child {
+				--sPB: #{rem(75)};
+				@include media-breakpoint-up(md) {
+					--sPB: #{rem(170)};
+				}
+			}
+			.section-title {
+				h2 {
+					max-width: 15em;
+				}
+				p {
+					max-width: 38.4em;
+				}
+			}
+		}
+	}
+}

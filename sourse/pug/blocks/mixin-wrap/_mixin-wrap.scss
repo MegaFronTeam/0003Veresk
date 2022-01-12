@@ -167,6 +167,15 @@
 .slider-controls {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
+	width: rem(224);
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	@include media-breakpoint-up(md) {
+		margin-left: 0;
+	width: rem(344);
+	}
 	.swiper-button-hand {
 		position: relative;
 		min-width: var(--swiperArrowSize);
@@ -177,8 +186,11 @@
 		}
 	}
 	.swiper-pagination {
-		display: inline-flex;
+		display: flex;
 		align-items: center;
+		justify-content: center;
+		flex-grow: 1;
+		flex-wrap: wrap;
 		width: auto;
 		margin-left: rem(5);
 		margin-right: rem(5);
@@ -193,6 +205,8 @@
 			height: rem(10);
 			margin-left: rem(7);
 			margin-right: rem(7);
+			margin-top: rem(3);
+			margin-bottom: rem(3);
 			@include media-breakpoint-up(md) {
 				width: rem(17);
 				height: rem(17);
