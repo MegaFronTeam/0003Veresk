@@ -3,7 +3,74 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
-
+	.section-title {
+		h2 {
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(16);
+			}
+		}
+	}
+	&__row {
+		--bs-gutter-x: #{rem(30)};
+		--bs-gutter-y: --bs-gutter-x;
+		margin-bottom: rem(63);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(81);
+		}
+	}
+	&__col {
+		flex-direction: column;
+	}
+	.small-card-item {
+		&:not(:last-child) {
+			margin-bottom: rem(16);
+		}
+	}
+	picture {
+		@include media-breakpoint-up(xl) {
+			--ratio: 385/869;
+		}
+		@include media-breakpoint-up(lg) {
+			--ratio: 285/500;
+		}
+		@include media-breakpoint-up(md) {
+			--ratio: 205/173;
+		}
+		@include media-breakpoint-up(sm) {
+			--ratio: 280/173;
+		}
+		@include block(173,376);
+		img {
+			border-radius: 10px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			object-position: 62%;
+		}
+	}
+	&__objects-paragraph {
+		margin-bottom: rem(27);
+		@include media-breakpoint-up(md) {
+			margin-bottom: 0;
+		}
+		h4 {
+			font-size: rem(30);
+			color: $purple;
+			font-weight: 700;
+			margin-bottom: rem(27);
+			@include media-breakpoint-up(md) {
+				margin-bottom: rem(44);
+			}
+		}
+		p {
+			font-size: rem(12);
+			margin-bottom: 0;
+			@include media-breakpoint-up(lg) {
+				font-size: rem(20);
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
