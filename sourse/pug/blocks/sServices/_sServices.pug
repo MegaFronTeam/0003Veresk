@@ -1,4 +1,4 @@
-mixin sServices(h, ...items)
+mixin sServices(btn, h, ...items)
 	// start sServices
 	+b.SECTION.sServices.section#sServices&attributes(attributes)
 		.container
@@ -7,90 +7,48 @@ mixin sServices(h, ...items)
 				each item in items
 					p!= item
 			block
-			+e.btn-wrap
-				+e.btn(href="#") Отправить заявку
+			if btn
+				+e.btn-wrap
+					+e.btn(href="#")!= btn
 	// end sServices
 
 
 mixin cards()
-	+e.content--cards
+	+e.content--cards&attributes(attributes)
 		.row
-			.col-6.col-lg-3
-				+e.card
-					h4 > 250
-					p Pellentesque mollis nibh non nibh laoreet vulputate.
-			.col-6.col-lg-3
-				+e.card
-					h4 > 250
-					p Pellentesque mollis nibh non nibh laoreet vulputate.
-			.col-6.col-lg-3
-				+e.card
-					h4 > 250
-					p Pellentesque mollis nibh non nibh laoreet vulputate.
-			.col-6.col-lg-3
-				+e.card
-					h4 > 250
-					p Pellentesque mollis nibh non nibh laoreet vulputate.
+			- for (var x = 0; x < 4; x++)
+				.col-6.col-lg-3
+					+e.card
+						h4 > 250
+						p Pellentesque mollis nibh non nibh laoreet vulputate.
 
 mixin cards2()
-	+e.content--cards-lg
+	+e.content--cards-lg&attributes(attributes)
 		.row
-			.col-lg-4
-				+e.card--lg
-					h4 Заголовок
-					p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. 
-			.col-lg-4
-				+e.card--lg
-					h4 Заголовок
-					p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. 
-			.col-lg-4
-				+e.card--lg
-					h4 Заголовок
-					p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. 
+			- for (var x = 0; x < 3; x++)
+				.col-lg-4
+					+e.card--lg
+						h4 Заголовок
+						p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. 
+
+mixin cards3()
+	+e.content--cards&attributes(attributes)
+		.row
+			- for (var x = 0; x < 2; x++)
+				.col-lg-6
+					+e.card--text
+						h4 Заголовок
+						p Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum.
 
 mixin docs()
-	+e.content--docs
+	+e.content--docs&attributes(attributes)
 		h3 Документы
 		.row
-			.col-md-6
-				+e.download(href="#" download)
-					.row
-						.col-auto
-							+icon('document')
-						.col
-							p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis
-			.col-md-6
-				+e.download(href="#" download)
-					.row
-						.col-auto
-							+icon('document')
-						.col
-							p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis
-			.col-md-6
-				+e.download(href="#" download)
-					.row
-						.col-auto
-							+icon('document')
-						.col
-							p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis
-			.col-md-6
-				+e.download(href="#" download)
-					.row
-						.col-auto
-							+icon('document')
-						.col
-							p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis
-			.col-md-6
-				+e.download(href="#" download)
-					.row
-						.col-auto
-							+icon('document')
-						.col
-							p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis
-			.col-md-6
-				+e.download(href="#" download)
-					.row
-						.col-auto
-							+icon('document')
-						.col
-							p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis
+			- for (var x = 0; x < 6; x++)
+				.col-md-6
+					+e.download(href="#" download)
+						.row
+							.col-auto
+								+icon('document')
+							.col
+								p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis
