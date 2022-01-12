@@ -1,5 +1,5 @@
 "use strict";
-const JSCCommon = { 
+const JSCCommon = {
 	modalCall() {
 		const link = ".link-modal-js";
 
@@ -14,11 +14,11 @@ const JSCCommon = {
 			l10n: {
 				Escape: "Закрыть",
 				NEXT: "Вперед",
-				PREV: "Назад", 
-			}, 
-		}); 
-		document.querySelectorAll(".modal-close-js").forEach(el=>{
-			el.addEventListener("click", ()=>{
+				PREV: "Назад",
+			},
+		});
+		document.querySelectorAll(".modal-close-js").forEach(el => {
+			el.addEventListener("click", () => {
 				Fancybox.close();
 			})
 		})
@@ -73,7 +73,7 @@ const JSCCommon = {
 		}
 
 	},
-	mobileMenu() { 
+	mobileMenu() {
 		const menu = document.querySelector(".menu-mobile--js");
 		if (!menu) return;
 		this.toggleMenu();
@@ -243,7 +243,7 @@ function eventHandler() {
 	JSCCommon.makeDDGroup();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
-	
+
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
@@ -348,11 +348,47 @@ function eventHandler() {
 		lazy: {
 			loadPrevNext: true,
 		},
-		
+
 		navigation: {
 			nextEl: '.sAbout .swiper-button-next',
 			prevEl: '.sAbout .swiper-button-prev',
 		},
+	});
+	const sServicesSlider = new Swiper('.sServices__slider--js', {
+		slidesPerView: 4,
+		grid: {
+			rows: 2,
+		},
+		// loop: true,
+		// slideToClickedSlide: true,
+		// watchOverflow: true,
+		spaceBetween: 30,
+		// lazy: {
+		// 	loadPrevNext: true,
+		// },
+		navigation: {
+			nextEl: '.sServices .swiper-button-next',
+			prevEl: '.sServices .swiper-button-prev',
+		},
+		pagination: {
+			el: '.sServices .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+			// renderBullet: function (index, className) {
+			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+			// }
+		},
+	});
+	const breadSlider = new Swiper('.bread-slider-js', {
+		slidesPerView: 'auto',
+		freeMode: true,
+		watchOverflow: true,
+		spaceBetween: 0,
+		// loopFillGroupWithBlank: true,
+		// touchRatio: 0.2,
+		// slideToClickedSlide: true,
+		// freeModeMomentum: true,
+
 	});
 	// modal window
 

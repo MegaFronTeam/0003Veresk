@@ -6,7 +6,7 @@ mixin sObjects(cards, title, text)
 	// start sObjects
 	+b.SECTION.sObjects.section#sObjects&attributes(attributes)
 		.container
-			+b.section-title--sObject
+			+b.section-title
 				h2!= title
 				p!= text
 			+e.row.row
@@ -16,7 +16,7 @@ mixin sObjects(cards, title, text)
 						+small-card('> 250', 'Pellentesque mollis nibh non nibh laoreet vulputate.')
 						+small-card('> 250', 'Pellentesque mollis nibh non nibh laoreet vulputate.')
 					.col.col-lg-9
-						+pic('sObjects-1.jpg', 'bg').bg-wrap
+						+pic('sObjects-1.jpg', 'bg', 0).bg-wrap
 				//- else
 				//- 	+e.col-full-img.col
 				//- 		+pic('sObjects-1.jpg', 'bg', 0)
