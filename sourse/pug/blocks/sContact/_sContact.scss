@@ -126,7 +126,9 @@
 		margin-top: rem(22);
 	}
 	.request {
-		max-width: rem(470);
+		@include media-breakpoint-up(lg) {
+			max-width: rem(470);
+		}
 	}
 	@include media-breakpoint-up(xl) {
 	}
