@@ -1,3 +1,51 @@
+mixin filter()
+	+b.filter-block--aside.--js
+		+e.head.h5.fw-600.mb-4 Фильтр
+		+e.close.filter-toggle-js
+		+e.inner
+			mixin item(t, ...items)
+				+e.group&attributes(attributes)
+
+					+e.title= t
+					+e.group-inner
+						each item in items
+							+in-c("checkbox", item)
+						block
+			+item(`Регион`,`Москва`,`Московская область`,`Регионы`)
+			+item(`Шоссе`,`Алтуфьевское`,`Боровское`,`Варшавское`,`Вашутинское`,`Волковское`,`Волоколамское`,`Варшавское`,`Вашутинское`,`Волковское`,`Волоколамское`)
+			+item(`Удаленность`)
+				+e.line.row
+					.small.col-auto от
+					.col
+						+input()
+					.small.col-auto от
+					.col
+						+input()
+					.small.col-auto км
+
+				+e.title Площадь
+				+e.line.row
+					.small.col-auto от
+					.col
+						+input()
+					.small.col-auto от
+					.col
+						+input()
+					.small.col-auto соток
+				+e.title Цена
+				+e.line.row
+					.small.col-auto от
+					.col
+						+input()
+					.small.col-auto от
+					.col
+						+input()
+					.small.col-auto ₽
+
+		+item(`Назначение`,`Многоэтажное жилищное строительство`,`Индивидуальное жилищное строительство`,`Промышленное назначение`,`Коммерческое назначение`,`Рекреационное назначение`,`Сельскохозяйственное использование`)
+		+e.footer.text-center
+			button.btn.btn-primary.w-100.mb-2 Показать участки
+			.fw-600 Сбросить фильтр
 mixin sSearch(data)
 	// start sSearch
 	+b.SECTION.sSearch.section#sSearch&attributes(attributes).bg-light
@@ -20,53 +68,7 @@ mixin sSearch(data)
 			+e.inner
 				.row
 					.col-lg-3
-						+b.filter-block--aside.--js
-							+e.head.h5.fw-600.mb-4 Фильтр
-							+e.close.filter-toggle-js
-							+e.inner
-								mixin item(t, ...items)
-									+e.group&attributes(attributes)
-
-										+e.title= t
-										+e.group-inner
-											each item in items
-												+in-c("checkbox", item)
-											block
-								+item(`Регион`,`Москва`,`Московская область`,`Регионы`)
-								+item(`Шоссе`,`Алтуфьевское`,`Боровское`,`Варшавское`,`Вашутинское`,`Волковское`,`Волоколамское`,`Варшавское`,`Вашутинское`,`Волковское`,`Волоколамское`)
-								+item(`Удаленность`)
-									+e.line.row
-										.small.col-auto от
-										.col
-											+input()
-										.small.col-auto от
-										.col
-											+input()
-										.small.col-auto км
-
-									+e.title Площадь
-									+e.line.row
-										.small.col-auto от
-										.col
-											+input()
-										.small.col-auto от
-										.col
-											+input()
-										.small.col-auto соток
-									+e.title Цена
-									+e.line.row
-										.small.col-auto от
-										.col
-											+input()
-										.small.col-auto от
-										.col
-											+input()
-										.small.col-auto ₽
-
-							+item(`Назначение`,`Многоэтажное жилищное строительство`,`Индивидуальное жилищное строительство`,`Промышленное назначение`,`Коммерческое назначение`,`Рекреационное назначение`,`Сельскохозяйственное использование`)
-							+e.footer.text-center
-								button.btn.btn-primary.w-100.mb-2 Показать участки
-								.fw-600 Сбросить фильтр
+						+filter()
 					.col-lg-9
 						+b.filter-head
 							.h5.fw-600.mb-4 Найдено земель:  
