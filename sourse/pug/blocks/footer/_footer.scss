@@ -1,11 +1,9 @@
 .footer {
-	--sPT: #{rem(60)};
 	padding-top: rem(60);
-	--sPB: #{rem(49)};
+	padding-bottom: rem(64);
 	@include media-breakpoint-up(lg) {
-		--sPT: #{rem(48)};
 		padding-top: rem(48);
-		--sPB: #{rem(58)};
+		padding-bottom: rem(41);
 	}
 	margin-top: auto;
 	.logo-link {
