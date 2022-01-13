@@ -26,15 +26,20 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy
 		.container
 			.row
-				+e.logo-col.col-auto 
+				+e.logo-col.col-lg-auto.col 
 					+logo()
-				.col
+				.col-lg.order-lg-0.order-last
 					.menu-mobile.menu-mobile--js
-						+menu-toggle()
-						+mnu()
+						.menu-mobile__inner
+							.d-lg-none.h4.mono.mb-4 Меню
+							+menu-toggle()
+							+mnu()
+							.d-lg-none
+								+contactblock()
+								+soc
 				.col-auto
 					+contactblock()
-				.col-auto
+				.col-auto.d-none.d-lg-block
 					+soc
 				.col-auto.d-lg-none
 					+menu-toggle()

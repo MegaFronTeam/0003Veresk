@@ -1,14 +1,61 @@
 // start .headerBlock
 .headerBlock {
 	margin-bottom: 1px;
+	--sPT: 42px;
+	--sPB: var(--sPT);
 	// min-height: 100vh;
 	// min-height: calc(var(--vh, 1vh) * 100);
 	// background-image: url(../img);
 	// background-color: #000000;
 	background-color: $body-color;
-
+	position: relative;
+	z-index: 2;
+	&__row{
+		align-items: center;
+	}
+	&__slider{
+		// z-index: -1;
+		@include a-cent;
+	}
+	.picture-bg{
+		opacity: 0.5;
+	}
 	.request{
-		width: 470px;
+		position: relative;
+		z-index: 2;
+		@include media-breakpoint-up(xl) {
+			width: 470px;
+		}
+		@include media-breakpoint-up(lg) {
+			width: 400px;
+		}
+	}
+	&__text-block{
+		color: #fff;
+		*{
+			position: relative;
+			z-index: 2;
+		}
+		h1{
+			margin-bottom: 0.5em;
+		}
+		p{
+			@include rfs(26px);
+			max-width: rem(640);
+			min-height: 4em;
+		}
+	}
+	.slider-controls{
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 0;
+			margin-top: em(100);
+		}
+		margin-bottom: em(50);
+		margin-top: em(50);
+	}
+	.swiper-pagination-bullet{
+		position: relative;
+		z-index: 2;
 	}
 
 	@include media-breakpoint-up(xl) {}

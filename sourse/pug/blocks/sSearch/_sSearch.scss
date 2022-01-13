@@ -3,7 +3,29 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
+		.section-title{
 
+		}
+		&__inner{
+			padding: 35px 20px;
+			// margin-left: -20px;
+			// margin-right: -20px;
+			background: #FFFFFF;
+border-radius: 10px;
+		}
+		&__btn{
+			@extend .btn, .btn-primary;
+			min-width: 249px;
+			&:not(:hover){
+				opacity: 0.5;
+			}
+			&.active{
+				opacity: 1;
+			}
+		}
+		.product-item{
+			background: #F8F8F8;
+		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -12,3 +34,75 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sSearch
+
+.filter-head{
+	margin-bottom: 26px;
+	.row{
+		align-items: center;
+	}
+	&__btn{
+		@extend .btn, .btn-light;
+		padding: rem(4) rem(10);
+		margin-bottom: 5px;
+		&:hover,
+		&.active{
+			background: $primary;
+			border-color: $primary;
+			color: #fff;
+		}
+	}
+}
+
+.filter-aside{
+	padding: 30px 20px;
+	background: #F8F8F8;
+	border-radius: 10px;
+	&__title{
+		font-weight: 600;
+		margin-bottom: 1rem;
+	}
+	&__group{
+		border-bottom: 1px solid #AFAFAF;
+		margin-bottom: 22px;
+	}
+	&__inner{
+		max-height: 209px;
+		overflow-x: hidden;
+		overflow-y: auto;
+		@extend .custom-scroll;
+		--scroll: #{$primary};
+		--bg-scroll: #C4C4C4;
+		margin-bottom: 22px;
+		padding-right: 10px;
+	}
+	.custom-input{
+		margin-bottom: 12px;
+		line-height: 1.2;
+		input{
+			margin-top: 0;
+		}
+	}
+	&__footer{
+		.fw-600 {
+			cursor: pointer;
+		}
+	}
+	&__line{
+		flex-wrap: nowrap;
+		--bs-gutter-x: 6px;
+		margin-bottom: 20px;
+		input{
+			font-size: 14px;
+			border: none;
+			border-radius: 0;
+			border-bottom: 1px solid #AFAFAF;
+			background: transparent;
+			height: auto;
+			padding: 0;
+		}
+		.small:last-child{
+			width: 40px;
+			text-align: right;
+		}
+	}
+}

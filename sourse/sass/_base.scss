@@ -118,10 +118,13 @@ body {
 
 .section-title {
 	margin-bottom: var(--sTPB);
+	h2{
+		margin-bottom: 1rem;
+	}
 }
 
 .mono {
-	font-family: $font-family-code;
+	font-family: var(--bs-font-monospace);
 }
 
 .small {
@@ -431,11 +434,11 @@ iframe {
 .custom-scroll {
 	/* ===== Scrollbar CSS ===== */
 	/* Firefox */
-	--bs-primary: #dedede;
+	--scroll: #dedede;
 
 	& {
 		scrollbar-width: auto;
-		scrollbar-color: var(--bs-primary) transparent;
+		scrollbar-color: var(--scroll) var(--bg-scroll, transparent);
 	}
 
 	/* Chrome, Edge, and Safari */
@@ -444,11 +447,11 @@ iframe {
 	}
 
 	&::-webkit-scrollbar-track {
-		background: transparent;
+		background: var(--bg-scroll, transparent);
 	}
 
 	&::-webkit-scrollbar-thumb {
-		background-color: var(--bs-primary);
+		background-color: var(--scroll);
 		border-radius: 16px;
 		border: 0px solid transparent;
 	}
@@ -471,11 +474,11 @@ iframe {
 		padding: 0;
 	}
 }
-h1 {
-	font-family: "Sitka Text";
-}
+h1,
 h2 {
-	font-family: "Sitka Text";
+	@extend .mono;
+	// font-family: "Sitka Text";
+
 }
 
 .btn {
