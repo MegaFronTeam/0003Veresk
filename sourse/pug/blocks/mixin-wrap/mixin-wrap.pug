@@ -119,3 +119,11 @@ mixin logo()
 	+b.logo-link(href="#")
 		img(src="img/svg/logo.svg" loading="lazy", alt="")
 
+
+mixin pagehead(t,p)
+	+b.page-head
+		.container
+			h1 
+			if p
+				p
+			block
