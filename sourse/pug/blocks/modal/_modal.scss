@@ -5,13 +5,19 @@
 .fancybox__content {
 	padding: 0;
 	max-width: 100%;
+	& > .carousel__button.is-close {
+		top: rem(14);
+		right: rem(14);
+		--fancybox-color: $black;
+		font-size: rem(15);
+	}
 }
 .modal-win {
 	// display: block;
 	background-color: #fff;
 	max-width: 100%;
 	position: relative;
-	width: rem(1500);
+	width: rem(694);
 	// min-height: 100%; 
 	padding: 40px;
 
@@ -101,6 +107,45 @@ a {
 	}
 }
 
+h4 {
+	margin-bottom: rem(10);
+}
+p {
+	margin-bottom: rem(16);
+}
+
+.form-wrap {
+	&__input-wrap {
+		&:not(:last-child) {
+			margin-bottom: rem(10);
+		}
+	}
+	&__form-footer {
+		display: flex;
+		align-items: center;
+		button {
+			width: 100%;
+			max-width: rem(305);
+		}
+		p {
+			max-width: rem(278);
+			margin-left: rem(25);
+			font-size: rem(12);
+			margin-bottom: 0;
+		}
+	}
+	textarea {
+		min-height: rem(102);
+	}
+}
+
+.carousel__button.is-close {
+	top: rem(14);
+	right: rem(14);
+	color: $black;
+	--fancybox-color: $black;
+	font-size: rem(15);
+}
 
 // 
 @include media-breakpoint-up(xl) {}

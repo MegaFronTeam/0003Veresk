@@ -339,122 +339,130 @@
 			<section class="sSearch section bg-light" id="sSearch">
 				<div class="container">
 					<div class="section-title text-center">
-						<h2>Воспользуйтесь поиском</h2>
+						<h1>Воспользуйтесь поиском</h1>
 						<p>Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.</p>
 					</div>
 					<div class="h3 fw-600 mb-3">Отображение подбора</div>
-					<div class="row g-3 mb-4">
+					<div class="sSearch__row-head row g-3 mb-4">
 						<div class="col-auto">
-							<a class="sSearch__btn active" href="#">Подбор по карте
+							<a class="sSearch__btn active" href="#"> <span class="d-none d-lg-inline">Подбор </span>по карте
 							</a>
 						</div>
 						<div class="col-auto">
-							<a class="sSearch__btn" href="#">Подбор по критериям
+							<a class="sSearch__btn" href="#"> <span class="d-none d-lg-inline">Подбор </span>по критериям
 							</a>
+						</div>
+						<div class="col-auto d-lg-none ms-auto">
+							<button class="btn btn-outline-primary filter-toggle-js">Фильтры</button>
 						</div>
 					</div>
 					<div class="sSearch__inner">
 						<div class="row">
 							<div class="col-lg-3">
-								<div class="h5 fw-600 mb-4">Фильтр</div>
-								<div class="filter-aside"> 
-									<div class="filter-aside__group">
-										<div class="filter-aside__title">Регион
+								<div class="filter-block filter-block--aside filter-block--js">
+									<div class="filter-block__head h5 fw-600 mb-4">Фильтр
+									</div>
+									<div class="filter-block__close filter-toggle-js">
+									</div>
+									<div class="filter-block__inner">
+										<div class="filter-block__group">
+											<div class="filter-block__title">Регион
+											</div>
+											<div class="filter-block__group-inner">
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Москва</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Московская область</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Регионы</span>
+												</label>
+											</div>
 										</div>
-										<div class="filter-aside__inner">
-											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Москва</span>
-											</label>
-											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Московская область</span>
-											</label>
-											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Регионы</span>
-											</label>
+										<div class="filter-block__group">
+											<div class="filter-block__title">Шоссе
+											</div>
+											<div class="filter-block__group-inner">
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Алтуфьевское</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Боровское</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Варшавское</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Вашутинское</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Волковское</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Волоколамское</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Варшавское</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Вашутинское</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Волковское</span>
+												</label>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Волоколамское</span>
+												</label>
+											</div>
+										</div>
+										<div class="filter-block__group">
+											<div class="filter-block__title">Удаленность
+											</div>
+											<div class="filter-block__group-inner">
+												<div class="filter-block__line row">
+													<div class="small col-auto">от</div>
+													<div class="col">
+														<div class="filter-block__input-wrap form-group"><input class="filter-block__input form-control" name="text" type="text"/>
+														</div>
+														<!-- +e.input-wrap-->
+													</div>
+													<div class="small col-auto">от</div>
+													<div class="col">
+														<div class="filter-block__input-wrap form-group"><input class="filter-block__input form-control" name="text" type="text"/>
+														</div>
+														<!-- +e.input-wrap-->
+													</div>
+													<div class="small col-auto">км</div>
+												</div>
+												<div class="filter-block__title">Площадь
+												</div>
+												<div class="filter-block__line row">
+													<div class="small col-auto">от</div>
+													<div class="col">
+														<div class="filter-block__input-wrap form-group"><input class="filter-block__input form-control" name="text" type="text"/>
+														</div>
+														<!-- +e.input-wrap-->
+													</div>
+													<div class="small col-auto">от</div>
+													<div class="col">
+														<div class="filter-block__input-wrap form-group"><input class="filter-block__input form-control" name="text" type="text"/>
+														</div>
+														<!-- +e.input-wrap-->
+													</div>
+													<div class="small col-auto">соток</div>
+												</div>
+												<div class="filter-block__title">Цена
+												</div>
+												<div class="filter-block__line row">
+													<div class="small col-auto">от</div>
+													<div class="col">
+														<div class="filter-block__input-wrap form-group"><input class="filter-block__input form-control" name="text" type="text"/>
+														</div>
+														<!-- +e.input-wrap-->
+													</div>
+													<div class="small col-auto">от</div>
+													<div class="col">
+														<div class="filter-block__input-wrap form-group"><input class="filter-block__input form-control" name="text" type="text"/>
+														</div>
+														<!-- +e.input-wrap-->
+													</div>
+													<div class="small col-auto">₽</div>
+												</div>
+											</div>
 										</div>
 									</div>
-									<div class="filter-aside__group">
-										<div class="filter-aside__title">Шоссе
+									<div class="filter-block__group">
+										<div class="filter-block__title">Назначение
 										</div>
-										<div class="filter-aside__inner">
-											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Алтуфьевское</span>
-											</label>
-											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Боровское</span>
-											</label>
-											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Варшавское</span>
-											</label>
-											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Вашутинское</span>
-											</label>
-											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Волковское</span>
-											</label>
-											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Волоколамское</span>
-											</label>
-											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Варшавское</span>
-											</label>
-											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Вашутинское</span>
-											</label>
-											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Волковское</span>
-											</label>
-											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Волоколамское</span>
-											</label>
-										</div>
-									</div>
-									<div class="filter-aside__group">
-										<div class="filter-aside__title">Удаленность
-										</div>
-										<div class="filter-aside__inner">
-											<div class="filter-aside__line row">
-												<div class="small col-auto">от</div>
-												<div class="col">
-													<div class="filter-aside__input-wrap form-group"><input class="filter-aside__input form-control" name="text" type="text"/>
-													</div>
-													<!-- +e.input-wrap-->
-												</div>
-												<div class="small col-auto">от</div>
-												<div class="col">
-													<div class="filter-aside__input-wrap form-group"><input class="filter-aside__input form-control" name="text" type="text"/>
-													</div>
-													<!-- +e.input-wrap-->
-												</div>
-												<div class="small col-auto">км</div>
-											</div>
-											<div class="filter-aside__title">Площадь
-											</div>
-											<div class="filter-aside__line row">
-												<div class="small col-auto">от</div>
-												<div class="col">
-													<div class="filter-aside__input-wrap form-group"><input class="filter-aside__input form-control" name="text" type="text"/>
-													</div>
-													<!-- +e.input-wrap-->
-												</div>
-												<div class="small col-auto">от</div>
-												<div class="col">
-													<div class="filter-aside__input-wrap form-group"><input class="filter-aside__input form-control" name="text" type="text"/>
-													</div>
-													<!-- +e.input-wrap-->
-												</div>
-												<div class="small col-auto">соток</div>
-											</div>
-											<div class="filter-aside__title">Цена
-											</div>
-											<div class="filter-aside__line row">
-												<div class="small col-auto">от</div>
-												<div class="col">
-													<div class="filter-aside__input-wrap form-group"><input class="filter-aside__input form-control" name="text" type="text"/>
-													</div>
-													<!-- +e.input-wrap-->
-												</div>
-												<div class="small col-auto">от</div>
-												<div class="col">
-													<div class="filter-aside__input-wrap form-group"><input class="filter-aside__input form-control" name="text" type="text"/>
-													</div>
-													<!-- +e.input-wrap-->
-												</div>
-												<div class="small col-auto">₽</div>
-											</div>
-										</div>
-									</div>
-									<div class="filter-aside__group">
-										<div class="filter-aside__title">Назначение
-										</div>
-										<div class="filter-aside__inner">
+										<div class="filter-block__group-inner">
 											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Многоэтажное жилищное строительство</span>
 											</label>
 											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Индивидуальное жилищное строительство</span>
@@ -469,18 +477,18 @@
 											</label>
 										</div>
 									</div>
-									<div class="filter-aside__footer text-center">
+									<div class="filter-block__footer text-center">
 										<button class="btn btn-primary w-100 mb-2">Показать участки</button>
 										<div class="fw-600">Сбросить фильтр</div>
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-8"> 
+							<div class="col-lg-9">
 								<div class="filter-head">
 									<div class="h5 fw-600 mb-4">
 										Найдено земель:   <span class="text-primary">325</span></div>
 									<div class="row g-3">
-										<div class="col-auto fw-600">Сортировать: </div>
+										<div class="col-md-auto fw-600">Сортировать: </div>
 										<div class="col">
 											<button class="filter-head__btn active" type="button"> по цене
 											</button>
@@ -492,7 +500,7 @@
 									</div>
 								</div>
 								<div class="row gy-4">
-									<div class="col-xl-4 col-6"> 
+									<div class="col-lg-4 col-6"> 
 										<div class="product-item">
 											<!-- picture-->
 											<picture> 
@@ -521,7 +529,7 @@
 											</a>
 										</div>
 									</div>
-									<div class="col-xl-4 col-6"> 
+									<div class="col-lg-4 col-6"> 
 										<div class="product-item">
 											<!-- picture-->
 											<picture> 
@@ -550,7 +558,7 @@
 											</a>
 										</div>
 									</div>
-									<div class="col-xl-4 col-6"> 
+									<div class="col-lg-4 col-6"> 
 										<div class="product-item">
 											<!-- picture-->
 											<picture> 
@@ -579,7 +587,7 @@
 											</a>
 										</div>
 									</div>
-									<div class="col-xl-4 col-6"> 
+									<div class="col-lg-4 col-6"> 
 										<div class="product-item">
 											<!-- picture-->
 											<picture> 
@@ -608,7 +616,7 @@
 											</a>
 										</div>
 									</div>
-									<div class="col-xl-4 col-6"> 
+									<div class="col-lg-4 col-6"> 
 										<div class="product-item">
 											<!-- picture-->
 											<picture> 
@@ -637,7 +645,7 @@
 											</a>
 										</div>
 									</div>
-									<div class="col-xl-4 col-6"> 
+									<div class="col-lg-4 col-6"> 
 										<div class="product-item">
 											<!-- picture-->
 											<picture> 
@@ -666,7 +674,7 @@
 											</a>
 										</div>
 									</div>
-									<div class="col-xl-4 col-6"> 
+									<div class="col-lg-4 col-6"> 
 										<div class="product-item">
 											<!-- picture-->
 											<picture> 
@@ -695,7 +703,7 @@
 											</a>
 										</div>
 									</div>
-									<div class="col-xl-4 col-6"> 
+									<div class="col-lg-4 col-6"> 
 										<div class="product-item">
 											<!-- picture-->
 											<picture> 
@@ -724,7 +732,7 @@
 											</a>
 										</div>
 									</div>
-									<div class="col-xl-4 col-6"> 
+									<div class="col-lg-4 col-6"> 
 										<div class="product-item">
 											<!-- picture-->
 											<picture> 
@@ -1079,7 +1087,7 @@
 									</div>
 									<a class="sContactMain__tel" href="tel:+79876543210">+7 987 654 32 10
 									</a>
-									<a class="sContactMain__btn" href="#">Обратный звонок
+									<a class="sContactMain__btn link-modal-js" href="#feedback">Обратный звонок
 									</a>
 								</li>
 								<li>
@@ -1136,19 +1144,29 @@
 						<div class="footer__col-menu col-12 col-lg-5">
 							<a class="logo-link" href="#"><img src="img/svg/logo.svg" loading="lazy" alt=""/>
 							</a>
-							<ul>
-								<li><a href="#">Услуги</a>
-									<svg class="icon icon-dd-button ">
-										<use xlink:href="img/svg/sprite.svg#dd-button"></use>
-									</svg>
+							<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+								<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">Услуги</a>
+									<ul class="sub-menu">
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Подбор земельных участков</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Юридическое сопровождение, Due Diligence</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Разработка градостроительной документации</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Оценка градостроительного потенциала и инвестиционной стоимости</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Аналитические исследования земельного рынка и девелоперских проектов</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Аэрофотосъемка объектов</a></li>
+									</ul>
 								</li>
-								<li><a href="#">Земельные участки</a>
-									<svg class="icon icon-dd-button ">
-										<use xlink:href="img/svg/sprite.svg#dd-button"></use>
-									</svg>
+								<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">Земельные участки</a>
+									<ul class="sub-menu">
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Многоэтажное жилищное строительство</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Индивидуальное жилищное строительство </a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Промышленное назначение </a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Коммерческое назначение</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Рекреационное назначение </a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Сельскохозяйственное использование</a></li>
+									</ul>
 								</li>
-								<li><a href="#">О компании</a></li>
-								<li><a href="#">Контакты</a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О компании</a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
 							</ul>
 						</div>
 						<div class="col-6 col-lg-4">
@@ -1206,6 +1224,59 @@
 		</div>
 		<!-- #modal-call-->
 		<!-- end modals-->
+		<!--  start modals-->
+		<div id="feedback" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__title form-data h4">Обратный звонок
+						</div>
+						<p class="after-headline">Перезвоним вам в течение 15 минут в рабочее время</p>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Номер телефона" required="required"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__form-footer">
+							<button class="form-wrap__btn btn btn-primary" type="submit">Отправить заявку
+							</button>
+							<p>Отправляя заявку, вы даете свое согласие на обработку <a href="#">персональных данных</a></p>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #feedback-->
+		<div id="request" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__title form-data h4">Заявка на подбор или продажу земельного участка
+						</div>
+						<p class="after-headline">Перезвоним вам в течение 15 минут в рабочее время</p>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Номер телефона" required="required"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="email" type="email" placeholder="Email" required="required"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Опишите ваши задачи"></textarea>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__form-footer">
+							<button class="form-wrap__btn btn btn-primary" type="submit">Отправить заявку
+							</button>
+							<p>Отправляя заявку, вы даете свое согласие на обработку <a href="#">персональных данных</a></p>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #request-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>

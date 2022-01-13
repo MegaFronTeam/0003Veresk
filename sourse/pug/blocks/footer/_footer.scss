@@ -122,6 +122,24 @@
 			}
 		}
 	}
+	.menu {
+		text-align: left;
+		li {
+			--bs-gutter-x: 0;
+			a {
+				padding-left: 0;
+			}
+			.sub-menu {
+				margin-left: 10px;
+				@include media-breakpoint-up(lg) {
+					padding: 7px;
+					max-width: rem(281);
+					top: -180%;
+					left: rem(186);
+				}
+			}
+		}
+	}
 // 
 @include media-breakpoint-up(xl) {}
 

@@ -563,7 +563,7 @@
 									</div>
 									<a class="sContactMain__tel" href="tel:+79876543210">+7 987 654 32 10
 									</a>
-									<a class="sContactMain__btn" href="#">Обратный звонок
+									<a class="sContactMain__btn link-modal-js" href="#feedback">Обратный звонок
 									</a>
 								</li>
 								<li>
@@ -620,19 +620,29 @@
 						<div class="footer__col-menu col-12 col-lg-5">
 							<a class="logo-link" href="#"><img src="img/svg/logo.svg" loading="lazy" alt=""/>
 							</a>
-							<ul>
-								<li><a href="#">Услуги</a>
-									<svg class="icon icon-dd-button ">
-										<use xlink:href="img/svg/sprite.svg#dd-button"></use>
-									</svg>
+							<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+								<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">Услуги</a>
+									<ul class="sub-menu">
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Подбор земельных участков</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Юридическое сопровождение, Due Diligence</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Разработка градостроительной документации</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Оценка градостроительного потенциала и инвестиционной стоимости</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Аналитические исследования земельного рынка и девелоперских проектов</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Аэрофотосъемка объектов</a></li>
+									</ul>
 								</li>
-								<li><a href="#">Земельные участки</a>
-									<svg class="icon icon-dd-button ">
-										<use xlink:href="img/svg/sprite.svg#dd-button"></use>
-									</svg>
+								<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">Земельные участки</a>
+									<ul class="sub-menu">
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Многоэтажное жилищное строительство</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Индивидуальное жилищное строительство </a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Промышленное назначение </a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Коммерческое назначение</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Рекреационное назначение </a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Сельскохозяйственное использование</a></li>
+									</ul>
 								</li>
-								<li><a href="#">О компании</a></li>
-								<li><a href="#">Контакты</a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О компании</a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
 							</ul>
 						</div>
 						<div class="col-6 col-lg-4">
@@ -690,6 +700,59 @@
 		</div>
 		<!-- #modal-call-->
 		<!-- end modals-->
+		<!--  start modals-->
+		<div id="feedback" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__title form-data h4">Обратный звонок
+						</div>
+						<p class="after-headline">Перезвоним вам в течение 15 минут в рабочее время</p>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Номер телефона" required="required"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__form-footer">
+							<button class="form-wrap__btn btn btn-primary" type="submit">Отправить заявку
+							</button>
+							<p>Отправляя заявку, вы даете свое согласие на обработку <a href="#">персональных данных</a></p>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #feedback-->
+		<div id="request" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__title form-data h4">Заявка на подбор или продажу земельного участка
+						</div>
+						<p class="after-headline">Перезвоним вам в течение 15 минут в рабочее время</p>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Номер телефона" required="required"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="email" type="email" placeholder="Email" required="required"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Опишите ваши задачи"></textarea>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__form-footer">
+							<button class="form-wrap__btn btn btn-primary" type="submit">Отправить заявку
+							</button>
+							<p>Отправляя заявку, вы даете свое согласие на обработку <a href="#">персональных данных</a></p>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #request-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>

@@ -97,3 +97,30 @@
 }
 
 // end.headerBlock
+
+.all-services {
+	.headerBlock {
+		--sPT: #{rem(117)};
+		--sPB: #{rem(74)};
+		@include media-breakpoint-up(lg) {
+			--sPT: #{rem(164)};
+			--sPB: #{rem(221)};
+		}
+	}
+}
+
+.single-service {
+	.headerBlock {
+		--sPT: #{rem(117)};
+		--sPB: #{rem(109)};
+		@include media-breakpoint-up(lg) {
+			--sPT: #{rem(140)};
+			--sPB: #{rem(145)};
+		}
+		button {
+			@extend .btn, .btn-primary;
+			width: 100%;
+			max-width: rem(487);
+		}
+	}
+}
