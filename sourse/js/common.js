@@ -355,14 +355,15 @@ function eventHandler() {
 		},
 	});
 	const sServicesSlider = new Swiper('.sServices__slider--js', {
-		slidesPerView: 4,
+		slidesPerView: 2,
 		grid: {
 			rows: 2,
+			fill:	'row',
 		},
 		// loop: true,
 		// slideToClickedSlide: true,
 		// watchOverflow: true,
-		spaceBetween: 30,
+		spaceBetween: 23,
 		// lazy: {
 		// 	loadPrevNext: true,
 		// },
@@ -378,6 +379,16 @@ function eventHandler() {
 			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
 			// }
 		},
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+			},
+			// when window width is >= 640px
+			992: {
+				slidesPerView: 4,
+				spaceBetween: 30
+			}
+		}
 	});
 	const breadSlider = new Swiper('.bread-slider-js', {
 		slidesPerView: 'auto',
