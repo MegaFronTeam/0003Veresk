@@ -5,7 +5,24 @@
 		<title>Все услуги</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
+		<meta name="viewport" content="width=428,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no">
+		<script>
+			let viewport = document.querySelector("meta[name=viewport]");
+			var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+			if (is_safari) {
+				//- alert(navigator.userAgent);
+				function w() {
+					this.outerWidth > 428 
+						? viewport.content = "width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" 
+						:  viewport.content = "width=428,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no" 
+					//- alert(this.outerWidth + ', '+  viewport.content);
+				}
+				 w();
+				window.addEventListener('resize', () => { 
+				 w();
+				}, { passive: true });
+			}
+		</script>
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="libs/swiper/swiper.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
@@ -124,7 +141,7 @@
 				<!-- end top-nav-->
 			</header>
 			<!-- end header-->
-			<div class="breadcrumb-wrap">
+			<div class="breadcrumb-wrap light">
 				<div class="container">
 					<nav class="bread-slider-js swiper" aria-label="breadcrumb">
 						<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
@@ -492,212 +509,247 @@
 						<h2>Оценка градостроительного потенциала и инвестиционной стоимости</h2>
 						<p>Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis</p>
 					</div>
-					<div class="sServices__slider sServices__slider--js swiper">
-						<div class="swiper-wrapper">
-								<div class="sServices__slide swiper-slide">
-									<a class="sServices__item" href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="sServices-gallery">
-										<div class="sServices__img-wrap">
-											<!-- picture-->
-											<picture> 
-												<source type="image/avif" srcset="img/@2x/avif/sServices-slider-1.avif"/>
-												<source type="image/webp" srcset="img/@2x/webp/sServices-slider-1.webp"/><img class="object-fit-js" src="img/@2x/sServices-slider-1.jpg" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
-										</div>
-									</a>
-								</div>
-								<div class="sServices__slide swiper-slide">
-									<a class="sServices__item" href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="sServices-gallery">
-										<div class="sServices__img-wrap">
-											<!-- picture-->
-											<picture> 
-												<source type="image/avif" srcset="img/@2x/avif/sServices-slider-1.avif"/>
-												<source type="image/webp" srcset="img/@2x/webp/sServices-slider-1.webp"/><img class="object-fit-js" src="img/@2x/sServices-slider-1.jpg" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
-										</div>
-									</a>
-								</div>
-								<div class="sServices__slide swiper-slide">
-									<a class="sServices__item" href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="sServices-gallery">
-										<div class="sServices__img-wrap">
-											<!-- picture-->
-											<picture> 
-												<source type="image/avif" srcset="img/@2x/avif/sServices-slider-1.avif"/>
-												<source type="image/webp" srcset="img/@2x/webp/sServices-slider-1.webp"/><img class="object-fit-js" src="img/@2x/sServices-slider-1.jpg" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
-										</div>
-									</a>
-								</div>
-								<div class="sServices__slide swiper-slide">
-									<a class="sServices__item" href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="sServices-gallery">
-										<div class="sServices__img-wrap">
-											<!-- picture-->
-											<picture> 
-												<source type="image/avif" srcset="img/@2x/avif/sServices-slider-1.avif"/>
-												<source type="image/webp" srcset="img/@2x/webp/sServices-slider-1.webp"/><img class="object-fit-js" src="img/@2x/sServices-slider-1.jpg" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
-										</div>
-									</a>
-								</div>
-								<div class="sServices__slide swiper-slide">
-									<a class="sServices__item" href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="sServices-gallery">
-										<div class="sServices__img-wrap">
-											<!-- picture-->
-											<picture> 
-												<source type="image/avif" srcset="img/@2x/avif/sServices-slider-1.avif"/>
-												<source type="image/webp" srcset="img/@2x/webp/sServices-slider-1.webp"/><img class="object-fit-js" src="img/@2x/sServices-slider-1.jpg" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
-										</div>
-									</a>
-								</div>
-								<div class="sServices__slide swiper-slide">
-									<a class="sServices__item" href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="sServices-gallery">
-										<div class="sServices__img-wrap">
-											<!-- picture-->
-											<picture> 
-												<source type="image/avif" srcset="img/@2x/avif/sServices-slider-1.avif"/>
-												<source type="image/webp" srcset="img/@2x/webp/sServices-slider-1.webp"/><img class="object-fit-js" src="img/@2x/sServices-slider-1.jpg" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
-										</div>
-									</a>
-								</div>
-								<div class="sServices__slide swiper-slide">
-									<a class="sServices__item" href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="sServices-gallery">
-										<div class="sServices__img-wrap">
-											<!-- picture-->
-											<picture> 
-												<source type="image/avif" srcset="img/@2x/avif/sServices-slider-1.avif"/>
-												<source type="image/webp" srcset="img/@2x/webp/sServices-slider-1.webp"/><img class="object-fit-js" src="img/@2x/sServices-slider-1.jpg" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
-										</div>
-									</a>
-								</div>
-								<div class="sServices__slide swiper-slide">
-									<a class="sServices__item" href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="sServices-gallery">
-										<div class="sServices__img-wrap">
-											<!-- picture-->
-											<picture> 
-												<source type="image/avif" srcset="img/@2x/avif/sServices-slider-1.avif"/>
-												<source type="image/webp" srcset="img/@2x/webp/sServices-slider-1.webp"/><img class="object-fit-js" src="img/@2x/sServices-slider-1.jpg" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
-										</div>
-									</a>
-								</div>
-								<div class="sServices__slide swiper-slide">
-									<a class="sServices__item" href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="sServices-gallery">
-										<div class="sServices__img-wrap">
-											<!-- picture-->
-											<picture> 
-												<source type="image/avif" srcset="img/@2x/avif/sServices-slider-1.avif"/>
-												<source type="image/webp" srcset="img/@2x/webp/sServices-slider-1.webp"/><img class="object-fit-js" src="img/@2x/sServices-slider-1.jpg" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
-										</div>
-									</a>
-								</div>
-								<div class="sServices__slide swiper-slide">
-									<a class="sServices__item" href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="sServices-gallery">
-										<div class="sServices__img-wrap">
-											<!-- picture-->
-											<picture> 
-												<source type="image/avif" srcset="img/@2x/avif/sServices-slider-1.avif"/>
-												<source type="image/webp" srcset="img/@2x/webp/sServices-slider-1.webp"/><img class="object-fit-js" src="img/@2x/sServices-slider-1.jpg" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
-										</div>
-									</a>
-								</div>
-								<div class="sServices__slide swiper-slide">
-									<a class="sServices__item" href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="sServices-gallery">
-										<div class="sServices__img-wrap">
-											<!-- picture-->
-											<picture> 
-												<source type="image/avif" srcset="img/@2x/avif/sServices-slider-1.avif"/>
-												<source type="image/webp" srcset="img/@2x/webp/sServices-slider-1.webp"/><img class="object-fit-js" src="img/@2x/sServices-slider-1.jpg" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
-										</div>
-									</a>
-								</div>
-								<div class="sServices__slide swiper-slide">
-									<a class="sServices__item" href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="sServices-gallery">
-										<div class="sServices__img-wrap">
-											<!-- picture-->
-											<picture> 
-												<source type="image/avif" srcset="img/@2x/avif/sServices-slider-1.avif"/>
-												<source type="image/webp" srcset="img/@2x/webp/sServices-slider-1.webp"/><img class="object-fit-js" src="img/@2x/sServices-slider-1.jpg" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
-										</div>
-									</a>
-								</div>
-								<div class="sServices__slide swiper-slide">
-									<a class="sServices__item" href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="sServices-gallery">
-										<div class="sServices__img-wrap">
-											<!-- picture-->
-											<picture> 
-												<source type="image/avif" srcset="img/@2x/avif/sServices-slider-1.avif"/>
-												<source type="image/webp" srcset="img/@2x/webp/sServices-slider-1.webp"/><img class="object-fit-js" src="img/@2x/sServices-slider-1.jpg" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
-										</div>
-									</a>
-								</div>
-								<div class="sServices__slide swiper-slide">
-									<a class="sServices__item" href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="sServices-gallery">
-										<div class="sServices__img-wrap">
-											<!-- picture-->
-											<picture> 
-												<source type="image/avif" srcset="img/@2x/avif/sServices-slider-1.avif"/>
-												<source type="image/webp" srcset="img/@2x/webp/sServices-slider-1.webp"/><img class="object-fit-js" src="img/@2x/sServices-slider-1.jpg" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
-										</div>
-									</a>
-								</div>
-								<div class="sServices__slide swiper-slide">
-									<a class="sServices__item" href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="sServices-gallery">
-										<div class="sServices__img-wrap">
-											<!-- picture-->
-											<picture> 
-												<source type="image/avif" srcset="img/@2x/avif/sServices-slider-1.avif"/>
-												<source type="image/webp" srcset="img/@2x/webp/sServices-slider-1.webp"/><img class="object-fit-js" src="img/@2x/sServices-slider-1.jpg" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
-										</div>
-									</a>
-								</div>
-								<div class="sServices__slide swiper-slide">
-									<a class="sServices__item" href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="sServices-gallery">
-										<div class="sServices__img-wrap">
-											<!-- picture-->
-											<picture> 
-												<source type="image/avif" srcset="img/@2x/avif/sServices-slider-1.avif"/>
-												<source type="image/webp" srcset="img/@2x/webp/sServices-slider-1.webp"/><img class="object-fit-js" src="img/@2x/sServices-slider-1.jpg" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
-										</div>
-									</a>
-								</div>
-						</div>
-						<div class="slider-controls">
-							<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
-								<svg class="icon icon-arrow-left ">
-									<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
-								</svg>
+					<div class="sServices__content sServices__content--slider">
+						<h3>Виртуальные туры</h3>
+						<div class="sServices__slider sServices__slider--js swiper">
+							<div class="swiper-wrapper">
+									<div class="sServices__slide swiper-slide">
+										<a class="sServices__slider-item" href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="sServices-gallery">
+											<div class="sServices__img-wrap bg-wrap">
+												<!-- picture-->
+												<picture class="picture-bg"> 
+													<source type="image/avif" srcset="img/@2x/avif/sServices-slider-1.avif"/>
+													<source type="image/webp" srcset="img/@2x/webp/sServices-slider-1.webp"/><img class="object-fit-js" src="img/@2x/sServices-slider-1.jpg" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture-->
+												<svg class="icon icon-play ">
+													<use xlink:href="img/svg/sprite.svg#play"></use>
+												</svg>
+											</div>
+											<p>Pellentesque mollis nibh non nibh laoreet vulputate.</p>
+										</a>
+									</div>
+									<div class="sServices__slide swiper-slide">
+										<a class="sServices__slider-item" href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="sServices-gallery">
+											<div class="sServices__img-wrap bg-wrap">
+												<!-- picture-->
+												<picture class="picture-bg"> 
+													<source type="image/avif" srcset="img/@2x/avif/sServices-slider-1.avif"/>
+													<source type="image/webp" srcset="img/@2x/webp/sServices-slider-1.webp"/><img class="object-fit-js" src="img/@2x/sServices-slider-1.jpg" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture-->
+												<svg class="icon icon-play ">
+													<use xlink:href="img/svg/sprite.svg#play"></use>
+												</svg>
+											</div>
+											<p>Pellentesque mollis nibh non nibh laoreet vulputate.</p>
+										</a>
+									</div>
+									<div class="sServices__slide swiper-slide">
+										<a class="sServices__slider-item" href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="sServices-gallery">
+											<div class="sServices__img-wrap bg-wrap">
+												<!-- picture-->
+												<picture class="picture-bg"> 
+													<source type="image/avif" srcset="img/@2x/avif/sServices-slider-1.avif"/>
+													<source type="image/webp" srcset="img/@2x/webp/sServices-slider-1.webp"/><img class="object-fit-js" src="img/@2x/sServices-slider-1.jpg" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture-->
+												<svg class="icon icon-play ">
+													<use xlink:href="img/svg/sprite.svg#play"></use>
+												</svg>
+											</div>
+											<p>Pellentesque mollis nibh non nibh laoreet vulputate. Pellentesque mollis nibh non nibh laoreet vulputate.</p>
+										</a>
+									</div>
+									<div class="sServices__slide swiper-slide">
+										<a class="sServices__slider-item" href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="sServices-gallery">
+											<div class="sServices__img-wrap bg-wrap">
+												<!-- picture-->
+												<picture class="picture-bg"> 
+													<source type="image/avif" srcset="img/@2x/avif/sServices-slider-1.avif"/>
+													<source type="image/webp" srcset="img/@2x/webp/sServices-slider-1.webp"/><img class="object-fit-js" src="img/@2x/sServices-slider-1.jpg" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture-->
+												<svg class="icon icon-play ">
+													<use xlink:href="img/svg/sprite.svg#play"></use>
+												</svg>
+											</div>
+											<p>Pellentesque mollis nibh non nibh laoreet vulputate.</p>
+										</a>
+									</div>
+									<div class="sServices__slide swiper-slide">
+										<a class="sServices__slider-item" href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="sServices-gallery">
+											<div class="sServices__img-wrap bg-wrap">
+												<!-- picture-->
+												<picture class="picture-bg"> 
+													<source type="image/avif" srcset="img/@2x/avif/sServices-slider-1.avif"/>
+													<source type="image/webp" srcset="img/@2x/webp/sServices-slider-1.webp"/><img class="object-fit-js" src="img/@2x/sServices-slider-1.jpg" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture-->
+												<svg class="icon icon-play ">
+													<use xlink:href="img/svg/sprite.svg#play"></use>
+												</svg>
+											</div>
+											<p>Pellentesque mollis nibh non nibh laoreet vulputate. Pellentesque mollis nibh non nibh laoreet vulputate.</p>
+										</a>
+									</div>
+									<div class="sServices__slide swiper-slide">
+										<a class="sServices__slider-item" href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="sServices-gallery">
+											<div class="sServices__img-wrap bg-wrap">
+												<!-- picture-->
+												<picture class="picture-bg"> 
+													<source type="image/avif" srcset="img/@2x/avif/sServices-slider-1.avif"/>
+													<source type="image/webp" srcset="img/@2x/webp/sServices-slider-1.webp"/><img class="object-fit-js" src="img/@2x/sServices-slider-1.jpg" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture-->
+												<svg class="icon icon-play ">
+													<use xlink:href="img/svg/sprite.svg#play"></use>
+												</svg>
+											</div>
+											<p>Pellentesque mollis nibh non nibh laoreet vulputate.</p>
+										</a>
+									</div>
+									<div class="sServices__slide swiper-slide">
+										<a class="sServices__slider-item" href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="sServices-gallery">
+											<div class="sServices__img-wrap bg-wrap">
+												<!-- picture-->
+												<picture class="picture-bg"> 
+													<source type="image/avif" srcset="img/@2x/avif/sServices-slider-1.avif"/>
+													<source type="image/webp" srcset="img/@2x/webp/sServices-slider-1.webp"/><img class="object-fit-js" src="img/@2x/sServices-slider-1.jpg" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture-->
+												<svg class="icon icon-play ">
+													<use xlink:href="img/svg/sprite.svg#play"></use>
+												</svg>
+											</div>
+											<p>Pellentesque mollis nibh non nibh laoreet vulputate.</p>
+										</a>
+									</div>
+									<div class="sServices__slide swiper-slide">
+										<a class="sServices__slider-item" href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="sServices-gallery">
+											<div class="sServices__img-wrap bg-wrap">
+												<!-- picture-->
+												<picture class="picture-bg"> 
+													<source type="image/avif" srcset="img/@2x/avif/sServices-slider-1.avif"/>
+													<source type="image/webp" srcset="img/@2x/webp/sServices-slider-1.webp"/><img class="object-fit-js" src="img/@2x/sServices-slider-1.jpg" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture-->
+												<svg class="icon icon-play ">
+													<use xlink:href="img/svg/sprite.svg#play"></use>
+												</svg>
+											</div>
+											<p>Pellentesque mollis nibh non nibh laoreet vulputate.</p>
+										</a>
+									</div>
+									<div class="sServices__slide swiper-slide">
+										<a class="sServices__slider-item" href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="sServices-gallery">
+											<div class="sServices__img-wrap bg-wrap">
+												<!-- picture-->
+												<picture class="picture-bg"> 
+													<source type="image/avif" srcset="img/@2x/avif/sServices-slider-1.avif"/>
+													<source type="image/webp" srcset="img/@2x/webp/sServices-slider-1.webp"/><img class="object-fit-js" src="img/@2x/sServices-slider-1.jpg" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture-->
+												<svg class="icon icon-play ">
+													<use xlink:href="img/svg/sprite.svg#play"></use>
+												</svg>
+											</div>
+											<p>Pellentesque mollis nibh non nibh laoreet vulputate.</p>
+										</a>
+									</div>
+									<div class="sServices__slide swiper-slide">
+										<a class="sServices__slider-item" href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="sServices-gallery">
+											<div class="sServices__img-wrap bg-wrap">
+												<!-- picture-->
+												<picture class="picture-bg"> 
+													<source type="image/avif" srcset="img/@2x/avif/sServices-slider-1.avif"/>
+													<source type="image/webp" srcset="img/@2x/webp/sServices-slider-1.webp"/><img class="object-fit-js" src="img/@2x/sServices-slider-1.jpg" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture-->
+												<svg class="icon icon-play ">
+													<use xlink:href="img/svg/sprite.svg#play"></use>
+												</svg>
+											</div>
+											<p>Pellentesque mollis nibh non nibh laoreet vulputate.</p>
+										</a>
+									</div>
+									<div class="sServices__slide swiper-slide">
+										<a class="sServices__slider-item" href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="sServices-gallery">
+											<div class="sServices__img-wrap bg-wrap">
+												<!-- picture-->
+												<picture class="picture-bg"> 
+													<source type="image/avif" srcset="img/@2x/avif/sServices-slider-1.avif"/>
+													<source type="image/webp" srcset="img/@2x/webp/sServices-slider-1.webp"/><img class="object-fit-js" src="img/@2x/sServices-slider-1.jpg" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture-->
+												<svg class="icon icon-play ">
+													<use xlink:href="img/svg/sprite.svg#play"></use>
+												</svg>
+											</div>
+											<p>Pellentesque mollis nibh non nibh laoreet vulputate.</p>
+										</a>
+									</div>
+									<div class="sServices__slide swiper-slide">
+										<a class="sServices__slider-item" href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="sServices-gallery">
+											<div class="sServices__img-wrap bg-wrap">
+												<!-- picture-->
+												<picture class="picture-bg"> 
+													<source type="image/avif" srcset="img/@2x/avif/sServices-slider-1.avif"/>
+													<source type="image/webp" srcset="img/@2x/webp/sServices-slider-1.webp"/><img class="object-fit-js" src="img/@2x/sServices-slider-1.jpg" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture-->
+												<svg class="icon icon-play ">
+													<use xlink:href="img/svg/sprite.svg#play"></use>
+												</svg>
+											</div>
+											<p>Pellentesque mollis nibh non nibh laoreet vulputate.</p>
+										</a>
+									</div>
+									<div class="sServices__slide swiper-slide">
+										<a class="sServices__slider-item" href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="sServices-gallery">
+											<div class="sServices__img-wrap bg-wrap">
+												<!-- picture-->
+												<picture class="picture-bg"> 
+													<source type="image/avif" srcset="img/@2x/avif/sServices-slider-1.avif"/>
+													<source type="image/webp" srcset="img/@2x/webp/sServices-slider-1.webp"/><img class="object-fit-js" src="img/@2x/sServices-slider-1.jpg" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture-->
+												<svg class="icon icon-play ">
+													<use xlink:href="img/svg/sprite.svg#play"></use>
+												</svg>
+											</div>
+											<p>Pellentesque mollis nibh non nibh laoreet vulputate.</p>
+										</a>
+									</div>
+									<div class="sServices__slide swiper-slide">
+										<a class="sServices__slider-item" href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="sServices-gallery">
+											<div class="sServices__img-wrap bg-wrap">
+												<!-- picture-->
+												<picture class="picture-bg"> 
+													<source type="image/avif" srcset="img/@2x/avif/sServices-slider-1.avif"/>
+													<source type="image/webp" srcset="img/@2x/webp/sServices-slider-1.webp"/><img class="object-fit-js" src="img/@2x/sServices-slider-1.jpg" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture-->
+												<svg class="icon icon-play ">
+													<use xlink:href="img/svg/sprite.svg#play"></use>
+												</svg>
+											</div>
+											<p>Pellentesque mollis nibh non nibh laoreet vulputate.</p>
+										</a>
+									</div>
 							</div>
-							<div class="swiper-pagination"></div>
-							<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
-								<svg class="icon icon-arrow-right ">
-									<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
-								</svg>
+							<div class="slider-controls">
+								<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+									<svg class="icon icon-arrow-left ">
+										<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+									</svg>
+								</div>
+								<div class="swiper-pagination"></div>
+								<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+									<svg class="icon icon-arrow-right ">
+										<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+									</svg>
+								</div>
 							</div>
 						</div>
 					</div>

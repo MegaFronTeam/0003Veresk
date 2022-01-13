@@ -174,7 +174,7 @@
 	margin-right: auto;
 	@include media-breakpoint-up(md) {
 		margin-left: 0;
-	width: rem(344);
+		width: rem(344);
 	}
 	.swiper-button-hand {
 		position: relative;
@@ -358,6 +358,27 @@
 	position: absolute;
 	width: 100%;
 	pointer-events: none;
+	z-index: 3;
+	&.light {
+		.breadcrumb {
+			.breadcrumb-item {
+				a {
+					color: $white;
+					&:hover {
+						color: #e3e3e3;
+					}
+				}
+				& + .breadcrumb-item:before {
+					color: $white;
+				}
+				&.active {
+					a {
+						color: #e3e3e3;
+					}
+				}
+			}
+		}
+	}
 }
 .breadcrumb {
 	display: inline-flex;

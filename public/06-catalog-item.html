@@ -5,7 +5,24 @@
 		<title>Отдельный земельный участок</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
+		<meta name="viewport" content="width=428,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no">
+		<script>
+			let viewport = document.querySelector("meta[name=viewport]");
+			var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+			if (is_safari) {
+				//- alert(navigator.userAgent);
+				function w() {
+					this.outerWidth > 428 
+						? viewport.content = "width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" 
+						:  viewport.content = "width=428,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no" 
+					//- alert(this.outerWidth + ', '+  viewport.content);
+				}
+				 w();
+				window.addEventListener('resize', () => { 
+				 w();
+				}, { passive: true });
+			}
+		</script>
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="libs/swiper/swiper.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
@@ -124,109 +141,22 @@
 				<!-- end top-nav-->
 			</header>
 			<!-- end header-->
-			<!-- start headerBlock-->
-			<div class="headerBlock section bg-wrap" id="headerBlock">
-				<div class="headerBlock__slider headerBlock__slider--js swiper">
-					<div class="swiper-wrapper">
-						<div class="headerBlock__slide swiper-slide bg-wrap">
-							<!-- picture-->
-							<picture class="picture-bg"> 
-								<source type="image/avif" srcset="img/@2x/avif/slide.avif"/>
-								<source type="image/webp" srcset="img/@2x/webp/slide.webp"/><img class="object-fit-js" src="img/@2x/slide.jpg" alt="" loading="lazy"/>
-							</picture>
-							<!-- /picture-->
-						</div>
-						<div class="headerBlock__slide swiper-slide bg-wrap">
-							<!-- picture-->
-							<picture class="picture-bg"> 
-								<source type="image/avif" srcset="img/@2x/avif/slide.avif"/>
-								<source type="image/webp" srcset="img/@2x/webp/slide.webp"/><img class="object-fit-js" src="img/@2x/slide.jpg" alt="" loading="lazy"/>
-							</picture>
-							<!-- /picture-->
-						</div>
-						<div class="headerBlock__slide swiper-slide bg-wrap">
-							<!-- picture-->
-							<picture class="picture-bg"> 
-								<source type="image/avif" srcset="img/@2x/avif/slide.avif"/>
-								<source type="image/webp" srcset="img/@2x/webp/slide.webp"/><img class="object-fit-js" src="img/@2x/slide.jpg" alt="" loading="lazy"/>
-							</picture>
-							<!-- /picture-->
-						</div>
-					</div>
-				</div>
+			<div class="breadcrumb-wrap">
 				<div class="container">
-					<div class="headerBlock__row row">
-						<div class="col">
-							<div class="headerBlock__text-block">
-								<h1>Продажа земельных участков в Москве</h1>
-								<p>Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis. </p>
-							</div>
-							<div class="slider-controls">
-								<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
-									<svg class="icon icon-arrow-left ">
-										<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
-									</svg>
-								</div>
-								<div class="swiper-pagination"></div>
-								<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
-									<svg class="icon icon-arrow-right ">
-										<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
-									</svg>
-								</div>
-							</div>
-						</div>
-						<div class="col-auto">
-							<div class="request">
-								<div class="form-wrap">
-									<form>
-										<h4>Подбор или продажа земельного участка</h4>
-										<div class="form-wrap__subtitle">Перезвоним вам в&nbsp;течение 15&nbsp;минут <br> в&nbsp;рабочее время
-										</div>
-										<div class="form-wrap__row row">
-											<div class="col-6">
-												<label>
-													<input class="btn-check" type="radio" name="name1" autocomplete="off"/>
-													<div class="btn btn-sm w-100 btn-outline-primary">Подбор</div>
-												</label>
-											</div>
-											<div class="col-6">
-												<label>
-													<input class="btn-check" type="radio" name="name1" autocomplete="off"/>
-													<div class="btn btn-sm w-100 btn-outline-primary">Продажа</div>
-												</label>
-											</div>
-											<div class="col-12">
-												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя"/>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-											<div class="col-12">
-												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Номер телефона"/>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-											<div class="col-12">
-												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="email" type="email" placeholder="Email"/>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-											<div class="col-12">
-												<button class="form-wrap__btn">Отправить заявку
-												</button>
-											</div>
-											<div class="col-12">
-												<div class="form-wrap__agreement">Отправляя заявку, вы&nbsp;даете свое согласие на&nbsp;обработку <a href="#">персональных данных</a>
-												</div>
-											</div>
-										</div>
-									</form>
-								</div>
-							</div>
-						</div>
-					</div>
+					<nav class="bread-slider-js swiper" aria-label="breadcrumb">
+						<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+									<meta itemprop="position" content="1"/></a></li>
+							<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Земельные участки</span>
+									<meta itemprop="position" content="2"/></a></li>
+							<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Индивидуальное жилищное строительство</span>
+									<meta itemprop="position" content="3"/></a></li>
+							<li class="breadcrumb-item swiper-slide active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Название земельного участка</span>
+									<meta itemprop="position" content="4"/></a></li>
+						</ol>
+					</nav>
 				</div>
 			</div>
-			<!-- end headerBlock-->
 			<!-- start sCatalogItem-->
 			<section class="sCatalogItem section" id="sCatalogItem">
 				<div class="container">

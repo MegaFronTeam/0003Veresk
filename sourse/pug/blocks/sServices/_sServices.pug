@@ -41,17 +41,32 @@ mixin cards3()
 						p Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum.
 
 mixin double-slider()
-	+e.slider--js.swiper&attributes(attributes)
-		.swiper-wrapper
-			mixin slider-item() 
-				+e.slide.swiper-slide
-					+e.item(href="https://www.youtube.com/watch?v=z2X2HaTvkl8", data-fancybox=`sServices-gallery`)
-						+e.img-wrap
-							+pic(`sServices-slider-1.jpg`, "bg", 0)
-							//- +icon("youtube-play")
-			- for (var x = 0; x < 16; x++)
-				+slider-item()
-		+slider-controls
+	+e.content--slider&attributes(attributes)
+		h3 Виртуальные туры
+		+e.slider--js.swiper
+			.swiper-wrapper
+				mixin slider-item(p) 
+					+e.slide.swiper-slide
+						+e.slider-item(href="https://www.youtube.com/watch?v=z2X2HaTvkl8", data-fancybox=`sServices-gallery`)
+							+e.img-wrap.bg-wrap
+								+pic(`sServices-slider-1.jpg`, "bg", 0).picture-bg
+								+icon("play")
+							p!= p
+				+slider-item(`Pellentesque mollis nibh non nibh laoreet vulputate.`)
+				+slider-item(`Pellentesque mollis nibh non nibh laoreet vulputate.`)
+				+slider-item(`Pellentesque mollis nibh non nibh laoreet vulputate. Pellentesque mollis nibh non nibh laoreet vulputate.`)
+				+slider-item(`Pellentesque mollis nibh non nibh laoreet vulputate.`)
+				+slider-item(`Pellentesque mollis nibh non nibh laoreet vulputate. Pellentesque mollis nibh non nibh laoreet vulputate.`)
+				+slider-item(`Pellentesque mollis nibh non nibh laoreet vulputate.`)
+				+slider-item(`Pellentesque mollis nibh non nibh laoreet vulputate.`)
+				+slider-item(`Pellentesque mollis nibh non nibh laoreet vulputate.`)
+				+slider-item(`Pellentesque mollis nibh non nibh laoreet vulputate.`)
+				+slider-item(`Pellentesque mollis nibh non nibh laoreet vulputate.`)
+				+slider-item(`Pellentesque mollis nibh non nibh laoreet vulputate.`)
+				+slider-item(`Pellentesque mollis nibh non nibh laoreet vulputate.`)
+				+slider-item(`Pellentesque mollis nibh non nibh laoreet vulputate.`)
+				+slider-item(`Pellentesque mollis nibh non nibh laoreet vulputate.`)
+			+slider-controls
 
 mixin docs()
 	+e.content--docs&attributes(attributes)
