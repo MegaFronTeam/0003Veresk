@@ -15,3 +15,31 @@ mixin modal()
 	// #modal-call
 	
 	// end modals
+
+	//  start modals
+	//- a(href="modal-call").link-modal-js modal-call 
+	div(id="feedback"  style="display: none" )
+		+b.modal-win
+			+form-wrap
+				+e.title.form-data.h4 Обратный звонок
+				p.after-headline Перезвоним вам в течение 15 минут в рабочее время
+				+input("Ваше Имя")(required)  
+				+input("Номер телефона", 'tel')(required)
+				+e.form-footer
+					+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Отправить заявку
+					p Отправляя заявку, вы даете свое согласие на обработку #[a(href="#") персональных данных]
+	// #feedback
+
+	div(id="request"  style="display: none" )
+		+b.modal-win
+			+form-wrap
+				+e.title.form-data.h4 Заявка на подбор или продажу земельного участка
+				p.after-headline Перезвоним вам в течение 15 минут в рабочее время
+				+input("Ваше Имя")(required)  
+				+input("Номер телефона", 'tel')(required)
+				+input("Email", 'email')(required)
+				+input("Опишите ваши задачи", 'textarea')(required)
+				+e.form-footer
+					+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Отправить заявку
+					p Отправляя заявку, вы даете свое согласие на обработку #[a(href="#") персональных данных]
+	// #request

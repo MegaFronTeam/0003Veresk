@@ -32,3 +32,30 @@ mixin headerBlock2()
 					+request()
 
 	// end headerBlock
+
+mixin headerBlock3()
+	// start headerBlock
+	+b.headerBlock.section.bg-wrap#headerBlock&attributes(attributes)
+		+pic("slide.jpg",'bg',0).picture-bg
+		.container
+			+e.row.row
+				.col
+					+e.text-block
+						h1 О компании  Veresk&nbsp;Group
+						p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis. 
+					//- +slider-controls
+		
+	// end headerBlock
+
+mixin headerBlock4()
+	// start headerBlock
+	+b.headerBlock.section.bg-wrap#headerBlock&attributes(attributes)
+		+pic("slide.jpg",'bg',0).picture-bg
+		.container
+			+e.row.row
+				.col
+					+e.text-block
+						h1 О компании  Veresk&nbsp;Group
+						p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis. 
+						button(type="button") Отправить заявку на подбор или продажу участка
+	//- +slider-controls
