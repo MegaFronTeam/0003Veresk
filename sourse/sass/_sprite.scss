@@ -31,6 +31,10 @@
 	font-size:math.div(70,10)*1rem;
 	width: math.div(54,70)*1em;
 }
+.icon-document-small {
+	font-size:math.div(28,10)*1rem;
+	width: math.div(28,28)*1em;
+}
 .icon-facebook {
 	font-size:math.div(14,10)*1rem;
 	width: math.div(7,14)*1em;
@@ -43,9 +47,17 @@
 	font-size:math.div(24,10)*1rem;
 	width: math.div(24,24)*1em;
 }
+.icon-picture {
+	font-size:math.div(30,10)*1rem;
+	width: math.div(30,30)*1em;
+}
 .icon-play {
 	font-size:math.div(42,10)*1rem;
 	width: math.div(36,42)*1em;
+}
+.icon-play-small {
+	font-size:math.div(24,10)*1rem;
+	width: math.div(21,24)*1em;
 }
 .icon-telegram {
 	font-size:math.div(13,10)*1rem;

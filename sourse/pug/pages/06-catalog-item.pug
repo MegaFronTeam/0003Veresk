@@ -30,6 +30,51 @@ block pagecontent
 	+sContactMain()
 	+footer()
 
+block map
+	script.
+		function init() {
+				var center = [55.755819, 37.617644];
+				var myMap1 = new ymaps.Map('map', {
+						center: center,
+						zoom: 17,
+						controls: ['zoomControl']
+				});
+				var myPlacemark1 = new ymaps.Placemark(center, {
+						// Свойства.
+						// Содержимое иконки, балуна и хинта.
+						hintContent: 'Veresk Group',
+						balloonContent: 'Москва, улица Первая, дом 20, офис 303'
+				});
+				myMap1.geoObjects.add(myPlacemark1);
+				myMap1.behaviors.disable('scrollZoom');
+				//на мобильных устройствах... (проверяем по userAgent браузера)
+				if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+					// ... отключаем перетаскивание карты
+					myMap1.behaviors.disable('drag');
+				}
+
+
+
+				var myMap2 = new ymaps.Map('map2', {
+						center: center,
+						zoom: 17,
+						controls: ['zoomControl']
+				});
+				var myPlacemark2 = new ymaps.Placemark(center, {
+						// Свойства.
+						// Содержимое иконки, балуна и хинта.
+						hintContent: 'Veresk Group',
+						balloonContent: 'Москва, улица Первая, дом 20, офис 303'
+				});
+				myMap2.geoObjects.add(myPlacemark2);
+				myMap2.behaviors.disable('scrollZoom');
+				//на мобильных устройствах... (проверяем по userAgent браузера)
+				if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+					// ... отключаем перетаскивание карты
+					myMap2.behaviors.disable('drag');
+				}
+		}
+
 
 
 
