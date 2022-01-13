@@ -17,9 +17,9 @@
 						:  viewport.content = "width=428,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no" 
 					//- alert(this.outerWidth + ', '+  viewport.content);
 				}
-				 w();
+					w();
 				window.addEventListener('resize', () => { 
-				 w();
+					w();
 				}, { passive: true });
 			}
 		</script>
@@ -309,5 +309,31 @@
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="js/common.js"></script>
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
+		<script>
+			function init() {
+				var center = [55.755819, 37.617644];
+				var myMap1 = new ymaps.Map('map', {
+					center: center,
+					zoom: 17,
+					controls: ['zoomControl']
+				});
+				var myPlacemark1 = new ymaps.Placemark(center, {
+					// Свойства.
+					// Содержимое иконки, балуна и хинта.
+					hintContent: 'Veresk Group',
+					balloonContent: 'Москва, улица Первая, дом 20, офис 303'
+				});
+				myMap1.geoObjects.add(myPlacemark1);
+				myMap1.behaviors.disable('scrollZoom');
+				//на мобильных устройствах... (проверяем по userAgent браузера)
+				if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+					// ... отключаем перетаскивание карты
+					myMap1.behaviors.disable('drag');
+				}
+			}
+			
+		</script>
+		<script>ymaps.ready(init);</script>
 	</body>
 </html>

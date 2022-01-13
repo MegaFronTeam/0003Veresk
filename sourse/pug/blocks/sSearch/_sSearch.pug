@@ -105,7 +105,23 @@ mixin sSearch2(data)
 				.col-auto.d-lg-none.ms-auto
 					button.btn.btn-outline-primary.filter-toggle-js Фильтры
 			+b.filter-map
-				
+				+e.map
+						+e.map-widget#map3(style="	height: 654px; width: 100%;")
+				+e.block
+					+in-c("checkbox",'Все')(checked class="map-dot-input" data-color="all")
+					+in-c("checkbox",'Зеленые')(checked class="map-dot-input" data-color="#00ff00" style="--color-map:#00ff00")
+					+in-c("checkbox",'Красные')(checked class="map-dot-input" data-color="#ff1000" style="--color-map:#ff1000")
+					+in-c("checkbox",'Желтые')(checked class="map-dot-input" data-color="#ffcc00" style="--color-map:#ffcc00")
+					//- | Фильтр по цветам 
+					//- br
+					//- input#red(type='checkbox' checked='true')
+					//- | Красные
+					//- br
+					//- input#green(type='checkbox' checked='true')
+					//- | Зеленые
+					//- br
+					//- input#yellow(type='checkbox' checked='true')
+					//- | Желтые
 			+b.filter-head
 				+e.inner
 					.row.g-3

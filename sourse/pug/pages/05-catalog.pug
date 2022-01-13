@@ -31,5 +31,111 @@ block pagecontent
 	+footer()
 
 
+block map
+	script.
+		function init() {
+				var center = [55.755819, 37.617644];
+				var myMap1 = new ymaps.Map('map', {
+						center: center,
+						zoom: 17,
+						controls: ['zoomControl']
+				});
+				var myPlacemark1 = new ymaps.Placemark(center, {
+						// Свойства.
+						// Содержимое иконки, балуна и хинта.
+						hintContent: 'Veresk Group',
+						balloonContent: 'Москва, улица Первая, дом 20, офис 303'
+				});
+				myMap1.geoObjects.add(myPlacemark1);
+				myMap1.behaviors.disable('scrollZoom');
+				//на мобильных устройствах... (проверяем по userAgent браузера)
+				if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+					// ... отключаем перетаскивание карты
+					myMap1.behaviors.disable('drag');
+				}
 
 
+
+			var myMap = new ymaps.Map('map3', {
+					center: [55.30954, 37.721587],
+					zoom: 8
+			}, {
+					searchControlProvider: 'yandex#search'
+			});
+	
+				// Функция, которая по состоянию чекбоксов в меню
+				// показывает или скрывает геообъекты из выборки.
+				function checkState () {
+						
+				}
+				
+				$('.map-dot-input').click(function(){
+					var shownObjects,
+								byColor = new ymaps.GeoQueryResult();
+								byShape = new ymaps.GeoQueryResult(); 
+
+						if ($('[data-color="#ff1000"]').prop('checked')) { 
+								byColor = myObjects.search(`options.iconColor = "#ff1000"`);
+							}
+							
+						if ($('[data-color="#00ff00"]').prop('checked')) { 
+								byColor = myObjects.search(`options.iconColor = "#00ff00"`)
+								.add(byColor);
+							}
+						if ($('[data-color="#ffcc00"]').prop('checked')) { 
+								byColor = myObjects.search(`options.iconColor = "#ffcc00"`)
+								.add(byColor);
+							}
+
+
+						// Мы отобрали объекты по цвету и по форме. Покажем на карте объекты,
+						// которые совмещают нужные признаки.
+						shownObjects = byColor.addToMap(myMap);
+						// Объекты, которые не попали в выборку, нужно убрать с карты.
+						myObjects.remove(shownObjects).removeFromMap(myMap); 
+				});
+				//- $('#red').click(checkState);
+				//- $('#green').click(checkState);
+				//- $('#yellow').click(checkState);
+				
+				// Создадим объекты из их JSON-описания и добавим их на карту.
+				window.myObjects = ymaps.geoQuery({
+						type: "FeatureCollection",
+						features: [
+								{
+										type: 'Feature',
+										geometry: {
+												type: 'Point',
+												coordinates: [55.34954, 37.721587]
+										},
+										options: { 
+												preset:  'islands#circleDotIcon',
+												iconColor: '#00ff00'
+										}
+								},
+								{
+										type: 'Feature',
+										geometry: {
+												type: 'Point',
+												coordinates: [55.24954, 37.4]
+										},
+										options: {
+												preset:  'islands#circleDotIcon',
+												iconColor: '#ff1000'
+										}
+								},
+
+								{
+										type: 'Feature',
+										geometry: {
+												type: 'Point',
+												coordinates: [55.14954, 37.61587], 
+										},
+										options: {
+												preset:  'islands#circleDotIcon',
+												iconColor: '#ffcc00'
+										}
+								}
+						]
+				}).addToMap(myMap);
+		}

@@ -17,9 +17,9 @@
 						:  viewport.content = "width=428,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no" 
 					//- alert(this.outerWidth + ', '+  viewport.content);
 				}
-				 w();
+					w();
 				window.addEventListener('resize', () => { 
-				 w();
+					w();
 				}, { passive: true });
 			}
 		</script>
@@ -176,6 +176,20 @@
 						</div>
 					</div>
 					<div class="filter-map">
+						<div class="filter-map__map">
+							<div class="filter-map__map-widget" id="map3" style="	height: 654px; width: 100%;">
+							</div>
+						</div>
+						<div class="filter-map__block">
+							<label class="custom-input form-check"><input class="custom-input__input form-check-input map-dot-input" name="checkbox" type="checkbox" checked="checked" data-color="all"/><span class="custom-input__text form-check-label">Все</span>
+							</label>
+							<label class="custom-input form-check"><input class="custom-input__input form-check-input map-dot-input" name="checkbox" type="checkbox" checked="checked" data-color="#00ff00" style="--color-map:#00ff00;"/><span class="custom-input__text form-check-label">Зеленые</span>
+							</label>
+							<label class="custom-input form-check"><input class="custom-input__input form-check-input map-dot-input" name="checkbox" type="checkbox" checked="checked" data-color="#ff1000" style="--color-map:#ff1000;"/><span class="custom-input__text form-check-label">Красные</span>
+							</label>
+							<label class="custom-input form-check"><input class="custom-input__input form-check-input map-dot-input" name="checkbox" type="checkbox" checked="checked" data-color="#ffcc00" style="--color-map:#ffcc00;"/><span class="custom-input__text form-check-label">Желтые</span>
+							</label>
+						</div>
 					</div>
 					<div class="filter-head">
 						<div class="filter-head__inner">
@@ -843,7 +857,7 @@
 									</div>
 									<a class="sContactMain__tel" href="tel:+79876543210">+7 987 654 32 10
 									</a>
-									<a class="sContactMain__btn" href="#">Обратный звонок
+									<a class="sContactMain__btn link-modal-js" href="#feedback">Обратный звонок
 									</a>
 								</li>
 								<li>
@@ -886,7 +900,6 @@
 						</div>
 						<div class="sContactMain__col col-lg-auto">
 							<div class="sContactMain__map">
-								<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c" type="text/javascript"></script>
 								<div class="sContactMain__map-widget" id="map">
 								</div>
 							</div>
@@ -1039,5 +1052,115 @@
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="js/common.js"></script>
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
+		<script>
+			function init() {
+					var center = [55.755819, 37.617644];
+					var myMap1 = new ymaps.Map('map', {
+							center: center,
+							zoom: 17,
+							controls: ['zoomControl']
+					});
+					var myPlacemark1 = new ymaps.Placemark(center, {
+							// Свойства.
+							// Содержимое иконки, балуна и хинта.
+							hintContent: 'Veresk Group',
+							balloonContent: 'Москва, улица Первая, дом 20, офис 303'
+					});
+					myMap1.geoObjects.add(myPlacemark1);
+					myMap1.behaviors.disable('scrollZoom');
+					//на мобильных устройствах... (проверяем по userAgent браузера)
+					if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+						// ... отключаем перетаскивание карты
+						myMap1.behaviors.disable('drag');
+					}
+			
+			
+			
+				var myMap = new ymaps.Map('map3', {
+						center: [55.30954, 37.721587],
+						zoom: 8
+				}, {
+						searchControlProvider: 'yandex#search'
+				});
+			
+					// Функция, которая по состоянию чекбоксов в меню
+					// показывает или скрывает геообъекты из выборки.
+					function checkState () {
+							
+					}
+					
+					$('.map-dot-input').click(function(){
+						var shownObjects,
+									byColor = new ymaps.GeoQueryResult();
+									byShape = new ymaps.GeoQueryResult(); 
+			
+							if ($('[data-color="#ff1000"]').prop('checked')) { 
+									byColor = myObjects.search(`options.iconColor = "#ff1000"`);
+								}
+								
+							if ($('[data-color="#00ff00"]').prop('checked')) { 
+									byColor = myObjects.search(`options.iconColor = "#00ff00"`)
+									.add(byColor);
+								}
+							if ($('[data-color="#ffcc00"]').prop('checked')) { 
+									byColor = myObjects.search(`options.iconColor = "#ffcc00"`)
+									.add(byColor);
+								}
+			
+			
+							// Мы отобрали объекты по цвету и по форме. Покажем на карте объекты,
+							// которые совмещают нужные признаки.
+							shownObjects = byColor.addToMap(myMap);
+							// Объекты, которые не попали в выборку, нужно убрать с карты.
+							myObjects.remove(shownObjects).removeFromMap(myMap); 
+					});
+					//- $('#red').click(checkState);
+					//- $('#green').click(checkState);
+					//- $('#yellow').click(checkState);
+					
+					// Создадим объекты из их JSON-описания и добавим их на карту.
+					window.myObjects = ymaps.geoQuery({
+							type: "FeatureCollection",
+							features: [
+									{
+											type: 'Feature',
+											geometry: {
+													type: 'Point',
+													coordinates: [55.34954, 37.721587]
+											},
+											options: { 
+													preset:  'islands#circleDotIcon',
+													iconColor: '#00ff00'
+											}
+									},
+									{
+											type: 'Feature',
+											geometry: {
+													type: 'Point',
+													coordinates: [55.24954, 37.4]
+											},
+											options: {
+													preset:  'islands#circleDotIcon',
+													iconColor: '#ff1000'
+											}
+									},
+			
+									{
+											type: 'Feature',
+											geometry: {
+													type: 'Point',
+													coordinates: [55.14954, 37.61587], 
+											},
+											options: {
+													preset:  'islands#circleDotIcon',
+													iconColor: '#ffcc00'
+											}
+									}
+							]
+					}).addToMap(myMap);
+			}
+		</script>
+		<script>ymaps.ready(init);</script>
 	</body>
 </html>

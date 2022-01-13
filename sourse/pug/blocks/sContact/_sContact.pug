@@ -10,7 +10,7 @@ mixin sContact()
 						li
 							+e.subtitle Телефон
 							+e.tel(href="tel:+79876543210") +7 987 654 32 10
-							+e.btn(href="#") Обратный звонок
+							+e.btn.link-modal-js(href="#feedback") Обратный звонок
 						li
 							+e.subtitle Режим работы
 							p Без выходных с 10:00 до 20:00
@@ -31,6 +31,6 @@ mixin sContact()
 					+request()
 				.col-12
 					+e.map
-						script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c' type='text/javascript')
 						+e.map-widget#map
+						
 	// end sContact
