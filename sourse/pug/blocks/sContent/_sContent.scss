@@ -1,7 +1,30 @@
 
 	// start .sContent
 	.sContent {
-		 
+	--sPT: #{rem(96)};
+	--sPB: #{rem(86)};
+	background-color: $light;
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(112)};
+		--sPB: #{rem(100)};
+	}
+	h2 {
+		margin-bottom: rem(32);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(30);
+		}
+	}
+	p {
+		&:not(:last-of-type) {
+			margin-bottom: rem(40);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(35);
+			}
+		}
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

@@ -10,7 +10,7 @@ include ../blocks/sForm/_sForm.pug
 include ../blocks/sServices/_sServices.pug
 
 block variables
-	- let  mainPage= null 
+	- let  mainPage= 'all-services'
 	- let  bg= null
 
 block title
@@ -20,7 +20,8 @@ block pagecontent
 	//- +mob-mnu()
 	+header()
 		+top-nav()
-	//- +headerBlock()
+	+breadcrumb("Главная", "Услуги")
+	+headerBlock3()
 	+sServices(`Отправить заявку`, `Подбор земельных участков`, `Pellentesque mollis nibh non nibh laoreet vulputate.`, `Mauris id metus dignissim, efficitur nulla quis, fermentum.`)
 		+cards()
 	+sServices(`Отправить заявку`, `Юридическое сопровождение, <br> Due Diligence`, `Pellentesque mollis nibh non nibh laoreet vulputate.`, `Mauris id metus dignissim, efficitur nulla quis, fermentum.`).bg-light

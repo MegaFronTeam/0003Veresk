@@ -124,13 +124,27 @@
 				<!-- end top-nav-->
 			</header>
 			<!-- end header-->
+			<div class="breadcrumb-wrap">
+				<div class="container">
+					<nav class="bread-slider-js swiper" aria-label="breadcrumb">
+						<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+							<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+									<meta itemprop="position" content="1"/></a></li>
+							<li class="breadcrumb-item swiper-slide active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Cоглашение об обработке персональных данных</span>
+									<meta itemprop="position" content="2"/></a></li>
+						</ol>
+					</nav>
+				</div>
+			</div>
 			<!-- start sContent-->
 			<section class="sContent section" id="sContent">
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>sContent</h2>
-					</div>
-					<div class="row"></div>
+					<h2>Cоглашение об обработке персональных данных</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis tortor sed mollis imperdiet. Nullam molestie neque at&nbsp;orci congue fringilla. Donec nunc turpis, placerat nec diam&nbsp;ac, feugiat dictum&nbsp;ex. Nam vel blandit lorem, eget iaculis enim. Vestibulum a&nbsp;maximus tellus. Fusce quis porta nulla. Phasellus tempor nisi eget lorem mollis pellentesque.</p>
+					<p>Cras imperdiet euismod justo ac&nbsp;venenatis. Phasellus tincidunt feugiat neque quis porta. Nulla pulvinar pellentesque est, et&nbsp;dapibus arcu faucibus vel. Quisque et&nbsp;pretium quam. Curabitur aliquet vitae lacus eu&nbsp;luctus. Integer lobortis justo eu&nbsp;orci vehicula posuere eget ac&nbsp;quam. Mauris viverra sit amet diam ac&nbsp;posuere. Nunc pretium elementum rutrum. Aliquam vel dolor fermentum urna convallis rutrum. Integer posuere mauris at&nbsp;felis fringilla imperdiet. Phasellus cursus turpis sed vehicula semper. Pellentesque et&nbsp;sodales nisl, id&nbsp;tempus nisl. Curabitur massa nisi, dapibus ac&nbsp;risus sit amet, consequat dignissim erat. Nam tempor, ligula eu&nbsp;pharetra placerat, velit risus vehicula lectus, aliquet viverra nunc leo id&nbsp;nibh. Suspendisse tempor ligula ac&nbsp;nunc congue imperdiet.</p>
+					<p>Sed ac&nbsp;odio efficitur nulla facilisis malesuada. Phasellus cursus tempus nunc vel vestibulum. Donec fringilla nulla a&nbsp;erat feugiat tempor. Nulla venenatis ligula ac&nbsp;imperdiet vestibulum. Vestibulum at&nbsp;nisl consectetur, molestie sem nec, euismod massa. Phasellus fringilla nisl sed orci tincidunt, non volutpat enim accumsan. Aliquam et&nbsp;enim et&nbsp;nulla pretium vulputate id&nbsp;a&nbsp;arcu. Quisque sed sollicitudin augue. Nulla sit amet cursus ante. Duis sed elementum urna. Ut&nbsp;consequat vitae eros in&nbsp;porta. Nulla viverra dapibus ex&nbsp;quis interdum. Duis pellentesque elit dui, vel lobortis felis feugiat sit amet. Proin a&nbsp;aliquet metus, eget facilisis eros. Praesent et&nbsp;orci felis.</p>
+					<p>Aliquam erat volutpat. Cras eleifend felis maximus nibh facilisis aliquet. Aliquam pretium leo neque, in&nbsp;efficitur lectus convallis&nbsp;eu. Aliquam dui ipsum, consequat et&nbsp;nunc&nbsp;id, maximus vehicula nulla. Aliquam sit amet dui a&nbsp;massa condimentum accumsan sit amet in&nbsp;arcu. Vestibulum fermentum vitae velit scelerisque posuere. Maecenas aliquam ligula lectus, et&nbsp;dignissim enim commodo sed.</p>
+					<p>Suspendisse lobortis diam id&nbsp;pellentesque pulvinar. Donec nec justo id&nbsp;metus pretium aliquam in&nbsp;id&nbsp;neque. Vivamus ac&nbsp;auctor tellus, eget gravida velit. Phasellus sapien dolor, sollicitudin porta rhoncus&nbsp;a, posuere blandit nisi. Donec consequat nunc ut&nbsp;dui dapibus interdum. Nam ut&nbsp;urna vitae purus sodales pellentesque. Donec sed ex&nbsp;ac&nbsp;neque ultricies sagittis a&nbsp;id&nbsp;ipsum. Nam pretium a&nbsp;orci ut&nbsp;cursus. Donec massa nisi, sagittis sed lectus sit amet, rutrum lobortis felis. Sed sem&nbsp;ex, consectetur a&nbsp;vehicula&nbsp;in, eleifend non nisi. Maecenas quis sapien cursus, vulputate lectus&nbsp;at, volutpat neque. Suspendisse bibendum sagittis dolor, eu&nbsp;dignissim ante eleifend&nbsp;at. Quisque ornare egestas odio, sed varius tellus imperdiet quis. Nullam quis sagittis orci.</p>
 				</div>
 			</section>
 			<!-- end sContent-->
@@ -140,19 +154,29 @@
 						<div class="footer__col-menu col-12 col-lg-5">
 							<a class="logo-link" href="#"><img src="img/svg/logo.svg" loading="lazy" alt=""/>
 							</a>
-							<ul>
-								<li><a href="#">Услуги</a>
-									<svg class="icon icon-dd-button ">
-										<use xlink:href="img/svg/sprite.svg#dd-button"></use>
-									</svg>
+							<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+								<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">Услуги</a>
+									<ul class="sub-menu">
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Подбор земельных участков</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Юридическое сопровождение, Due Diligence</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Разработка градостроительной документации</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Оценка градостроительного потенциала и инвестиционной стоимости</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Аналитические исследования земельного рынка и девелоперских проектов</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Аэрофотосъемка объектов</a></li>
+									</ul>
 								</li>
-								<li><a href="#">Земельные участки</a>
-									<svg class="icon icon-dd-button ">
-										<use xlink:href="img/svg/sprite.svg#dd-button"></use>
-									</svg>
+								<li class="menu-item menu-item-has-children"><a href="#" itemprop="url">Земельные участки</a>
+									<ul class="sub-menu">
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Многоэтажное жилищное строительство</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Индивидуальное жилищное строительство </a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Промышленное назначение </a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Коммерческое назначение</a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Рекреационное назначение </a></li>
+										<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Сельскохозяйственное использование</a></li>
+									</ul>
 								</li>
-								<li><a href="#">О компании</a></li>
-								<li><a href="#">Контакты</a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О компании</a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
 							</ul>
 						</div>
 						<div class="col-6 col-lg-4">
@@ -210,6 +234,59 @@
 		</div>
 		<!-- #modal-call-->
 		<!-- end modals-->
+		<!--  start modals-->
+		<div id="feedback" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__title form-data h4">Обратный звонок
+						</div>
+						<p class="after-headline">Перезвоним вам в течение 15 минут в рабочее время</p>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Номер телефона" required="required"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__form-footer">
+							<button class="form-wrap__btn btn btn-primary" type="submit">Отправить заявку
+							</button>
+							<p>Отправляя заявку, вы даете свое согласие на обработку <a href="#">персональных данных</a></p>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #feedback-->
+		<div id="request" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__title form-data h4">Заявка на подбор или продажу земельного участка
+						</div>
+						<p class="after-headline">Перезвоним вам в течение 15 минут в рабочее время</p>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Номер телефона" required="required"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="email" type="email" placeholder="Email" required="required"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Опишите ваши задачи"></textarea>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__form-footer">
+							<button class="form-wrap__btn btn btn-primary" type="submit">Отправить заявку
+							</button>
+							<p>Отправляя заявку, вы даете свое согласие на обработку <a href="#">персональных данных</a></p>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #request-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>

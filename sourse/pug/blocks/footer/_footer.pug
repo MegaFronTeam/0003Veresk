@@ -4,17 +4,7 @@ mixin footer()
 			.row
 				+e.col-menu.col-12.col-lg-5
 					+logo()
-					ul
-						li
-							a(href='#') Услуги
-							+icon('dd-button')
-						li
-							a(href='#') Земельные участки
-							+icon('dd-button')
-						li
-							a(href='#') О компании
-						li
-							a(href='#') Контакты
+					+mnu()
 				.col-6.col-lg-4
 					h6 Услуги
 					+e.UL.list
