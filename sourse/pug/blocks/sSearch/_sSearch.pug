@@ -51,7 +51,46 @@ mixin sSearch(data)
 	+b.SECTION.sSearch.section#sSearch&attributes(attributes).bg-light
 		.container
 			+b.section-title.text-center
-				h2 Воспользуйтесь поиском
+				h1 Воспользуйтесь поиском
+				p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.
+			.h3.fw-600.mb-3 Отображение подбора
+			+e.row-head.row.g-3.mb-4
+				.col-auto
+					+e.btn(href="#").active 
+						span.d-none.d-lg-inline Подбор 
+						| по карте
+				.col-auto
+					+e.btn(href="#") 
+						span.d-none.d-lg-inline Подбор 
+						| по критериям
+				.col-auto.d-lg-none.ms-auto
+					button.btn.btn-outline-primary.filter-toggle-js Фильтры
+			+e.inner
+				.row
+					.col-lg-3
+						+filter()
+					.col-lg-9
+						+b.filter-head
+							.h5.fw-600.mb-4 Найдено земель:  
+								| 
+								span.text-primary 325
+							.row.g-3
+								.col-md-auto.fw-600 Сортировать: 
+								.col
+									+e.btn(type='button').active  по цене
+									+e.btn(type='button') по площади
+									+e.btn(type='button') по дате добавления
+						.row.gy-4
+							- for (var x = 0; x < 9; x++)
+								.col-lg-4.col-6 
+									+product-item(`Pellentesque mollis nibh non nibh laoreet`)
+						+e.btn.w-100.mt-5(href="#") Показать еще
+mixin sSearch2(data)
+	// start sSearch
+	+b.SECTION.sSearch.section#sSearch&attributes(attributes).bg-light
+		.container
+			+b.section-title.text-center
+				h1 Воспользуйтесь поиском
 				p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.
 			.h3.fw-600.mb-3 Отображение подбора
 			+e.row-head.row.g-3.mb-4
