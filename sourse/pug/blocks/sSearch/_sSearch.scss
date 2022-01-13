@@ -4,6 +4,10 @@
 		// --sPB: ;
 		// --sTPB: ;
 		.section-title{
+			&__text{
+				@include rfs(26px);
+				max-width: 690px;
+			}
 
 		}
 		&__inner{
@@ -12,6 +16,9 @@
 			// margin-right: -20px;
 			background: #FFFFFF;
 border-radius: 10px;
+.product-item{
+			background: #F8F8F8;
+		}
 		}
 		.btn{
 			@include media-breakpoint-down(sm) {
@@ -33,9 +40,7 @@ border-radius: 10px;
 				opacity: 1;
 			}
 		}
-		.product-item{
-			background: #F8F8F8;
-		}
+		
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -47,6 +52,12 @@ border-radius: 10px;
 
 .filter-head{
 	margin-bottom: 26px;
+	&__inner{
+		background-color: #fff;
+		padding: rem(20);
+		border-radius: 10px;
+
+	}
 	.row{
 		align-items: center;
 	}

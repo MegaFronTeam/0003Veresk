@@ -1,7 +1,7 @@
 mixin filter()
 	+b.filter-block--aside.--js
 		+e.head.h5.fw-600.mb-4 Фильтр
-		+e.close.filter-toggle-js
+		+e.close.filter-toggle-js.d-lg-none
 		+e.inner
 			mixin item(t, ...items)
 				+e.group&attributes(attributes)
@@ -51,10 +51,10 @@ mixin sSearch(data)
 	+b.SECTION.sSearch.section#sSearch&attributes(attributes).bg-light
 		.container
 			+b.section-title.text-center
-				h1 Воспользуйтесь поиском
+				h2 Воспользуйтесь поиском
 				p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.
 			.h3.fw-600.mb-3 Отображение подбора
-			+e.row-head.row.g-3.mb-4
+			+e.row-head.row.g-3.mb-5
 				.col-auto
 					+e.btn(href="#").active 
 						span.d-none.d-lg-inline Подбор 
@@ -89,38 +89,38 @@ mixin sSearch2(data)
 	// start sSearch
 	+b.SECTION.sSearch.section#sSearch&attributes(attributes).bg-light
 		.container
-			+b.section-title.text-center
-				h1 Воспользуйтесь поиском
-				p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.
+			+b.section-title
+				h2 Воспользуйтесь поиском
+				+e.text Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.
 			.h3.fw-600.mb-3 Отображение подбора
 			+e.row-head.row.g-3.mb-4
 				.col-auto
-					+e.btn(href="#").active 
+					+e.btn(href="#")
 						span.d-none.d-lg-inline Подбор 
 						| по карте
 				.col-auto
-					+e.btn(href="#") 
+					+e.btn(href="#").active  
 						span.d-none.d-lg-inline Подбор 
 						| по критериям
 				.col-auto.d-lg-none.ms-auto
 					button.btn.btn-outline-primary.filter-toggle-js Фильтры
+			+b.filter-map
+				
+			+b.filter-head
+				+e.inner
+					.row.g-3
+						.col-md-auto.fw-600 Сортировать: 
+						.col
+							+e.btn(type='button').active  по цене
+							+e.btn(type='button') по площади
+							+e.btn(type='button') по дате добавления
+			.row.gy-4
+				- for (var x = 0; x < 12; x++)
+					.col-xl-3.col-lg-4.col-6 
+						+product-item(`Pellentesque mollis nibh non nibh laoreet`)
+			+pugin
+		//- +filter()
 			+e.inner
 				.row
 					.col-lg-3
-						+filter()
 					.col-lg-9
-						+b.filter-head
-							.h5.fw-600.mb-4 Найдено земель:  
-								| 
-								span.text-primary 325
-							.row.g-3
-								.col-md-auto.fw-600 Сортировать: 
-								.col
-									+e.btn(type='button').active  по цене
-									+e.btn(type='button') по площади
-									+e.btn(type='button') по дате добавления
-						.row.gy-4
-							- for (var x = 0; x < 9; x++)
-								.col-lg-4.col-6 
-									+product-item(`Pellentesque mollis nibh non nibh laoreet`)
-						+e.btn.w-100.mt-5(href="#") Показать еще

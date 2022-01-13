@@ -9,7 +9,7 @@ include ../blocks/sContactMain/_sContactMain.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sServices/_sServices.pug
 include ../blocks/sBestDeals/_sBestDeals.pug
-include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sSearch/_sSearch.pug
 
 block variables
 	- let  mainPage= null 
@@ -22,9 +22,9 @@ block pagecontent
 	//- +mob-mnu()
 	+header()
 		+top-nav()
-	+headerBlock()
-	+breadcrumb("Главная", "Земельные участки", "Индивидуальное жилищное строительство", "Название земельного участка")
-	+sCatalog()
+	//- +headerBlock()
+	+breadcrumb("Главная", "Земельные участки")
+	+sSearch2()
 	+sBestDeals()
 	+sForm()
 	+sContactMain()
