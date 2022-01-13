@@ -406,7 +406,10 @@ function eventHandler() {
 			prevEl: '.headerBlock .swiper-button-prev',
 		},
 	});
-
+	$(document).on("click", ".filter-toggle-js", function(){
+		$(".filter-block--js").toggleClass("active")
+		$("body").toggleClass("fixed")
+	})
 
 };
 if (document.readyState !== 'loading') {
