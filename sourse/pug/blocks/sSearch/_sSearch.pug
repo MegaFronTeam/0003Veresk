@@ -1,5 +1,5 @@
 mixin filter()
-	+b.filter-block--aside.--js
+	+b.filter-block&attributes(attributes)
 		+e.head.h5.fw-600.mb-4 Фильтр
 		+e.close.filter-toggle-js.d-lg-none
 		+e.inner
@@ -46,6 +46,61 @@ mixin filter()
 		+e.footer.text-center
 			button.btn.btn-primary.w-100.mb-2 Показать участки
 			.fw-600 Сбросить фильтр
+			
+mixin filter2()
+	+b.filter-block&attributes(attributes)
+		+e.head.h5.fw-600.mb-4 Фильтр
+		+e.close.filter-toggle-js
+		.row
+			mixin item(t, ...items)
+				+e.group&attributes(attributes)
+
+					+e.title= t
+					+e.group-inner
+						each item in items
+							+in-c("checkbox", item)
+						block
+			.col-lg-4
+				+item(`Регион`,`Москва`,`Московская область`,`Регионы`)
+				+item(`Шоссе`,`Алтуфьевское`,`Боровское`,`Варшавское`,`Вашутинское`,`Волковское`,`Волоколамское`,`Варшавское`,`Вашутинское`,`Волковское`,`Волоколамское`)
+			.col-lg-4
+				+item(`Удаленность`)
+					+e.line.row
+						.small.col-auto от
+						.col
+							+input()
+						.small.col-auto от
+						.col
+							+input()
+						.small.col-auto км
+
+					+e.title Площадь
+					+e.line.row
+						.small.col-auto от
+						.col
+							+input()
+						.small.col-auto от
+						.col
+							+input()
+						.small.col-auto соток
+					+e.title Цена
+					+e.line.row
+						.small.col-auto от
+						.col
+							+input()
+						.small.col-auto от
+						.col
+							+input()
+						.small.col-auto ₽
+			.col-lg-4
+				+item(`Назначение`,`Многоэтажное жилищное строительство`,`Индивидуальное жилищное строительство`,`Промышленное назначение`,`Коммерческое назначение`,`Рекреационное назначение`,`Сельскохозяйственное использование`)
+		+e.footer.text-center
+			.row.align-items-center
+				.col-lg-4
+					button.btn.btn-primary.w-100.mb-2 Показать участки
+				.col-auto
+					.fw-600 Сбросить фильтр
+
 mixin sSearch(data)
 	// start sSearch
 	+b.SECTION.sSearch.section#sSearch&attributes(attributes).bg-light
@@ -68,7 +123,7 @@ mixin sSearch(data)
 			+e.inner
 				.row
 					.col-lg-3
-						+filter()
+						+filter().--aside.--js
 					.col-lg-9
 						+b.filter-head
 							.h5.fw-600.mb-4 Найдено земель:  
@@ -93,35 +148,52 @@ mixin sSearch2(data)
 				h2 Воспользуйтесь поиском
 				+e.text Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.
 			.h3.fw-600.mb-3 Отображение подбора
-			+e.row-head.row.g-3.mb-4
-				.col-auto
-					+e.btn(href="#")
-						span.d-none.d-lg-inline Подбор 
-						| по карте
-				.col-auto
-					+e.btn(href="#").active  
-						span.d-none.d-lg-inline Подбор 
-						| по критериям
-				.col-auto.d-lg-none.ms-auto
-					button.btn.btn-outline-primary.filter-toggle-js Фильтры
-			+b.filter-map
-				+e.map
-						+e.map-widget#map3(style="	height: 654px; width: 100%;")
-				+e.block
-					+in-c("checkbox",'Все')(checked class="map-dot-input" data-color="all")
-					+in-c("checkbox",'Зеленые')(checked class="map-dot-input" data-color="#00ff00" style="--color-map:#00ff00")
-					+in-c("checkbox",'Красные')(checked class="map-dot-input" data-color="#ff1000" style="--color-map:#ff1000")
-					+in-c("checkbox",'Желтые')(checked class="map-dot-input" data-color="#ffcc00" style="--color-map:#ffcc00")
-					//- | Фильтр по цветам 
-					//- br
-					//- input#red(type='checkbox' checked='true')
-					//- | Красные
-					//- br
-					//- input#green(type='checkbox' checked='true')
-					//- | Зеленые
-					//- br
-					//- input#yellow(type='checkbox' checked='true')
-					//- | Желтые
+			.tabs
+				+e.row-head.row.g-3.mb-4
+					.col-auto
+						+e.btn.btn-tab(href="#tab1").active  
+							span.d-none.d-lg-inline Подбор 
+							| по карте
+					.col-auto
+						+e.btn.btn-tab(href="#tab2")
+							span.d-none.d-lg-inline Подбор 
+							| по критериям
+					.col-auto.d-lg-none.ms-auto
+						button.btn.btn-outline-primary.filter-toggle-js Фильтры
+				.tabs__block.active#tab1
+					+b.filter-map
+						+e.map
+								+e.map-widget#map3()
+						+e.block
+							+in-c("checkbox",'Все')(checked class="map-dot-input" data-color="all")
+							+in-c("checkbox",'Зеленые')(checked class="map-dot-input" data-color="#00ff00" style="--color-map:#00ff00")
+							+in-c("checkbox",'Красные')(checked class="map-dot-input" data-color="#ff1000" style="--color-map:#ff1000")
+							+in-c("checkbox",'Желтые')(checked class="map-dot-input" data-color="#ffcc00" style="--color-map:#ffcc00")
+							//- | Фильтр по цветам 
+							//- br
+							//- input#red(type='checkbox' checked='true')
+							//- | Красные
+							//- br
+							//- input#green(type='checkbox' checked='true')
+							//- | Зеленые
+							//- br
+							//- input#yellow(type='checkbox' checked='true')
+							//- | Желтые
+				.tabs__block#tab2
+					+b.filter-map
+						+e.map
+							+e.map-widget#map4()
+							+filter2().--map
+							//- | Фильтр по цветам 
+							//- br
+							//- input#red(type='checkbox' checked='true')
+							//- | Красные
+							//- br
+							//- input#green(type='checkbox' checked='true')
+							//- | Зеленые
+							//- br
+							//- input#yellow(type='checkbox' checked='true')
+							//- | Желтые
 			+b.filter-head
 				+e.inner
 					.row.g-3

@@ -162,33 +162,180 @@
 						</div>
 					</div>
 					<div class="h3 fw-600 mb-3">Отображение подбора</div>
-					<div class="sSearch__row-head row g-3 mb-4">
-						<div class="col-auto">
-							<a class="sSearch__btn" href="#"><span class="d-none d-lg-inline">Подбор </span>по карте
-							</a>
-						</div>
-						<div class="col-auto">
-							<a class="sSearch__btn active" href="#"> <span class="d-none d-lg-inline">Подбор </span>по критериям
-							</a>
-						</div>
-						<div class="col-auto d-lg-none ms-auto">
-							<button class="btn btn-outline-primary filter-toggle-js">Фильтры</button>
-						</div>
-					</div>
-					<div class="filter-map">
-						<div class="filter-map__map">
-							<div class="filter-map__map-widget" id="map3" style="	height: 654px; width: 100%;">
+					<div class="tabs">
+						<div class="sSearch__row-head row g-3 mb-4">
+							<div class="col-auto">
+								<a class="sSearch__btn btn-tab active" href="#tab1"> <span class="d-none d-lg-inline">Подбор </span>по карте
+								</a>
+							</div>
+							<div class="col-auto">
+								<a class="sSearch__btn btn-tab" href="#tab2"><span class="d-none d-lg-inline">Подбор </span>по критериям
+								</a>
+							</div>
+							<div class="col-auto d-lg-none ms-auto">
+								<button class="btn btn-outline-primary filter-toggle-js">Фильтры</button>
 							</div>
 						</div>
-						<div class="filter-map__block">
-							<label class="custom-input form-check"><input class="custom-input__input form-check-input map-dot-input" name="checkbox" type="checkbox" checked="checked" data-color="all"/><span class="custom-input__text form-check-label">Все</span>
-							</label>
-							<label class="custom-input form-check"><input class="custom-input__input form-check-input map-dot-input" name="checkbox" type="checkbox" checked="checked" data-color="#00ff00" style="--color-map:#00ff00;"/><span class="custom-input__text form-check-label">Зеленые</span>
-							</label>
-							<label class="custom-input form-check"><input class="custom-input__input form-check-input map-dot-input" name="checkbox" type="checkbox" checked="checked" data-color="#ff1000" style="--color-map:#ff1000;"/><span class="custom-input__text form-check-label">Красные</span>
-							</label>
-							<label class="custom-input form-check"><input class="custom-input__input form-check-input map-dot-input" name="checkbox" type="checkbox" checked="checked" data-color="#ffcc00" style="--color-map:#ffcc00;"/><span class="custom-input__text form-check-label">Желтые</span>
-							</label>
+						<div class="tabs__block active" id="tab1">
+							<div class="filter-map">
+								<div class="filter-map__map">
+									<div class="filter-map__map-widget" id="map3">
+									</div>
+								</div>
+								<div class="filter-map__block">
+									<label class="custom-input form-check"><input class="custom-input__input form-check-input map-dot-input" name="checkbox" type="checkbox" checked="checked" data-color="all"/><span class="custom-input__text form-check-label">Все</span>
+									</label>
+									<label class="custom-input form-check"><input class="custom-input__input form-check-input map-dot-input" name="checkbox" type="checkbox" checked="checked" data-color="#00ff00" style="--color-map:#00ff00;"/><span class="custom-input__text form-check-label">Зеленые</span>
+									</label>
+									<label class="custom-input form-check"><input class="custom-input__input form-check-input map-dot-input" name="checkbox" type="checkbox" checked="checked" data-color="#ff1000" style="--color-map:#ff1000;"/><span class="custom-input__text form-check-label">Красные</span>
+									</label>
+									<label class="custom-input form-check"><input class="custom-input__input form-check-input map-dot-input" name="checkbox" type="checkbox" checked="checked" data-color="#ffcc00" style="--color-map:#ffcc00;"/><span class="custom-input__text form-check-label">Желтые</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="tabs__block" id="tab2">
+							<div class="filter-map">
+								<div class="filter-map__map">
+									<div class="filter-map__map-widget" id="map4">
+									</div>
+									<div class="filter-block filter-block--map">
+										<div class="filter-block__head h5 fw-600 mb-4">Фильтр
+										</div>
+										<div class="filter-block__close filter-toggle-js">
+										</div>
+										<div class="row">
+											<div class="col-lg-4">
+													<div class="filter-block__group">
+														<div class="filter-block__title">Регион
+														</div>
+														<div class="filter-block__group-inner">
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Москва</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Московская область</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Регионы</span>
+															</label>
+														</div>
+													</div>
+													<div class="filter-block__group">
+														<div class="filter-block__title">Шоссе
+														</div>
+														<div class="filter-block__group-inner">
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Алтуфьевское</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Боровское</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Варшавское</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Вашутинское</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Волковское</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Волоколамское</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Варшавское</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Вашутинское</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Волковское</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Волоколамское</span>
+															</label>
+														</div>
+													</div>
+											</div>
+											<div class="col-lg-4">
+													<div class="filter-block__group">
+														<div class="filter-block__title">Удаленность
+														</div>
+														<div class="filter-block__group-inner">
+															<div class="filter-block__line row">
+																<div class="small col-auto">от</div>
+																<div class="col">
+																	<div class="filter-block__input-wrap form-group"><input class="filter-block__input form-control" name="text" type="text"/>
+																	</div>
+																	<!-- +e.input-wrap-->
+																</div>
+																<div class="small col-auto">от</div>
+																<div class="col">
+																	<div class="filter-block__input-wrap form-group"><input class="filter-block__input form-control" name="text" type="text"/>
+																	</div>
+																	<!-- +e.input-wrap-->
+																</div>
+																<div class="small col-auto">км</div>
+															</div>
+															<div class="filter-block__title">Площадь
+															</div>
+															<div class="filter-block__line row">
+																<div class="small col-auto">от</div>
+																<div class="col">
+																	<div class="filter-block__input-wrap form-group"><input class="filter-block__input form-control" name="text" type="text"/>
+																	</div>
+																	<!-- +e.input-wrap-->
+																</div>
+																<div class="small col-auto">от</div>
+																<div class="col">
+																	<div class="filter-block__input-wrap form-group"><input class="filter-block__input form-control" name="text" type="text"/>
+																	</div>
+																	<!-- +e.input-wrap-->
+																</div>
+																<div class="small col-auto">соток</div>
+															</div>
+															<div class="filter-block__title">Цена
+															</div>
+															<div class="filter-block__line row">
+																<div class="small col-auto">от</div>
+																<div class="col">
+																	<div class="filter-block__input-wrap form-group"><input class="filter-block__input form-control" name="text" type="text"/>
+																	</div>
+																	<!-- +e.input-wrap-->
+																</div>
+																<div class="small col-auto">от</div>
+																<div class="col">
+																	<div class="filter-block__input-wrap form-group"><input class="filter-block__input form-control" name="text" type="text"/>
+																	</div>
+																	<!-- +e.input-wrap-->
+																</div>
+																<div class="small col-auto">₽</div>
+															</div>
+														</div>
+													</div>
+											</div>
+											<div class="col-lg-4">
+													<div class="filter-block__group">
+														<div class="filter-block__title">Назначение
+														</div>
+														<div class="filter-block__group-inner">
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Многоэтажное жилищное строительство</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Индивидуальное жилищное строительство</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Промышленное назначение</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Коммерческое назначение</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Рекреационное назначение</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Сельскохозяйственное использование</span>
+															</label>
+														</div>
+													</div>
+											</div>
+										</div>
+										<div class="filter-block__footer text-center">
+											<div class="row align-items-center">
+												<div class="col-lg-4">
+													<button class="btn btn-primary w-100 mb-2">Показать участки</button>
+												</div>
+												<div class="col-auto">
+													<div class="fw-600">Сбросить фильтр</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="filter-head">
@@ -1159,6 +1306,90 @@
 									}
 							]
 					}).addToMap(myMap);
+					
+				var myMap4 = new ymaps.Map('map4', {
+						center: [55.30954, 37.721587],
+						zoom: 8
+				}, {
+						searchControlProvider: 'yandex#search'
+				});
+			
+					// Функция, которая по состоянию чекбоксов в меню
+					// показывает или скрывает геообъекты из выборки.
+					function checkState () {
+							
+					}
+					
+					$('.map-dot-input').click(function(){
+						var shownObjects,
+									byColor = new ymaps.GeoQueryResult();
+									byShape = new ymaps.GeoQueryResult(); 
+			
+							if ($('[data-color="#ff1000"]').prop('checked')) { 
+									byColor = myObjects.search(`options.iconColor = "#ff1000"`);
+								}
+								
+							if ($('[data-color="#00ff00"]').prop('checked')) { 
+									byColor = myObjects.search(`options.iconColor = "#00ff00"`)
+									.add(byColor);
+								}
+							if ($('[data-color="#ffcc00"]').prop('checked')) { 
+									byColor = myObjects.search(`options.iconColor = "#ffcc00"`)
+									.add(byColor);
+								}
+			
+			
+							// Мы отобрали объекты по цвету и по форме. Покажем на карте объекты,
+							// которые совмещают нужные признаки.
+							shownObjects = byColor.addToMap(myMap4);
+							// Объекты, которые не попали в выборку, нужно убрать с карты.
+							myObjects.remove(shownObjects).removeFromMap(myMap4); 
+					});
+					//- $('#red').click(checkState);
+					//- $('#green').click(checkState);
+					//- $('#yellow').click(checkState);
+					
+					// Создадим объекты из их JSON-описания и добавим их на карту.
+					window.myObjects = ymaps.geoQuery({
+							type: "FeatureCollection",
+							features: [
+									{
+											type: 'Feature',
+											geometry: {
+													type: 'Point',
+													coordinates: [55.34954, 37.721587]
+											},
+											options: { 
+													preset:  'islands#circleDotIcon',
+													iconColor: '#00ff00'
+											}
+									},
+									{
+											type: 'Feature',
+											geometry: {
+													type: 'Point',
+													coordinates: [55.24954, 37.4]
+											},
+											options: {
+													preset:  'islands#circleDotIcon',
+													iconColor: '#ff1000'
+											}
+									},
+			
+									{
+											type: 'Feature',
+											geometry: {
+													type: 'Point',
+													coordinates: [55.14954, 37.61587], 
+											},
+											options: {
+													preset:  'islands#circleDotIcon',
+													iconColor: '#ffcc00'
+											}
+									}
+							]
+					}).addToMap(myMap4);
+			
 			}
 		</script>
 		<script>ymaps.ready(init);</script>

@@ -439,60 +439,16 @@ function eventHandler() {
 		$("body").toggleClass("fixed")
 	})
 
+	$(".btn-tab").click(function(e){
+		e.preventDefault();
+		let tab = $(this).attr("href");
+		$(`.tabs__block:not(${tab})`).hide();
+		$(tab).fadeIn()
+	})
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
-
-// window.onload = function () {
-// 	document.body.classList.add('loaded_hiding');
-// 	window.setTimeout(function () {
-// 		document.body.classList.add('loaded');
-// 		document.body.classList.remove('loaded_hiding');
-// 	}, 500);
-// }
-
-// if (document.querySelector("#map")) {
-
-
-// 	ymaps.ready(function () {
-// 		var myMap = new ymaps.Map('map', {
-// 			center: [55.755819, 37.617644],
-// 			zoom: 17,
-// 			controls: ['zoomControl']
-// 		}, {
-// 			//searchControlProvider: 'yandex#search'
-// 		}),
-// 			// Создаём макет содержимого.
-// 			// MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-// 			// 		'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-// 			// ),
-
-// 			myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-// 				hintContent: 'Veresk Group',
-// 				balloonContent: 'Москва, улица Первая, дом 20, офис 303'
-// 			}, {
-// 				// Опции.
-// 				// Необходимо указать данный тип макета.
-// 				// iconLayout: 'default#image',
-// 				// Своё изображение иконки метки.
-// 				// iconImageHref: 'img/svg/logo.svg',
-// 				// Размеры метки.
-// 				// iconImageSize: [60, 42],
-// 				// Смещение левого верхнего угла иконки относительно
-// 				// её "ножки" (точки привязки).
-// 				// iconImageOffset: [-5, -38]
-// 			});
-// 		myMap.behaviors.disable('scrollZoom');
-// 		//на мобильных устройствах... (проверяем по userAgent браузера)
-// 		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-// 			// ... отключаем перетаскивание карты
-// 			myMap.behaviors.disable('drag');
-// 		}
-// 		myMap.geoObjects
-// 			.add(myPlacemark);
-// 	});
-
-// }
