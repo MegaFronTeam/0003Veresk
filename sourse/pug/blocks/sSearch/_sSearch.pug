@@ -50,7 +50,7 @@ mixin filter()
 mixin filter2()
 	+b.filter-block&attributes(attributes)
 		+e.head.h5.fw-600.mb-4 Фильтр
-		+e.close.filter-toggle-js
+		+e.close.filter-map-close-js
 		.row
 			mixin item(t, ...items)
 				+e.group&attributes(attributes)
@@ -108,18 +108,18 @@ mixin sSearch(data)
 			+b.section-title.text-center
 				h2 Воспользуйтесь поиском
 				p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.
-			.h3.fw-600.mb-3 Отображение подбора
-			+e.row-head.row.g-3.mb-5
-				.col-auto
-					+e.btn(href="#").active 
-						span.d-none.d-lg-inline Подбор 
-						| по карте
-				.col-auto
-					+e.btn(href="#") 
-						span.d-none.d-lg-inline Подбор 
-						| по критериям
-				.col-auto.d-lg-none.ms-auto
-					button.btn.btn-outline-primary.filter-toggle-js Фильтры
+			//- .h3.fw-600.mb-3 Отображение подбора
+			//- +e.row-head.row.g-3.mb-5
+			//- 	.col-auto
+			//- 		+e.btn(href="#").active 
+			//- 			span.d-none.d-lg-inline Подбор 
+			//- 			| по карте
+			//- 	.col-auto
+			//- 		+e.btn(href="#") 
+			//- 			span.d-none.d-lg-inline Подбор 
+			//- 			| по критериям
+			.col-auto.d-lg-none.ms-auto.mb-3
+				button.btn.btn-outline-primary.filter-toggle-js Фильтры
 			+e.inner
 				.row
 					.col-lg-3
@@ -158,8 +158,8 @@ mixin sSearch2(data)
 						+e.btn.btn-tab(href="#tab2")
 							span.d-none.d-lg-inline Подбор 
 							| по критериям
-					.col-auto.d-lg-none.ms-auto
-						button.btn.btn-outline-primary.filter-toggle-js Фильтры
+					//- .col-auto.d-lg-none.ms-auto
+					//- 	button.btn.btn-outline-primary.filter-toggle-js Фильтры
 				.tabs__block.active#tab1
 					+b.filter-map
 						+e.map
@@ -183,7 +183,7 @@ mixin sSearch2(data)
 					+b.filter-map
 						+e.map
 							+e.map-widget#map4()
-							+filter2().--map
+							+filter2().--map.active
 							//- | Фильтр по цветам 
 							//- br
 							//- input#red(type='checkbox' checked='true')

@@ -32,8 +32,10 @@ mixin addblock()
 
 mixin product-item(t)
 	+b.product-item
-		+pic(`product-item-1.png`, `bg`, 0)
-		h6!= t
+		a(href="#") 
+			+pic(`product-item-1.png`, `bg`, 0)
+		h6
+			a.text-body(href="#")!= t
 		table
 			tr
 				td Тип

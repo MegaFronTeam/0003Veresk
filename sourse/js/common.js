@@ -438,8 +438,14 @@ function eventHandler() {
 		$(".filter-block--js").toggleClass("active")
 		$("body").toggleClass("fixed")
 	})
+	$(document).on("click", ".filter-map-close-js", function(){
+		$(".filter-block--js").toggleClass("active")
+		// $("body").toggleClass("fixed")
+	})
 
 	$(".btn-tab").click(function(e){
+		$(".btn-tab").removeClass("active")
+		$(this).addClass("active")
 		e.preventDefault();
 		let tab = $(this).attr("href");
 		$(`.tabs__block:not(${tab})`).hide();
