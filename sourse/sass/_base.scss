@@ -125,6 +125,8 @@ body {
 
 .mono {
 	font-family: var(--bs-font-monospace);
+	// letter-spacing: .9;
+	letter-spacing: .001em;
 }
 
 .small {
