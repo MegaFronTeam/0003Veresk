@@ -109,6 +109,7 @@
 			left: 0;
 			top: 0;
 			@include mt;
+			transform: scale(var(--sc, 1));
 		}
 	}
 	h6 {

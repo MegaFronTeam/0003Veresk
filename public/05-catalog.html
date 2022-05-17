@@ -17,9 +17,9 @@
 						:  viewport.content = "width=428,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no" 
 					//- alert(this.outerWidth + ', '+  viewport.content);
 				}
-				 w();
+					w();
 				window.addEventListener('resize', () => { 
-				 w();
+					w();
 				}, { passive: true });
 			}
 		</script>
@@ -142,110 +142,603 @@
 				<!-- end top-nav-->
 			</header>
 			<!-- end header-->
-			<!-- start headerBlock-->
-			<div class="headerBlock headerBlock--2 section bg-wrap" id="headerBlock">
-				<div class="headerBlock__slider headerBlock__slider--js swiper main-slider">
-					<div class="swiper-wrapper">
-						<div class="headerBlock__slide swiper-slide bg-wrap">
-							<!-- picture-->
-							<picture class="picture-bg"> 
-								<source type="image/avif" srcset="img/@2x/avif/slide.avif"/>
-								<source type="image/webp" srcset="img/@2x/webp/slide.webp"/><img class="object-fit-js" src="img/@2x/slide.jpg" alt="" loading="lazy"/>
-							</picture>
-							<!-- /picture-->
-						</div>
-						<div class="headerBlock__slide swiper-slide bg-wrap">
-							<!-- picture-->
-							<picture class="picture-bg"> 
-								<source type="image/avif" srcset="img/@2x/avif/slide.avif"/>
-								<source type="image/webp" srcset="img/@2x/webp/slide.webp"/><img class="object-fit-js" src="img/@2x/slide.jpg" alt="" loading="lazy"/>
-							</picture>
-							<!-- /picture-->
-						</div>
-						<div class="headerBlock__slide swiper-slide bg-wrap">
-							<!-- picture-->
-							<picture class="picture-bg"> 
-								<source type="image/avif" srcset="img/@2x/avif/slide.avif"/>
-								<source type="image/webp" srcset="img/@2x/webp/slide.webp"/><img class="object-fit-js" src="img/@2x/slide.jpg" alt="" loading="lazy"/>
-							</picture>
-							<!-- /picture-->
-						</div>
-					</div>
-				</div>
-				<div class="container">
-					<div class="headerBlock__row row">
-						<div class="col">
-							<div class="headerBlock__text-block">
-								<h1>Продажа земельных участков в Москве</h1>
-								<p>Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis. </p>
-							</div>
-							<div class="slider-controls">
-								<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
-									<svg class="icon icon-arrow-left ">
-										<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
-									</svg>
-								</div>
-								<div class="swiper-pagination"></div>
-								<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
-									<svg class="icon icon-arrow-right ">
-										<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
-									</svg>
-								</div>
-							</div>
-						</div>
-						<div class="col-auto">
-							<div class="request">
-								<div class="form-wrap">
-									<form>
-										<h4>Подбор или продажа земельного участка</h4>
-										<div class="form-wrap__subtitle">Перезвоним вам в&nbsp;течение 15&nbsp;минут <br> в&nbsp;рабочее время
-										</div>
-										<div class="form-wrap__row row">
-											<div class="col-12">
-												<a class="form-wrap__btn link-modal-js" href="#request2">Отправить заявку
-												</a>
-											</div>
-											<div class="col-12">
-												<div class="form-wrap__agreement">Отправляя заявку, вы&nbsp;даете свое согласие на&nbsp;обработку <a href="#">персональных данных</a>
-												</div>
-											</div>
-										</div>
-									</form>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- end headerBlock-->
 			<div class="breadcrumb-wrap">
 				<div class="container">
 					<nav class="bread-slider-js swiper" aria-label="breadcrumb">
 						<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
 							<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
 									<meta itemprop="position" content="1"/></a></li>
-							<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Земельные участки</span>
+							<li class="breadcrumb-item swiper-slide active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Земельные участки</span>
 									<meta itemprop="position" content="2"/></a></li>
-							<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Индивидуальное жилищное строительство</span>
-									<meta itemprop="position" content="3"/></a></li>
-							<li class="breadcrumb-item swiper-slide active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Название земельного участка</span>
-									<meta itemprop="position" content="4"/></a></li>
 						</ol>
 					</nav>
 				</div>
 			</div>
-			<!-- start sCatalog-->
-			<section class="sCatalog section" id="sCatalog">
+			<!-- start sSearch-->
+			<section class="sSearch section bg-light" id="sSearch">
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>sCatalog</h2>
+					<div class="section-title">
+						<h2>Воспользуйтесь поиском</h2>
+						<div class="section-title__text">Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.
+						</div>
 					</div>
-					<div class="row"></div>
+					<div class="h3 fw-600 mb-3">Отображение подбора</div>
+					<div class="tabs">
+						<div class="sSearch__row-head row g-3 mb-4">
+							<div class="col-auto">
+								<a class="sSearch__btn btn-tab active" href="#tab1"> <span class="d-none d-lg-inline">Подбор </span>по карте
+								</a>
+							</div>
+							<div class="col-auto">
+								<a class="sSearch__btn btn-tab" href="#tab2"><span class="d-none d-lg-inline">Подбор </span>по критериям
+								</a>
+							</div>
+						</div>
+						<div class="tabs__block active" id="tab1">
+							<div class="filter-map">
+								<div class="filter-map__map">
+									<div class="filter-map__map-widget" id="map3">
+									</div>
+								</div>
+								<div class="filter-map__block">
+									<label class="custom-input form-check"><input class="custom-input__input form-check-input map-dot-input" name="checkbox" type="checkbox" checked="checked" data-color="all"/><span class="custom-input__text form-check-label">Все</span>
+									</label>
+									<label class="custom-input form-check"><input class="custom-input__input form-check-input map-dot-input" name="checkbox" type="checkbox" checked="checked" data-color="#00ff00" style="--color-map:#00ff00;"/><span class="custom-input__text form-check-label">Зеленые</span>
+									</label>
+									<label class="custom-input form-check"><input class="custom-input__input form-check-input map-dot-input" name="checkbox" type="checkbox" checked="checked" data-color="#ff1000" style="--color-map:#ff1000;"/><span class="custom-input__text form-check-label">Красные</span>
+									</label>
+									<label class="custom-input form-check"><input class="custom-input__input form-check-input map-dot-input" name="checkbox" type="checkbox" checked="checked" data-color="#ffcc00" style="--color-map:#ffcc00;"/><span class="custom-input__text form-check-label">Желтые</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="tabs__block" id="tab2">
+							<div class="filter-map">
+								<div class="filter-map__map">
+									<div class="filter-map__map-widget" id="map4">
+									</div>
+									<div class="filter-block filter-block--map active">
+										<div class="filter-block__head h5 fw-600 mb-4">Фильтр
+										</div>
+										<div class="filter-block__close filter-map-close-js">
+										</div>
+										<div class="row">
+											<div class="col-lg-4">
+													<div class="filter-block__group">
+														<div class="filter-block__title">Регион
+														</div>
+														<div class="filter-block__group-inner">
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Москва</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Московская область</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Регионы</span>
+															</label>
+														</div>
+													</div>
+													<div class="filter-block__group">
+														<div class="filter-block__title">Шоссе
+														</div>
+														<div class="filter-block__group-inner">
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Алтуфьевское</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Боровское</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Варшавское</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Вашутинское</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Волковское</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Волоколамское</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Варшавское</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Вашутинское</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Волковское</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Волоколамское</span>
+															</label>
+														</div>
+													</div>
+											</div>
+											<div class="col-lg-4">
+													<div class="filter-block__group">
+														<div class="filter-block__title">Удаленность
+														</div>
+														<div class="filter-block__group-inner">
+															<div class="filter-block__line row">
+																<div class="small col-auto">от</div>
+																<div class="col">
+																	<div class="filter-block__input-wrap form-group"><input class="filter-block__input form-control" name="text" type="text"/>
+																	</div>
+																	<!-- +e.input-wrap-->
+																</div>
+																<div class="small col-auto">от</div>
+																<div class="col">
+																	<div class="filter-block__input-wrap form-group"><input class="filter-block__input form-control" name="text" type="text"/>
+																	</div>
+																	<!-- +e.input-wrap-->
+																</div>
+																<div class="small col-auto">км</div>
+															</div>
+															<div class="filter-block__title">Площадь
+															</div>
+															<div class="filter-block__line row">
+																<div class="small col-auto">от</div>
+																<div class="col">
+																	<div class="filter-block__input-wrap form-group"><input class="filter-block__input form-control" name="text" type="text"/>
+																	</div>
+																	<!-- +e.input-wrap-->
+																</div>
+																<div class="small col-auto">от</div>
+																<div class="col">
+																	<div class="filter-block__input-wrap form-group"><input class="filter-block__input form-control" name="text" type="text"/>
+																	</div>
+																	<!-- +e.input-wrap-->
+																</div>
+																<div class="small col-auto">соток</div>
+															</div>
+															<div class="filter-block__title">Цена
+															</div>
+															<div class="filter-block__line row">
+																<div class="small col-auto">от</div>
+																<div class="col">
+																	<div class="filter-block__input-wrap form-group"><input class="filter-block__input form-control" name="text" type="text"/>
+																	</div>
+																	<!-- +e.input-wrap-->
+																</div>
+																<div class="small col-auto">от</div>
+																<div class="col">
+																	<div class="filter-block__input-wrap form-group"><input class="filter-block__input form-control" name="text" type="text"/>
+																	</div>
+																	<!-- +e.input-wrap-->
+																</div>
+																<div class="small col-auto">₽</div>
+															</div>
+														</div>
+													</div>
+											</div>
+											<div class="col-lg-4">
+													<div class="filter-block__group">
+														<div class="filter-block__title">Назначение
+														</div>
+														<div class="filter-block__group-inner">
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Многоэтажное жилищное строительство</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Индивидуальное жилищное строительство</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Промышленное назначение</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Коммерческое назначение</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Рекреационное назначение</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Сельскохозяйственное использование</span>
+															</label>
+														</div>
+													</div>
+											</div>
+										</div>
+										<div class="filter-block__footer text-center">
+											<div class="row align-items-center">
+												<div class="col-lg-4">
+													<button class="btn btn-primary w-100 mb-2">Показать участки</button>
+												</div>
+												<div class="col-lg-auto">
+													<div class="fw-600">Сбросить фильтр</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="filter-head">
+						<div class="filter-head__inner">
+							<div class="row g-3">
+								<div class="col-md-auto fw-600">Сортировать: </div>
+								<div class="col">
+									<button class="filter-head__btn active" type="button"> по цене
+									</button>
+									<button class="filter-head__btn" type="button">по площади
+									</button>
+									<button class="filter-head__btn" type="button">по дате добавления
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row gy-4">
+						<div class="col-xl-3 col-lg-4 col-6"> 
+							<div class="product-item">
+								<!-- picture-->
+								<picture> 
+									<source type="image/avif" srcset="img/@2x/avif/product-item-1.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/product-item-1.webp"/><img class="object-fit-js" src="img/@2x/product-item-1.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+								<h6>Pellentesque mollis nibh non nibh laoreet</h6>
+								<p>id 12345</p>
+								<table>
+									<tr>
+										<td>Регион</td>
+										<td class="text-end">Москва</td>
+									</tr>
+									<tr>
+										<td>Площадь</td>
+										<td class="text-end">20,30 га</td>
+									</tr>
+									<tr>
+										<td>Дата актуальности <br> информации</td>
+										<td class="text-end">10.01.2022</td>
+									</tr>
+								</table>
+								<div class="product-item__price">35 млн. ₽
+								</div>
+								<a class="product-item__btn" href="#">Подробнее
+								</a>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-4 col-6"> 
+							<div class="product-item">
+								<!-- picture-->
+								<picture> 
+									<source type="image/avif" srcset="img/@2x/avif/product-item-1.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/product-item-1.webp"/><img class="object-fit-js" src="img/@2x/product-item-1.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+								<h6>Pellentesque mollis nibh non nibh laoreet</h6>
+								<p>id 12345</p>
+								<table>
+									<tr>
+										<td>Регион</td>
+										<td class="text-end">Москва</td>
+									</tr>
+									<tr>
+										<td>Площадь</td>
+										<td class="text-end">20,30 га</td>
+									</tr>
+									<tr>
+										<td>Дата актуальности <br> информации</td>
+										<td class="text-end">10.01.2022</td>
+									</tr>
+								</table>
+								<div class="product-item__price">35 млн. ₽
+								</div>
+								<a class="product-item__btn" href="#">Подробнее
+								</a>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-4 col-6"> 
+							<div class="product-item">
+								<!-- picture-->
+								<picture> 
+									<source type="image/avif" srcset="img/@2x/avif/product-item-1.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/product-item-1.webp"/><img class="object-fit-js" src="img/@2x/product-item-1.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+								<h6>Pellentesque mollis nibh non nibh laoreet</h6>
+								<p>id 12345</p>
+								<table>
+									<tr>
+										<td>Регион</td>
+										<td class="text-end">Москва</td>
+									</tr>
+									<tr>
+										<td>Площадь</td>
+										<td class="text-end">20,30 га</td>
+									</tr>
+									<tr>
+										<td>Дата актуальности <br> информации</td>
+										<td class="text-end">10.01.2022</td>
+									</tr>
+								</table>
+								<div class="product-item__price">35 млн. ₽
+								</div>
+								<a class="product-item__btn" href="#">Подробнее
+								</a>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-4 col-6"> 
+							<div class="product-item">
+								<!-- picture-->
+								<picture> 
+									<source type="image/avif" srcset="img/@2x/avif/product-item-1.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/product-item-1.webp"/><img class="object-fit-js" src="img/@2x/product-item-1.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+								<h6>Pellentesque mollis nibh non nibh laoreet</h6>
+								<p>id 12345</p>
+								<table>
+									<tr>
+										<td>Регион</td>
+										<td class="text-end">Москва</td>
+									</tr>
+									<tr>
+										<td>Площадь</td>
+										<td class="text-end">20,30 га</td>
+									</tr>
+									<tr>
+										<td>Дата актуальности <br> информации</td>
+										<td class="text-end">10.01.2022</td>
+									</tr>
+								</table>
+								<div class="product-item__price">35 млн. ₽
+								</div>
+								<a class="product-item__btn" href="#">Подробнее
+								</a>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-4 col-6"> 
+							<div class="product-item">
+								<!-- picture-->
+								<picture> 
+									<source type="image/avif" srcset="img/@2x/avif/product-item-1.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/product-item-1.webp"/><img class="object-fit-js" src="img/@2x/product-item-1.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+								<h6>Pellentesque mollis nibh non nibh laoreet</h6>
+								<p>id 12345</p>
+								<table>
+									<tr>
+										<td>Регион</td>
+										<td class="text-end">Москва</td>
+									</tr>
+									<tr>
+										<td>Площадь</td>
+										<td class="text-end">20,30 га</td>
+									</tr>
+									<tr>
+										<td>Дата актуальности <br> информации</td>
+										<td class="text-end">10.01.2022</td>
+									</tr>
+								</table>
+								<div class="product-item__price">35 млн. ₽
+								</div>
+								<a class="product-item__btn" href="#">Подробнее
+								</a>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-4 col-6"> 
+							<div class="product-item">
+								<!-- picture-->
+								<picture> 
+									<source type="image/avif" srcset="img/@2x/avif/product-item-1.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/product-item-1.webp"/><img class="object-fit-js" src="img/@2x/product-item-1.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+								<h6>Pellentesque mollis nibh non nibh laoreet</h6>
+								<p>id 12345</p>
+								<table>
+									<tr>
+										<td>Регион</td>
+										<td class="text-end">Москва</td>
+									</tr>
+									<tr>
+										<td>Площадь</td>
+										<td class="text-end">20,30 га</td>
+									</tr>
+									<tr>
+										<td>Дата актуальности <br> информации</td>
+										<td class="text-end">10.01.2022</td>
+									</tr>
+								</table>
+								<div class="product-item__price">35 млн. ₽
+								</div>
+								<a class="product-item__btn" href="#">Подробнее
+								</a>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-4 col-6"> 
+							<div class="product-item">
+								<!-- picture-->
+								<picture> 
+									<source type="image/avif" srcset="img/@2x/avif/product-item-1.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/product-item-1.webp"/><img class="object-fit-js" src="img/@2x/product-item-1.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+								<h6>Pellentesque mollis nibh non nibh laoreet</h6>
+								<p>id 12345</p>
+								<table>
+									<tr>
+										<td>Регион</td>
+										<td class="text-end">Москва</td>
+									</tr>
+									<tr>
+										<td>Площадь</td>
+										<td class="text-end">20,30 га</td>
+									</tr>
+									<tr>
+										<td>Дата актуальности <br> информации</td>
+										<td class="text-end">10.01.2022</td>
+									</tr>
+								</table>
+								<div class="product-item__price">35 млн. ₽
+								</div>
+								<a class="product-item__btn" href="#">Подробнее
+								</a>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-4 col-6"> 
+							<div class="product-item">
+								<!-- picture-->
+								<picture> 
+									<source type="image/avif" srcset="img/@2x/avif/product-item-1.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/product-item-1.webp"/><img class="object-fit-js" src="img/@2x/product-item-1.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+								<h6>Pellentesque mollis nibh non nibh laoreet</h6>
+								<p>id 12345</p>
+								<table>
+									<tr>
+										<td>Регион</td>
+										<td class="text-end">Москва</td>
+									</tr>
+									<tr>
+										<td>Площадь</td>
+										<td class="text-end">20,30 га</td>
+									</tr>
+									<tr>
+										<td>Дата актуальности <br> информации</td>
+										<td class="text-end">10.01.2022</td>
+									</tr>
+								</table>
+								<div class="product-item__price">35 млн. ₽
+								</div>
+								<a class="product-item__btn" href="#">Подробнее
+								</a>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-4 col-6"> 
+							<div class="product-item">
+								<!-- picture-->
+								<picture> 
+									<source type="image/avif" srcset="img/@2x/avif/product-item-1.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/product-item-1.webp"/><img class="object-fit-js" src="img/@2x/product-item-1.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+								<h6>Pellentesque mollis nibh non nibh laoreet</h6>
+								<p>id 12345</p>
+								<table>
+									<tr>
+										<td>Регион</td>
+										<td class="text-end">Москва</td>
+									</tr>
+									<tr>
+										<td>Площадь</td>
+										<td class="text-end">20,30 га</td>
+									</tr>
+									<tr>
+										<td>Дата актуальности <br> информации</td>
+										<td class="text-end">10.01.2022</td>
+									</tr>
+								</table>
+								<div class="product-item__price">35 млн. ₽
+								</div>
+								<a class="product-item__btn" href="#">Подробнее
+								</a>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-4 col-6"> 
+							<div class="product-item">
+								<!-- picture-->
+								<picture> 
+									<source type="image/avif" srcset="img/@2x/avif/product-item-1.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/product-item-1.webp"/><img class="object-fit-js" src="img/@2x/product-item-1.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+								<h6>Pellentesque mollis nibh non nibh laoreet</h6>
+								<p>id 12345</p>
+								<table>
+									<tr>
+										<td>Регион</td>
+										<td class="text-end">Москва</td>
+									</tr>
+									<tr>
+										<td>Площадь</td>
+										<td class="text-end">20,30 га</td>
+									</tr>
+									<tr>
+										<td>Дата актуальности <br> информации</td>
+										<td class="text-end">10.01.2022</td>
+									</tr>
+								</table>
+								<div class="product-item__price">35 млн. ₽
+								</div>
+								<a class="product-item__btn" href="#">Подробнее
+								</a>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-4 col-6"> 
+							<div class="product-item">
+								<!-- picture-->
+								<picture> 
+									<source type="image/avif" srcset="img/@2x/avif/product-item-1.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/product-item-1.webp"/><img class="object-fit-js" src="img/@2x/product-item-1.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+								<h6>Pellentesque mollis nibh non nibh laoreet</h6>
+								<p>id 12345</p>
+								<table>
+									<tr>
+										<td>Регион</td>
+										<td class="text-end">Москва</td>
+									</tr>
+									<tr>
+										<td>Площадь</td>
+										<td class="text-end">20,30 га</td>
+									</tr>
+									<tr>
+										<td>Дата актуальности <br> информации</td>
+										<td class="text-end">10.01.2022</td>
+									</tr>
+								</table>
+								<div class="product-item__price">35 млн. ₽
+								</div>
+								<a class="product-item__btn" href="#">Подробнее
+								</a>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-4 col-6"> 
+							<div class="product-item">
+								<!-- picture-->
+								<picture> 
+									<source type="image/avif" srcset="img/@2x/avif/product-item-1.avif"/>
+									<source type="image/webp" srcset="img/@2x/webp/product-item-1.webp"/><img class="object-fit-js" src="img/@2x/product-item-1.png" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+								<h6>Pellentesque mollis nibh non nibh laoreet</h6>
+								<p>id 12345</p>
+								<table>
+									<tr>
+										<td>Регион</td>
+										<td class="text-end">Москва</td>
+									</tr>
+									<tr>
+										<td>Площадь</td>
+										<td class="text-end">20,30 га</td>
+									</tr>
+									<tr>
+										<td>Дата актуальности <br> информации</td>
+										<td class="text-end">10.01.2022</td>
+									</tr>
+								</table>
+								<div class="product-item__price">35 млн. ₽
+								</div>
+								<a class="product-item__btn" href="#">Подробнее
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="pagination-wrapper">
+						<ul class="page-numbers">
+									<li><span class="prev">
+											<svg class="icon icon-arrow-left ">
+												<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+											</svg></span>
+									</li>
+									<li><span class="page-numbers current"> 1</span>
+									</li>
+									<li><a class="page-numbers" href="#">2</a>
+									</li>
+									<li><a class="page-numbers" href="#">3</a>
+									</li>
+									<li><a class="page-numbers" href="#">4</a>
+									</li>
+									<li><a class="next" href="#">
+											<svg class="icon icon-arrow-right ">
+												<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+											</svg></a>
+									</li>
+						</ul>
+					</div>
 				</div>
 			</section>
-			<!-- end sCatalog-->
 			<!-- start sBestDeals-->
-			<section class="sBestDeals section" id="sBestDeals">
+			<section class="sBestDeals section bg-white" id="sBestDeals">
 				<div class="container">
 					<div class="section-title">
 						<h2>Лучшие предложения</h2>
@@ -570,7 +1063,6 @@
 						</div>
 						<div class="sContactMain__col col-lg-auto">
 							<div class="sContactMain__map">
-								<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c" type="text/javascript"></script>
 								<div class="sContactMain__map-widget" id="map">
 								</div>
 							</div>
@@ -767,5 +1259,203 @@
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="js/common.js"></script>
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
+		<script>
+			function init() {
+					var center = [55.755819, 37.617644];
+					var myMap1 = new ymaps.Map('map', {
+							center: center,
+							zoom: 17,
+							controls: ['zoomControl']
+					});
+					var myPlacemark1 = new ymaps.Placemark(center, {
+							// Свойства.
+							// Содержимое иконки, балуна и хинта.
+							hintContent: 'Veresk Group',
+							balloonContent: 'Москва, улица Первая, дом 20, офис 303'
+					});
+					myMap1.geoObjects.add(myPlacemark1);
+					myMap1.behaviors.disable('scrollZoom');
+					//на мобильных устройствах... (проверяем по userAgent браузера)
+					if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+						// ... отключаем перетаскивание карты
+						myMap1.behaviors.disable('drag');
+					}
+			
+			
+			
+				var myMap = new ymaps.Map('map3', {
+						center: [55.30954, 37.721587],
+						zoom: 8
+				}, {
+						searchControlProvider: 'yandex#search'
+				});
+			
+					// Функция, которая по состоянию чекбоксов в меню
+					// показывает или скрывает геообъекты из выборки.
+					function checkState () {
+							
+					}
+					
+					$(document).on('click', '.map-dot-input', function(){
+						var shownObjects,
+									byColor = new ymaps.GeoQueryResult();
+									byShape = new ymaps.GeoQueryResult(); 
+			
+							if (!$(this).is('[data-color="all"]')) { 
+								console.log($(this).parents('.filter-map__block').find('[data-color="all"]'));
+								//- byColor = myObjects.add(byColor);
+								
+								$(this).parents('.filter-map__block').find('[data-color="all"]')[0].checked = false;
+							}
+							if ($('[data-color="all"]').prop('checked') && $(this).is('[data-color="all"]')) { 
+								$(this).parents('.filter-map__block').find('.map-dot-input').prop('checked', 'checked');
+								console.log(2);
+							}
+			
+			
+							if ($('[data-color="#ff1000"]').prop('checked')) { 
+									byColor = myObjects.search(`options.iconColor = "#ff1000"`);
+								}
+								
+							if ($('[data-color="#00ff00"]').prop('checked')) { 
+									byColor = myObjects.search(`options.iconColor = "#00ff00"`)
+									.add(byColor);
+								}
+							if ($('[data-color="#ffcc00"]').prop('checked')) { 
+									byColor = myObjects.search(`options.iconColor = "#ffcc00"`)
+									.add(byColor);
+								}
+								
+						
+			
+								
+			
+			
+							// Мы отобрали объекты по цвету и по форме. Покажем на карте объекты,
+							// которые совмещают нужные признаки.
+							shownObjects = byColor.addToMap(myMap);
+							// Объекты, которые не попали в выборку, нужно убрать с карты.
+							myObjects.remove(shownObjects).removeFromMap(myMap); 
+					});
+					//- $('#red').click(checkState);
+					//- $('#green').click(checkState);
+					//- $('#yellow').click(checkState);
+					
+					// Создадим объекты из их JSON-описания и добавим их на карту.
+					function balloonBody(title, price, type, sq, link='#') {
+						return `
+										<div class="balloon"> 
+											<div class="balloon__title"> ${title}</div>
+											<div class="balloon__price"> ${price} </div>
+											<table>
+												<tr><td>Тип земель</td><td>${type}</td></tr>
+												<tr><td>Площадь</td><td>${sq}</td></tr>
+											</table>
+											<a class="balloon__btn" href="${link}">Перейти к объекту</a>
+										</div>
+										`
+					}
+					window.myObjects = ymaps.geoQuery({
+							type: "FeatureCollection",
+							features: [
+									{
+											type: 'Feature',
+											geometry: {
+													type: 'Point',
+													coordinates: [55.34954, 37.721587],
+											},
+											properties: {
+												//- balloonContentHeader:"Lorem ipsum dolor sit amet consectetur adipiscing",
+												balloonContentBody: balloonBody('Lorem ipsum dolor sit amet consectetur adipiscing','18 000 000 ₽','Промышленное назначение','000 м2','#'),
+												balloonPanelMaxMapArea: 0,
+																//- name: 'point'
+															},
+											options: { 
+													preset:  'islands#circleDotIcon',
+													iconColor: '#00ff00'
+											}
+									},
+									{
+											type: 'Feature',
+											geometry: {
+													type: 'Point',
+													coordinates: [55.24954, 37.4]
+											},
+											options: {
+													preset:  'islands#circleDotIcon',
+													iconColor: '#ff1000'
+											}
+									},
+			
+									{
+											type: 'Feature',
+											geometry: {
+													type: 'Point',
+													coordinates: [55.14954, 37.61587], 
+											},
+											options: {
+													preset:  'islands#circleDotIcon',
+													iconColor: '#ffcc00'
+											}
+									}
+							]
+					}).addToMap(myMap);
+					
+				var myMap4 = new ymaps.Map('map4', {
+						center: [55.30954, 37.721587],
+						zoom: 8
+				}, {
+						searchControlProvider: 'yandex#search'
+				});
+			
+					//- $('#red').click(checkState);
+					//- $('#green').click(checkState);
+					//- $('#yellow').click(checkState);
+					
+					// Создадим объекты из их JSON-описания и добавим их на карту.
+					window.myObjects2 = ymaps.geoQuery({
+							type: "FeatureCollection",
+							features: [
+									{
+											type: 'Feature',
+											geometry: {
+													type: 'Point',
+													coordinates: [55.34954, 37.721587]
+											},
+											options: { 
+													preset:  'islands#circleDotIcon',
+													iconColor: '#00ff00'
+											}
+									},
+									{
+											type: 'Feature',
+											geometry: {
+													type: 'Point',
+													coordinates: [55.24954, 37.4]
+											},
+											options: {
+													preset:  'islands#circleDotIcon',
+													iconColor: '#ff1000'
+											}
+									},
+			
+									{
+											type: 'Feature',
+											geometry: {
+													type: 'Point',
+													coordinates: [55.14954, 37.61587], 
+											},
+											options: {
+													preset:  'islands#circleDotIcon',
+													iconColor: '#ffcc00'
+											}
+									}
+							]
+					}).addToMap(myMap4);
+			
+			}
+		</script>
+		<script>ymaps.ready(init);</script>
 	</body>
 </html>

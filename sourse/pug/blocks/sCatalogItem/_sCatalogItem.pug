@@ -2,8 +2,72 @@ mixin sCatalogItem(data)
 	// start sCatalogItem
 	+b.SECTION.sCatalogItem.section#sCatalogItem&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sCatalogItem
-				
-			.row
+			+b.section-title
+				h2 Воробьевы горы
+			+e.head-row.row
+				h6 Стоимость
+				.col
+					+e.price 13 800 000 ₽
+				.col-lg-auto
+					.row
+						.col-auto
+							+e.link(href="#")
+								+icon('play-small')
+								span Видео
+						.col-auto
+							+e.link(href="#")
+								+icon('picture')
+								span Панорама
+						.col-auto
+							+e.link(href="#")
+								+icon('document-small')
+								span Презентация объекта
+			+e.main-row.row
+				.col
+					h3 Об участке
+					table
+						mixin tr(l, r)
+							tr
+								td!= l
+								td!= r
+						+tr(`Номер лота`, `77823002`)
+						+tr(`Адрес`, `Lorem ipsum dolor sit amet`)
+						+tr(`Координаты`, `Широта: 55° 45' северной широты <br> Долгота: 37° 37' восточной долготы`)
+						+tr(`Район`, `77823002`)
+						+tr(`Расположение`, `Москва`)
+						+tr(`Шоссе`, `Алтуфьевское`)
+						+tr(`Удаленность`, `00 км`)
+						+tr(`Назначение`, `Многоэтажное жилищное строительство`)
+						+tr(`Кадастровый номер`, `77:05:0001010:3877`)
+						+tr(`Наличие градостроительной документации`, `Да`)
+						
+				+e.col.col-lg-auto
+					.row
+						.col-12
+							h3 Форма участка
+							+e.img-wrap(href="img/@2x/sCatalogItem-1.png" data-fancybox="sCatalogItem-1")
+								+pic(`sCatalogItem-1.png`, `bg`, 0)
+						.col-12
+							h3 Фотогалерея
+							+e.slider--js.swiper
+								.swiper-wrapper
+									+e.slide.swiper-slide
+										+e.img-wrap(href="img/@2x/sCatalogItem-1.png" data-fancybox="sCatalogItem-2")
+											+pic(`sCatalogItem-1.png`, `bg`, 0)
+									+e.slide.swiper-slide
+										+e.img-wrap(href="img/@2x/sCatalogItem-1.png" data-fancybox="sCatalogItem-2")
+											+pic(`sCatalogItem-1.png`, `bg`, 0)
+									+e.slide.swiper-slide
+										+e.img-wrap(href="img/@2x/sCatalogItem-1.png" data-fancybox="sCatalogItem-2")
+											+pic(`sCatalogItem-1.png`, `bg`, 0)
+									+e.slide.swiper-slide
+										+e.img-wrap(href="img/@2x/sCatalogItem-1.png" data-fancybox="sCatalogItem-2")
+											+pic(`sCatalogItem-1.png`, `bg`, 0)
+								+arrow
+				.col-12
+					+e.map-wrap
+						h3 Расположение участка
+						+e.map
+							+e.map-widget#map2
+						p Cras imperdiet euismod justo ac venenatis. Phasellus tincidunt feugiat neque quis porta. Nulla pulvinar pellentesque est, et dapibus arcu faucibus vel. Quisque et pretium quam. Curabitur aliquet vitae lacus eu luctus. Integer lobortis justo eu orci vehicula posuere eget ac quam. Mauris viverra sit amet diam ac posuere. Nunc pretium elementum rutrum. Aliquam vel dolor fermentum urna convallis rutrum. Integer posuere mauris at felis fringilla imperdiet. Phasellus cursus turpis sed vehicula semper. Pellentesque et sodales nisl, id tempus nisl. Curabitur massa nisi, dapibus ac risus sit amet, consequat dignissim erat. Nam tempor, ligula eu pharetra placerat, velit risus vehicula lectus, aliquet viverra nunc leo id nibh. Suspendisse tempor ligula ac nunc.
 	// end sCatalogItem

@@ -4,6 +4,10 @@
 		// --sPB: ;
 		// --sTPB: ;
 		.section-title{
+			&__text{
+				@include rfs(26px);
+				max-width: 690px;
+			}
 
 		}
 		&__inner{
@@ -11,7 +15,10 @@
 			// margin-left: -20px;
 			// margin-right: -20px;
 			background: #FFFFFF;
-border-radius: 10px;
+			border-radius: 10px;
+			.product-item{
+				background: #F8F8F8;
+			}
 		}
 		.btn{
 			@include media-breakpoint-down(sm) {
@@ -33,14 +40,30 @@ border-radius: 10px;
 				opacity: 1;
 			}
 		}
-		.product-item{
-			background: #F8F8F8;
+		&__map{
+			min-height: 654px;
+			position: relative;
+			
 		}
 	.tabs {
 		&__content {
 			&.active {
 				display: flex;
 			}
+		}
+	}
+	&__map-widget{
+		// height: 654px;
+		// width: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.tabs__block {
+		&:not(.active){
+			display: none;
 		}
 	}
 	@include media-breakpoint-up(xl) {}
@@ -51,9 +74,58 @@ border-radius: 10px;
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sSearch
+.filter-map{
+	position: relative;
+	margin-bottom: 50px;
+	&__map{
+		min-height: 654px;
+		position: relative;
+		padding-bottom: 50px;
+		padding-top: 40px;
+		
+	}
+	&__map-widget{
+		// height: 654px;
+		// width: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+	
 
+	&__block{
+		position: absolute;
+		top: 48px;
+		left: 20px;
+		background-color: #fff;
+		z-index: 20;
+		width: 264px;
+		padding: 20px;
+	}
+	.custom-input{
+		margin-bottom: 14px;
+		input{
+			border-radius: 5px;
+			border: 1px solid #fff;
+			box-shadow: 0 0 0 1px #B9B9B9;
+			width: 16px;
+			height: 16px;
+			&:checked{
+				background: var(--color-map, #{$primary});
+			}
+		}
+	}
+}
 .filter-head{
 	margin-bottom: 26px;
+	&__inner{
+		background-color: #fff;
+		padding: rem(20);
+		border-radius: 10px;
+
+	}
 	.row{
 		align-items: center;
 	}
@@ -77,6 +149,19 @@ border-radius: 10px;
 }
 
 .filter-block{
+	&--map{
+		position: relative;
+		z-index: 4;
+		max-width: 846px;
+		background: #FFFFFF;
+		border-radius: 10px;
+		margin-left: auto;
+		margin-right: auto;
+		
+		// margin-bottom: 55px;
+
+		padding: 40px;
+	}
 	&__inner{
 
 		padding: 30px 20px;
@@ -104,6 +189,8 @@ border-radius: 10px;
 	.custom-input{
 		margin-bottom: 12px;
 		line-height: 1.2;
+		margin-left: 1px;
+		margin-top: 1px;
 		input{
 			margin-top: 0;
 			background: $light;

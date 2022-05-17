@@ -17,9 +17,9 @@
 						:  viewport.content = "width=428,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no" 
 					//- alert(this.outerWidth + ', '+  viewport.content);
 				}
-				 w();
+					w();
 				window.addEventListener('resize', () => { 
-				 w();
+					w();
 				}, { passive: true });
 			}
 		</script>
@@ -161,15 +161,175 @@
 			<!-- start sCatalogItem-->
 			<section class="sCatalogItem section" id="sCatalogItem">
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>sCatalogItem</h2>
+					<div class="section-title">
+						<h2>Воробьевы горы</h2>
 					</div>
-					<div class="row"></div>
+					<div class="sCatalogItem__head-row row">
+						<h6>Стоимость</h6>
+						<div class="col">
+							<div class="sCatalogItem__price">13 800 000 ₽
+							</div>
+						</div>
+						<div class="col-lg-auto">
+							<div class="row">
+								<div class="col-auto">
+									<a class="sCatalogItem__link" href="#">
+										<svg class="icon icon-play-small ">
+											<use xlink:href="img/svg/sprite.svg#play-small"></use>
+										</svg><span>Видео</span>
+									</a>
+								</div>
+								<div class="col-auto">
+									<a class="sCatalogItem__link" href="#">
+										<svg class="icon icon-picture ">
+											<use xlink:href="img/svg/sprite.svg#picture"></use>
+										</svg><span>Панорама</span>
+									</a>
+								</div>
+								<div class="col-auto">
+									<a class="sCatalogItem__link" href="#">
+										<svg class="icon icon-document-small ">
+											<use xlink:href="img/svg/sprite.svg#document-small"></use>
+										</svg><span>Презентация объекта</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sCatalogItem__main-row row">
+						<div class="col">
+							<h3>Об участке</h3>
+							<table>
+										<tr>
+											<td>Номер лота</td>
+											<td>77823002</td>
+										</tr>
+										<tr>
+											<td>Адрес</td>
+											<td>Lorem ipsum dolor sit amet</td>
+										</tr>
+										<tr>
+											<td>Координаты</td>
+											<td>Широта: 55° 45' северной широты <br> Долгота: 37° 37' восточной долготы</td>
+										</tr>
+										<tr>
+											<td>Район</td>
+											<td>77823002</td>
+										</tr>
+										<tr>
+											<td>Расположение</td>
+											<td>Москва</td>
+										</tr>
+										<tr>
+											<td>Шоссе</td>
+											<td>Алтуфьевское</td>
+										</tr>
+										<tr>
+											<td>Удаленность</td>
+											<td>00 км</td>
+										</tr>
+										<tr>
+											<td>Назначение</td>
+											<td>Многоэтажное жилищное строительство</td>
+										</tr>
+										<tr>
+											<td>Кадастровый номер</td>
+											<td>77:05:0001010:3877</td>
+										</tr>
+										<tr>
+											<td>Наличие градостроительной документации</td>
+											<td>Да</td>
+										</tr>
+							</table>
+						</div>
+						<div class="sCatalogItem__col col-lg-auto">
+							<div class="row">
+								<div class="col-12">
+									<h3>Форма участка</h3>
+									<a class="sCatalogItem__img-wrap" href="img/@2x/sCatalogItem-1.png" data-fancybox="sCatalogItem-1">
+										<!-- picture-->
+										<picture> 
+											<source type="image/avif" srcset="img/@2x/avif/sCatalogItem-1.avif"/>
+											<source type="image/webp" srcset="img/@2x/webp/sCatalogItem-1.webp"/><img class="object-fit-js" src="img/@2x/sCatalogItem-1.png" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture-->
+									</a>
+								</div>
+								<div class="col-12">
+									<h3>Фотогалерея</h3>
+									<div class="sCatalogItem__slider sCatalogItem__slider--js swiper">
+										<div class="swiper-wrapper">
+											<div class="sCatalogItem__slide swiper-slide">
+												<a class="sCatalogItem__img-wrap" href="img/@2x/sCatalogItem-1.png" data-fancybox="sCatalogItem-2">
+													<!-- picture-->
+													<picture> 
+														<source type="image/avif" srcset="img/@2x/avif/sCatalogItem-1.avif"/>
+														<source type="image/webp" srcset="img/@2x/webp/sCatalogItem-1.webp"/><img class="object-fit-js" src="img/@2x/sCatalogItem-1.png" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture-->
+												</a>
+											</div>
+											<div class="sCatalogItem__slide swiper-slide">
+												<a class="sCatalogItem__img-wrap" href="img/@2x/sCatalogItem-1.png" data-fancybox="sCatalogItem-2">
+													<!-- picture-->
+													<picture> 
+														<source type="image/avif" srcset="img/@2x/avif/sCatalogItem-1.avif"/>
+														<source type="image/webp" srcset="img/@2x/webp/sCatalogItem-1.webp"/><img class="object-fit-js" src="img/@2x/sCatalogItem-1.png" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture-->
+												</a>
+											</div>
+											<div class="sCatalogItem__slide swiper-slide">
+												<a class="sCatalogItem__img-wrap" href="img/@2x/sCatalogItem-1.png" data-fancybox="sCatalogItem-2">
+													<!-- picture-->
+													<picture> 
+														<source type="image/avif" srcset="img/@2x/avif/sCatalogItem-1.avif"/>
+														<source type="image/webp" srcset="img/@2x/webp/sCatalogItem-1.webp"/><img class="object-fit-js" src="img/@2x/sCatalogItem-1.png" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture-->
+												</a>
+											</div>
+											<div class="sCatalogItem__slide swiper-slide">
+												<a class="sCatalogItem__img-wrap" href="img/@2x/sCatalogItem-1.png" data-fancybox="sCatalogItem-2">
+													<!-- picture-->
+													<picture> 
+														<source type="image/avif" srcset="img/@2x/avif/sCatalogItem-1.avif"/>
+														<source type="image/webp" srcset="img/@2x/webp/sCatalogItem-1.webp"/><img class="object-fit-js" src="img/@2x/sCatalogItem-1.png" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture-->
+												</a>
+											</div>
+										</div>
+										<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+											<svg class="icon icon-arrow-left ">
+												<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+											</svg>
+										</div>
+										<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+											<svg class="icon icon-arrow-right ">
+												<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="sCatalogItem__map-wrap">
+								<h3>Расположение участка</h3>
+								<div class="sCatalogItem__map">
+									<div class="sCatalogItem__map-widget" id="map2">
+									</div>
+								</div>
+								<p>Cras imperdiet euismod justo ac venenatis. Phasellus tincidunt feugiat neque quis porta. Nulla pulvinar pellentesque est, et dapibus arcu faucibus vel. Quisque et pretium quam. Curabitur aliquet vitae lacus eu luctus. Integer lobortis justo eu orci vehicula posuere eget ac quam. Mauris viverra sit amet diam ac posuere. Nunc pretium elementum rutrum. Aliquam vel dolor fermentum urna convallis rutrum. Integer posuere mauris at felis fringilla imperdiet. Phasellus cursus turpis sed vehicula semper. Pellentesque et sodales nisl, id tempus nisl. Curabitur massa nisi, dapibus ac risus sit amet, consequat dignissim erat. Nam tempor, ligula eu pharetra placerat, velit risus vehicula lectus, aliquet viverra nunc leo id nibh. Suspendisse tempor ligula ac nunc.</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 			<!-- end sCatalogItem-->
 			<!-- start sBestDeals-->
-			<section class="sBestDeals section" id="sBestDeals">
+			<section class="sBestDeals section bg-white" id="sBestDeals">
 				<div class="container">
 					<div class="section-title">
 						<h2>Лучшие предложения</h2>
@@ -494,7 +654,6 @@
 						</div>
 						<div class="sContactMain__col col-lg-auto">
 							<div class="sContactMain__map">
-								<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c" type="text/javascript"></script>
 								<div class="sContactMain__map-widget" id="map">
 								</div>
 							</div>
@@ -691,5 +850,51 @@
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="js/common.js"></script>
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
+		<script>
+			function init() {
+					var center = [55.755819, 37.617644];
+					var myMap1 = new ymaps.Map('map', {
+							center: center,
+							zoom: 17,
+							controls: ['zoomControl']
+					});
+					var myPlacemark1 = new ymaps.Placemark(center, {
+							// Свойства.
+							// Содержимое иконки, балуна и хинта.
+							hintContent: 'Veresk Group',
+							balloonContent: 'Москва, улица Первая, дом 20, офис 303'
+					});
+					myMap1.geoObjects.add(myPlacemark1);
+					myMap1.behaviors.disable('scrollZoom');
+					//на мобильных устройствах... (проверяем по userAgent браузера)
+					if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+						// ... отключаем перетаскивание карты
+						myMap1.behaviors.disable('drag');
+					}
+			
+			
+			
+					var myMap2 = new ymaps.Map('map2', {
+							center: center,
+							zoom: 17,
+							controls: ['zoomControl']
+					});
+					var myPlacemark2 = new ymaps.Placemark(center, {
+							// Свойства.
+							// Содержимое иконки, балуна и хинта.
+							hintContent: 'Veresk Group',
+							balloonContent: 'Москва, улица Первая, дом 20, офис 303'
+					});
+					myMap2.geoObjects.add(myPlacemark2);
+					myMap2.behaviors.disable('scrollZoom');
+					//на мобильных устройствах... (проверяем по userAgent браузера)
+					if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+						// ... отключаем перетаскивание карты
+						myMap2.behaviors.disable('drag');
+					}
+			}
+		</script>
+		<script>ymaps.ready(init);</script>
 	</body>
 </html>

@@ -45,7 +45,7 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/bootstrap/scss/card";
 // @import "./node_modules/bootstrap/scss/accordion";
 @import "./node_modules/bootstrap/scss/breadcrumb";
-// @import "./node_modules/bootstrap/scss/pagination";
+@import "./node_modules/bootstrap/scss/pagination";
 // @import "./node_modules/bootstrap/scss/badge";
 // @import "./node_modules/bootstrap/scss/alert";
 // @import "./node_modules/bootstrap/scss/progress";
@@ -70,12 +70,25 @@ $output-bourbon-deprecation-warnings: false;
 
 @import "./node_modules/bootstrap/scss/pagination";
 
+.pagination-wrapper {
+	ul{
+		align-items: center;
+	}
+	margin-top: 2rem;
+	.icon{
+		font-size: 14px;
+	}
+}
 .pagination-wrapper ul {
 	@extend .pagination;
 }
 
 .pagination-wrapper li .page-numbers {
-	@extend .page-link;
+	// @extend .page-link;
+	display: inline-block;
+	padding: rem(10) ;
+	margin-left: rem(5);
+	margin-right: rem(5);
 }
 
 .pagination-wrapper li {
@@ -86,6 +99,17 @@ $output-bourbon-deprecation-warnings: false;
 		// color: $pagination-active-color;
 		// background-color: $pagination-active-bg;
 		// border-color: $pagination-active-border-color;
+	}
+	.next,
+	.prev{
+		@extend .btn, .btn-primary;
+		width: 43px;
+		height: 43px;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0;
 	}
 }
 @import "root";
