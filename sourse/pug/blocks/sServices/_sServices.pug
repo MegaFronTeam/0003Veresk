@@ -29,16 +29,58 @@ mixin cards2()
 				.col-lg-4
 					+e.card--lg
 						h4 Заголовок
-						p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. 
+						//- p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis, fermentum. 
+						<ul>
+							<li>МАРКЕТИНГОВЫЙ АНАЛИЗ КОНКУРЕНТНОГО ОКРУЖЕНИЯ</li>
+							<li>ИЗУЧЕНИЕ ПОТЕНЦИАЛА СПРОСА</li>
+							<li>РЕКОМЕНДАЦИИ ПО ЦЕНООБРАЗОВАНИЮ</li>
+							<li>РАЗРАБОТКА КРЕАТИВНОЙ КОНЦЕПЦИИ ПРОДАЖ</li>
+							<li>РАЗРАБОТКА РЕКЛАМНОЙ КАМПАНИИ</li>
+							<li>РАЗРАБОТКА ВЫСОКОНВЕРСИОННОГО САЙТА</li>
+							<li>РАЗРАБОТКА ПЕЧАТНОЙ ПОЛИГРАФИЧЕСКОЙ ПРОДУКЦИИ</li>
+							<li>СТРОИТЕЛЬСТВО ОФИСА ПРОДАЖ НА ПЛОЩАДКЕ</li>
+							<li>ОТДЕЛКА ЭКСПОЗИЦИОННЫХ КВАРТИР</li>
+							<li>РАЗРАБОТКА ДОГОВОРНОЙ БАЗЫ</li>
+							<li>АККРЕДИТАЦИЯ НОВОСТРОЙКИ В ИПОТЕЧНЫХ БАНКАХ</li>
+							<li>ПОДКЛЮЧЕНИЕ ОБЪЕКТА К CRM СИСТЕМЕ</li>
+							<li>ПОДГОТОВКА ПЕРСОНАЛА</li>
+						</ul>
 
 mixin cards3()
 	+e.content--cards&attributes(attributes)
 		.row
-			- for (var x = 0; x < 2; x++)
-				.col-md-6
-					+e.card--text
-						h4 Заголовок
-						p Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum. <br> Pellentesque mollis nibh non nibh laoreet vulputate. <br> Mauris id metus dignissim, efficitur nulla quis, fermentum.
+			.col-md-6
+				+e.card--text
+					h4 
+						+img('img/@2x/icon-for-title.png')
+						| Для застройщиков
+					<ul>
+						<li>Индивидуальное позиционирование каждой новостройки</li>
+						<li>Продажи от имени застройщика</li>
+						<li>Собственные инвестиции в организацию высококачественного отдела продаж</li>
+						<li>Собственные инвестиции в маркетинг и рекламу</li>
+						<li>Готовность работать в связке с существующим отделом продаж, в том числе провести повышение квалификации действующих сотрудников</li>
+						<li>Участие в ценообразовании и разработке концепции по увеличению стоимости продаваемых квартир</li>
+						<li>Аккредитация новостроек в большом количестве банков</li>
+						<li>Привлечение, при необходимости, оптовых покупателей на квартиры</li>
+						<li>Ответственный руководитель продаж для каждого объекта</li>
+					</ul>
+			.col-md-6
+				+e.card--text
+					h4 
+						+img('img/@2x/icon-for-title-2.png')
+						| Для застройщиков
+					<ul>
+						<li>Индивидуальное позиционирование каждой новостройки</li>
+						<li>Продажи от имени застройщика</li>
+						<li>Собственные инвестиции в организацию высококачественного отдела продаж</li>
+						<li>Собственные инвестиции в маркетинг и рекламу</li>
+						<li>Готовность работать в связке с существующим отделом продаж, в том числе провести повышение квалификации действующих сотрудников</li>
+						<li>Участие в ценообразовании и разработке концепции по увеличению стоимости продаваемых квартир</li>
+						<li>Аккредитация новостроек в большом количестве банков</li>
+						<li>Привлечение, при необходимости, оптовых покупателей на квартиры</li>
+						<li>Ответственный руководитель продаж для каждого объекта</li>
+					</ul>
 
 mixin double-slider()
 	+e.content--slider&attributes(attributes)
@@ -81,6 +123,23 @@ mixin docs()
 							.col
 								p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id metus dignissim, efficitur nulla quis
 
-mixin picture(i)
-	+e.content--picture&attributes(attributes)
-		+pic(`sServices-${i}.jpg`, `bg`).bg-wrap
+mixin sServices2(h, i, ...items)
+	// start sServices
+	+b.SECTION.sServices.section#sServices&attributes(attributes)
+		.container
+			+e.content--picture&attributes(attributes)
+				.row
+					.col-lg
+						h2!= h 
+						each item in items
+							p!= item
+					.col-lg-auto
+						+pic(`sServices-${i}.jpg`, `bg`).bg-wrap
+
+//- mixin picture(i)
+//- 	+e.content--picture&attributes(attributes)
+//- 		.row
+//- 			.col
+
+//- 			.col-auto
+//- 				+pic(`sServices-${i}.jpg`, `bg`).bg-wrap

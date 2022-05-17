@@ -3,25 +3,32 @@ mixin sCatalogItem(data)
 	+b.SECTION.sCatalogItem.section#sCatalogItem&attributes(attributes)
 		.container
 			+b.section-title
-				h2 Воробьевы горы
+				h2 Участок под строительство жилья
 			+e.head-row.row
-				h6 Стоимость
+				+e.col-item.col
+					h6 Стоимость
+					+e.price 13 млн. ₽
 				.col
-					+e.price 13 800 000 ₽
-				.col-lg-auto
-					.row
-						.col-auto
-							+e.link(href="#")
-								+icon('play-small')
-								span Видео
-						.col-auto
-							+e.link(href="#")
-								+icon('picture')
-								span Панорама
-						.col-auto
-							+e.link(href="#")
-								+icon('document-small')
-								span Презентация объекта
+					h6 Площадь
+					+e.price 2.80 га
+				.col-auto
+					+e.link(href="#")
+						+icon('document-small')
+						span Презентация объекта
+				//- .col-lg-auto
+				//- 	.row
+				//- 		.col-auto
+				//- 			+e.link(href="#")
+				//- 				+icon('play-small')
+				//- 				span Видео
+				//- 		.col-auto
+				//- 			+e.link(href="#")
+				//- 				+icon('picture')
+				//- 				span Панорама
+				//- 		.col-auto
+				//- 			+e.link(href="#")
+				//- 				+icon('document-small')
+				//- 				span Презентация объекта
 			+e.main-row.row
 				.col
 					h3 Об участке
@@ -40,34 +47,38 @@ mixin sCatalogItem(data)
 						+tr(`Назначение`, `Многоэтажное жилищное строительство`)
 						+tr(`Кадастровый номер`, `77:05:0001010:3877`)
 						+tr(`Наличие градостроительной документации`, `Да`)
-						
+					p Земельные участки общей площадью 2,83&nbsp;га под строительство группы жилых домов с&nbsp;нежилыми помещениями, расположенные в&nbsp;Правобережном округе города Иркутск вдоль реки Ушакова.
+					p Согласно генплану, на&nbsp;предлагаемом активе может планироваться возведение 2-ой и&nbsp;3-ей очередей строительства жилых многоквартирных домов. Реализация земельных участков будет произведена путем переуступки права аренды. Также есть проект и&nbsp;действующие разрешения на&nbsp;строительство 12&nbsp;блок-секций (17&nbsp;этажей) от&nbsp;23.12.2013&nbsp;г.
+					p Инженерное обеспечение проекта подразумевает подключение к&nbsp;следующим системам: теплоснабжение, электроснабжение, водоснабжение и&nbsp;канализация.
+					p Вокруг участков располагаются оживленные жилые кварталы. На&nbsp;данный момент в&nbsp;эксплуатацию уже сдано 9&nbsp;блок-секций, где проживает около 3&nbsp;000&nbsp;человек, из&nbsp;которых по&nbsp;большей части это молодые семьи с&nbsp;детьми. Квартиры в&nbsp;районе пользуются огромным спросом.
 				+e.col.col-lg-auto
 					.row
 						.col-12
-							h3 Форма участка
-							+e.img-wrap(href="img/@2x/sCatalogItem-1.png" data-fancybox="sCatalogItem-1")
-								+pic(`sCatalogItem-1.png`, `bg`, 0)
+							h3 Границы участка
+							+e.img-wrap(href="img/@2x/sCatalogItem-2.jpg" data-fancybox="sCatalogItem-1")
+								+pic(`sCatalogItem-2.jpg`, `bg`, 0)
 						.col-12
 							h3 Фотогалерея
-							+e.slider--js.swiper
-								.swiper-wrapper
-									+e.slide.swiper-slide
-										+e.img-wrap(href="img/@2x/sCatalogItem-1.png" data-fancybox="sCatalogItem-2")
-											+pic(`sCatalogItem-1.png`, `bg`, 0)
-									+e.slide.swiper-slide
-										+e.img-wrap(href="img/@2x/sCatalogItem-1.png" data-fancybox="sCatalogItem-2")
-											+pic(`sCatalogItem-1.png`, `bg`, 0)
-									+e.slide.swiper-slide
-										+e.img-wrap(href="img/@2x/sCatalogItem-1.png" data-fancybox="sCatalogItem-2")
-											+pic(`sCatalogItem-1.png`, `bg`, 0)
-									+e.slide.swiper-slide
-										+e.img-wrap(href="img/@2x/sCatalogItem-1.png" data-fancybox="sCatalogItem-2")
-											+pic(`sCatalogItem-1.png`, `bg`, 0)
-								+arrow
+							+e.img-wrap(href="img/@2x/sCatalogItem-3.jpg" data-fancybox="sCatalogItem-2")
+								+pic(`sCatalogItem-3.jpg`, `bg`, 0)
+							+e.img-wrap(href="img/@2x/sCatalogItem-3.jpg" data-fancybox="sCatalogItem-2").d-none
+								+pic(`sCatalogItem-3.jpg`, `bg`, 0)
+							+e.img-wrap(href="img/@2x/sCatalogItem-3.jpg" data-fancybox="sCatalogItem-2").d-none
+								+pic(`sCatalogItem-3.jpg`, `bg`, 0)
+							+e.img-wrap(href="img/@2x/sCatalogItem-3.jpg" data-fancybox="sCatalogItem-2").d-none
+								+pic(`sCatalogItem-3.jpg`, `bg`, 0)
 				.col-12
 					+e.map-wrap
 						h3 Расположение участка
 						+e.map
 							+e.map-widget#map2
-						p Cras imperdiet euismod justo ac venenatis. Phasellus tincidunt feugiat neque quis porta. Nulla pulvinar pellentesque est, et dapibus arcu faucibus vel. Quisque et pretium quam. Curabitur aliquet vitae lacus eu luctus. Integer lobortis justo eu orci vehicula posuere eget ac quam. Mauris viverra sit amet diam ac posuere. Nunc pretium elementum rutrum. Aliquam vel dolor fermentum urna convallis rutrum. Integer posuere mauris at felis fringilla imperdiet. Phasellus cursus turpis sed vehicula semper. Pellentesque et sodales nisl, id tempus nisl. Curabitur massa nisi, dapibus ac risus sit amet, consequat dignissim erat. Nam tempor, ligula eu pharetra placerat, velit risus vehicula lectus, aliquet viverra nunc leo id nibh. Suspendisse tempor ligula ac nunc.
+						+e.row.row
+							.col.col-lg-4
+								+e.map-link(href="#").btn.btn-primary Отправить заявку
+							.col.col-lg-4
+								+e.map-link(href="#").btn.btn-primary Задать вопрос
+							.col-auto.col-lg-4
+								+e.map-link--2(href="#").btn.btn-outline-primary
+									+img('img/@2x/document-outline.png')
+									| Запросить документы
 	// end sCatalogItem

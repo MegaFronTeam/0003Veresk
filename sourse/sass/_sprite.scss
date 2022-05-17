@@ -7,6 +7,10 @@
 	fill: currentColor;
 }
 
+.icon-arrow-down {
+	font-size:math.div(10,10)*1rem;
+	width: math.div(13,10)*1em;
+}
 .icon-arrow-left {
 	font-size:math.div(13,10)*1rem;
 	width: math.div(21,13)*1em;
@@ -14,6 +18,10 @@
 .icon-arrow-right {
 	font-size:math.div(13,10)*1rem;
 	width: math.div(21,13)*1em;
+}
+.icon-arrow-up {
+	font-size:math.div(10,10)*1rem;
+	width: math.div(13,10)*1em;
 }
 .icon-basket {
 	font-size:math.div(24,10)*1rem;
@@ -30,6 +38,10 @@
 .icon-document {
 	font-size:math.div(70,10)*1rem;
 	width: math.div(54,70)*1em;
+}
+.icon-document-outline {
+	font-size:math.div(36,10)*1rem;
+	width: math.div(36,36)*1em;
 }
 .icon-document-small {
 	font-size:math.div(28,10)*1rem;

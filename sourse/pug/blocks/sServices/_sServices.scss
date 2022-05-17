@@ -17,6 +17,7 @@
 	}
 	.section-title {
 		h2 {
+			font-family: 'Sitka';
 			margin-bottom: rem(14);
 			// max-width: 15em;
 			@include media-breakpoint-up(md) {
@@ -75,11 +76,23 @@
 			}
 		}
 		&--picture {
+			h2 {
+				@include rfs(50px);
+				font-family: 'Sitka';
+				margin-bottom: rem(24);
+			}
+			p {
+				font-size: rem(18);
+				&:not(:last-child) {
+					margin-bottom: rem(28);
+				}
+			}
 			picture {
 				border-radius: $border-radius-lg;
 				overflow: hidden;
 				min-height: rem(388);
 				@include media-breakpoint-up(lg) {
+					min-width: rem(569);
 					min-height: rem(450);
 				}
 				img {
@@ -170,7 +183,14 @@
 		@include media-breakpoint-up(md) {
 			padding: rem(24) rem(32);
 		}
-
+		ul {
+			li {
+				text-transform: uppercase;
+				&:not(:last-child) {
+					margin-bottom: rem(10);
+				}
+			}
+		}
 		h4 {
 			width: 100%;
 			color: $primary;
@@ -222,6 +242,9 @@
 			}
 			h4 {
 				margin-bottom: rem(27);
+				img {
+					margin-right: rem(12);
+				}
 			}
 			p {
 				font-size: rem(12) !important;
@@ -235,6 +258,16 @@
 				}
 				@include media-breakpoint-up(xl) {
 					font-size: rem(20) !important;
+				}
+			}
+			ul {
+				li {
+					margin-left: rem(20);
+					font-size: rem(18);
+					margin-bottom: rem(20);
+					@include media-breakpoint-up(lg) {
+						font-size: rem(20);
+					}
 				}
 			}
 		}

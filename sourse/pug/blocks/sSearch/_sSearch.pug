@@ -53,10 +53,10 @@ mixin filter()
 				button.btn.btn-primary.w-100.mb-2 Показать участки
 				.fw-600 Сбросить фильтр
 
-		+item(`Назначение`,`Многоэтажное жилищное строительство`,`Индивидуальное жилищное строительство`,`Промышленное назначение`,`Коммерческое назначение`,`Рекреационное назначение`,`Сельскохозяйственное использование`)
-		+e.footer.text-center
-			button.btn.btn-primary.w-100.mb-2 Показать участки
-			.fw-600 Сбросить фильтр
+		//- +item(`Назначение`,`Многоэтажное жилищное строительство`,`Индивидуальное жилищное строительство`,`Промышленное назначение`,`Коммерческое назначение`,`Рекреационное назначение`,`Сельскохозяйственное использование`)
+		//- +e.footer.text-center
+		//- 	button.btn.btn-primary.w-100.mb-2 Показать участки
+		//- 	.fw-600 Сбросить фильтр
 			
 mixin filter2()
 	+b.filter-block&attributes(attributes)
@@ -137,29 +137,62 @@ mixin sSearch(data)
 						+filter().--aside.--js
 					.col-lg-9
 						+b.filter-head
-							+e.row.row
-								.col
-									.h5.fw-600.mb-0 Найдено земель:  
-										| 
-										span.text-primary 325
-								.col-auto
-									+e.btn--2.active 
-										span.d-none.d-lg-inline Подбор 
-										| по карте
-								.col-auto
-									+e.btn--2 
-										span.d-none.d-lg-inline Подбор 
-										| по критериям
+							.tabs
+								+e.row.row
+									.col
+										.h5.fw-600.mb-0 Найдено земель:  
+											| 
+											span.text-primary 325
+									.col-auto
+										+e.btn--2.btn-tab(href="#tab1").active
+											span.d-none.d-lg-inline Подбор 
+											| по карте
+									.col-auto
+										+e.btn--2.btn-tab(href="#tab2")
+											span.d-none.d-lg-inline Подбор 
+											| по критериям
 							.row.g-3
 								.col-md-auto.fw-600 Сортировать: 
 								.col
-									+e.btn(type='button').active  по цене
-									+e.btn(type='button') по площади
-									+e.btn(type='button') по дате добавления
-						.row.gy-4
-							- for (var x = 0; x < 9; x++)
-								.col-lg-4.col-6 
-									+product-item(`Pellentesque mollis nibh non nibh laoreet`)
+									.row
+										.col-auto
+											+e.sorting-wrap
+												+e.btn(type='button').active  по цене
+												+e.sorting-item
+													a(href="#")
+														+icon('arrow-up')
+													a(href="#").active
+														+icon('arrow-down')
+										.col-auto
+											+e.sorting-wrap
+												+e.btn(type='button').active по площади
+												+e.sorting-item
+													a(href="#")
+														+icon('arrow-up')
+													a(href="#").active
+														+icon('arrow-down')
+										.col-auto
+											+e.sorting-wrap
+												+e.btn(type='button').active по дате добавления
+												+e.sorting-item
+													a(href="#")
+														+icon('arrow-up')
+													a(href="#").active
+														+icon('arrow-down')
+						.tabs__block#tab1.active
+							.row.gy-4
+								- for (var x = 0; x < 9; x++)
+									.col-lg-4.col-6 
+										+product-item(`Pellentesque mollis nibh non nibh laoreet`)
+						.tabs__block.active#tab2
+							+b.filter-map
+								+e.map
+										+e.map-widget#map3()
+								+e.block
+									+in-c("checkbox",'Все')(checked class="map-dot-input" data-color="all")
+									+in-c("checkbox",'Зеленые')(checked class="map-dot-input" data-color="#00ff00" style="--color-map:#00ff00")
+									+in-c("checkbox",'Красные')(checked class="map-dot-input" data-color="#ff1000" style="--color-map:#ff1000")
+									+in-c("checkbox",'Желтые')(checked class="map-dot-input" data-color="#ffcc00" style="--color-map:#ffcc00")
 						+e.btn.w-100.mt-5(href="#") Показать еще
 mixin sSearch2(data)
 	// start sSearch
@@ -220,9 +253,31 @@ mixin sSearch2(data)
 					.row.g-3
 						.col-md-auto.fw-600 Сортировать: 
 						.col
-							+e.btn(type='button').active  по цене
-							+e.btn(type='button') по площади
-							+e.btn(type='button') по дате добавления
+							.row
+								.col-auto
+									+e.sorting-wrap
+										+e.btn(type='button').active  по цене
+										+e.sorting-item
+											a(href="#")
+												+icon('arrow-up')
+											a(href="#").active
+												+icon('arrow-down')
+								.col-auto
+									+e.sorting-wrap
+										+e.btn(type='button').active по площади
+										+e.sorting-item
+											a(href="#")
+												+icon('arrow-up')
+											a(href="#").active
+												+icon('arrow-down')
+								.col-auto
+									+e.sorting-wrap
+										+e.btn(type='button').active по дате добавления
+										+e.sorting-item
+											a(href="#")
+												+icon('arrow-up')
+											a(href="#").active
+												+icon('arrow-down')
 			.row.gy-4
 				- for (var x = 0; x < 12; x++)
 					.col-xl-3.col-lg-4.col-6 
