@@ -27,6 +27,7 @@
 		<link href="libs/swiper/swiper.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
+		<link href="css/custom.css"/>
 	</head>
 	<body class="main-page" data-bg="main.jpg">
 		<div class="main-wrapper">
@@ -142,8 +143,8 @@
 			</header>
 			<!-- end header-->
 			<!-- start headerBlock-->
-			<div class="headerBlock section bg-wrap" id="headerBlock">
-				<div class="headerBlock__slider headerBlock__slider--js swiper">
+			<div class="headerBlock headerBlock--2 section bg-wrap" id="headerBlock">
+				<div class="headerBlock__slider headerBlock__slider--js swiper main-slider">
 					<div class="swiper-wrapper">
 						<div class="headerBlock__slide swiper-slide bg-wrap">
 							<!-- picture-->
@@ -200,36 +201,9 @@
 										<div class="form-wrap__subtitle">Перезвоним вам в&nbsp;течение 15&nbsp;минут <br> в&nbsp;рабочее время
 										</div>
 										<div class="form-wrap__row row">
-											<div class="col-6">
-												<label>
-													<input class="btn-check" type="radio" name="name1" autocomplete="off"/>
-													<div class="btn btn-sm w-100 btn-outline-primary">Подбор</div>
-												</label>
-											</div>
-											<div class="col-6">
-												<label>
-													<input class="btn-check" type="radio" name="name1" autocomplete="off"/>
-													<div class="btn btn-sm w-100 btn-outline-primary">Продажа</div>
-												</label>
-											</div>
 											<div class="col-12">
-												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя"/>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-											<div class="col-12">
-												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Номер телефона"/>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-											<div class="col-12">
-												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="email" type="email" placeholder="Email"/>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-											<div class="col-12">
-												<button class="form-wrap__btn">Отправить заявку
-												</button>
+												<a class="form-wrap__btn link-modal-js" href="#request2">Отправить заявку
+												</a>
 											</div>
 											<div class="col-12">
 												<div class="form-wrap__agreement">Отправляя заявку, вы&nbsp;даете свое согласие на&nbsp;обработку <a href="#">персональных данных</a>
@@ -262,7 +236,11 @@
 										</picture>
 										<!-- /picture-->
 										<h5>Многоэтажное жилищное строительство</h5>
-										<div class="sCatalogMain__number"><span>2 965</span><span>Количество <br> участков</span>
+										<div class="sCatalogMain__wrap">
+											<div class="sCatalogMain__number"><span>101</span><span>в Москве<br>и МО</span>
+											</div>
+											<div class="sCatalogMain__number"><span>10</span><span>в регионах<br>(Регионы)</span>
+											</div>
 										</div>
 									</a>
 								</div>
@@ -275,7 +253,11 @@
 										</picture>
 										<!-- /picture-->
 										<h5>Индивидуальное жилищное строительство</h5>
-										<div class="sCatalogMain__number"><span>2 965</span><span>Количество <br> участков</span>
+										<div class="sCatalogMain__wrap">
+											<div class="sCatalogMain__number"><span>101</span><span>в Москве<br>и МО</span>
+											</div>
+											<div class="sCatalogMain__number"><span>10</span><span>в регионах<br>(Регионы)</span>
+											</div>
 										</div>
 									</a>
 								</div>
@@ -288,7 +270,11 @@
 										</picture>
 										<!-- /picture-->
 										<h5>Промышленное <br> назначение</h5>
-										<div class="sCatalogMain__number"><span>2 965</span><span>Количество <br> участков</span>
+										<div class="sCatalogMain__wrap">
+											<div class="sCatalogMain__number"><span>101</span><span>в Москве<br>и МО</span>
+											</div>
+											<div class="sCatalogMain__number"><span>10</span><span>в регионах<br>(Регионы)</span>
+											</div>
 										</div>
 									</a>
 								</div>
@@ -301,7 +287,11 @@
 										</picture>
 										<!-- /picture-->
 										<h5>Коммерческое <br> назначение</h5>
-										<div class="sCatalogMain__number"><span>2 965</span><span>Количество <br> участков</span>
+										<div class="sCatalogMain__wrap">
+											<div class="sCatalogMain__number"><span>101</span><span>в Москве<br>и МО</span>
+											</div>
+											<div class="sCatalogMain__number"><span>10</span><span>в регионах<br>(Регионы)</span>
+											</div>
 										</div>
 									</a>
 								</div>
@@ -314,7 +304,11 @@
 										</picture>
 										<!-- /picture-->
 										<h5>Рекреационное <br> назначение</h5>
-										<div class="sCatalogMain__number"><span>2 965</span><span>Количество <br> участков</span>
+										<div class="sCatalogMain__wrap">
+											<div class="sCatalogMain__number"><span>101</span><span>в Москве<br>и МО</span>
+											</div>
+											<div class="sCatalogMain__number"><span>10</span><span>в регионах<br>(Регионы)</span>
+											</div>
 										</div>
 									</a>
 								</div>
@@ -327,7 +321,11 @@
 										</picture>
 										<!-- /picture-->
 										<h5>Сельскохозяйственное использование</h5>
-										<div class="sCatalogMain__number"><span>2 965</span><span>Количество <br> участков</span>
+										<div class="sCatalogMain__wrap">
+											<div class="sCatalogMain__number"><span>101</span><span>в Москве<br>и МО</span>
+											</div>
+											<div class="sCatalogMain__number"><span>10</span><span>в регионах<br>(Регионы)</span>
+											</div>
 										</div>
 									</a>
 								</div>
@@ -344,14 +342,6 @@
 					</div>
 					<div class="h3 fw-600 mb-3">Отображение подбора</div>
 					<div class="sSearch__row-head row g-3 mb-4">
-						<div class="col-auto">
-							<a class="sSearch__btn active" href="#"> <span class="d-none d-lg-inline">Подбор </span>по карте
-							</a>
-						</div>
-						<div class="col-auto">
-							<a class="sSearch__btn" href="#"> <span class="d-none d-lg-inline">Подбор </span>по критериям
-							</a>
-						</div>
 						<div class="col-auto d-lg-none ms-auto">
 							<button class="btn btn-outline-primary filter-toggle-js">Фильтры</button>
 						</div>
@@ -403,7 +393,7 @@
 												</label>
 											</div>
 										</div>
-										<div class="filter-block__group">
+										<div class="filter-block__group remoteness">
 											<div class="filter-block__title">Удаленность
 											</div>
 											<div class="filter-block__group-inner">
@@ -439,7 +429,7 @@
 													</div>
 													<div class="small col-auto">соток</div>
 												</div>
-												<div class="filter-block__title">Цена
+												<div class="filter-block__title">Цена млн.
 												</div>
 												<div class="filter-block__line row">
 													<div class="small col-auto">от</div>
@@ -456,37 +446,49 @@
 													</div>
 													<div class="small col-auto">₽</div>
 												</div>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Возможно совместное освоение</span>
+												</label>
 											</div>
 										</div>
-									</div>
-									<div class="filter-block__group">
-										<div class="filter-block__title">Назначение
+										<div class="filter-block__group id">
+											<div class="filter-block__title">Поиск по id
+											</div>
+											<div class="filter-block__group-inner">
+												<div class="filter-block__line row">
+													<div class="small col-auto">id</div>
+													<div class="col">
+														<div class="filter-block__input-wrap form-group"><input class="filter-block__input form-control" name="text" type="text"/>
+														</div>
+														<!-- +e.input-wrap-->
+													</div>
+												</div>
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">с ГПЗУ или РнС</span>
+												</label>
+											</div>
 										</div>
-										<div class="filter-block__group-inner">
-											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Многоэтажное жилищное строительство</span>
-											</label>
-											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Индивидуальное жилищное строительство</span>
-											</label>
-											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Промышленное назначение</span>
-											</label>
-											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Коммерческое назначение</span>
-											</label>
-											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Рекреационное назначение</span>
-											</label>
-											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Сельскохозяйственное использование</span>
-											</label>
+										<div class="filter-block__footer text-center">
+											<button class="btn btn-primary w-100 mb-2">Показать участки</button>
+											<div class="fw-600">Сбросить фильтр</div>
 										</div>
-									</div>
-									<div class="filter-block__footer text-center">
-										<button class="btn btn-primary w-100 mb-2">Показать участки</button>
-										<div class="fw-600">Сбросить фильтр</div>
 									</div>
 								</div>
 							</div>
 							<div class="col-lg-9">
 								<div class="filter-head">
-									<div class="h5 fw-600 mb-4">
-										Найдено земель:   <span class="text-primary">325</span></div>
+									<div class="filter-head__row row">
+										<div class="col">
+											<div class="h5 fw-600 mb-0">
+												Найдено земель:   <span class="text-primary">325</span></div>
+										</div>
+										<div class="col-auto">
+											<div class="filter-head__btn filter-head__btn--2 active"> <span class="d-none d-lg-inline">Подбор </span>по карте
+											</div>
+										</div>
+										<div class="col-auto">
+											<div class="filter-head__btn filter-head__btn--2"> <span class="d-none d-lg-inline">Подбор </span>по критериям
+											</div>
+										</div>
+									</div>
 									<div class="row g-3">
 										<div class="col-md-auto fw-600">Сортировать: </div>
 										<div class="col">
@@ -509,21 +511,22 @@
 											</picture>
 											<!-- /picture-->
 											<h6>Pellentesque mollis nibh non nibh laoreet</h6>
+											<p>id 12345</p>
 											<table>
 												<tr>
-													<td>Тип</td>
-													<td>Lorem ipsum <br> dolor sit amet</td>
-												</tr>
-												<tr>
-													<td>Адрес</td>
-													<td>Lorem ipsum <br> dolor sit amet</td>
+													<td>Регион</td>
+													<td class="text-end">Москва</td>
 												</tr>
 												<tr>
 													<td>Площадь</td>
-													<td>000 м2</td>
+													<td class="text-end">20,30 га</td>
+												</tr>
+												<tr>
+													<td>Дата актуальности <br> информации</td>
+													<td class="text-end">10.01.2022</td>
 												</tr>
 											</table>
-											<div class="product-item__price">35 000 000 ₽
+											<div class="product-item__price">35 млн. ₽
 											</div>
 											<a class="product-item__btn" href="#">Подробнее
 											</a>
@@ -538,21 +541,22 @@
 											</picture>
 											<!-- /picture-->
 											<h6>Pellentesque mollis nibh non nibh laoreet</h6>
+											<p>id 12345</p>
 											<table>
 												<tr>
-													<td>Тип</td>
-													<td>Lorem ipsum <br> dolor sit amet</td>
-												</tr>
-												<tr>
-													<td>Адрес</td>
-													<td>Lorem ipsum <br> dolor sit amet</td>
+													<td>Регион</td>
+													<td class="text-end">Москва</td>
 												</tr>
 												<tr>
 													<td>Площадь</td>
-													<td>000 м2</td>
+													<td class="text-end">20,30 га</td>
+												</tr>
+												<tr>
+													<td>Дата актуальности <br> информации</td>
+													<td class="text-end">10.01.2022</td>
 												</tr>
 											</table>
-											<div class="product-item__price">35 000 000 ₽
+											<div class="product-item__price">35 млн. ₽
 											</div>
 											<a class="product-item__btn" href="#">Подробнее
 											</a>
@@ -567,21 +571,22 @@
 											</picture>
 											<!-- /picture-->
 											<h6>Pellentesque mollis nibh non nibh laoreet</h6>
+											<p>id 12345</p>
 											<table>
 												<tr>
-													<td>Тип</td>
-													<td>Lorem ipsum <br> dolor sit amet</td>
-												</tr>
-												<tr>
-													<td>Адрес</td>
-													<td>Lorem ipsum <br> dolor sit amet</td>
+													<td>Регион</td>
+													<td class="text-end">Москва</td>
 												</tr>
 												<tr>
 													<td>Площадь</td>
-													<td>000 м2</td>
+													<td class="text-end">20,30 га</td>
+												</tr>
+												<tr>
+													<td>Дата актуальности <br> информации</td>
+													<td class="text-end">10.01.2022</td>
 												</tr>
 											</table>
-											<div class="product-item__price">35 000 000 ₽
+											<div class="product-item__price">35 млн. ₽
 											</div>
 											<a class="product-item__btn" href="#">Подробнее
 											</a>
@@ -596,21 +601,22 @@
 											</picture>
 											<!-- /picture-->
 											<h6>Pellentesque mollis nibh non nibh laoreet</h6>
+											<p>id 12345</p>
 											<table>
 												<tr>
-													<td>Тип</td>
-													<td>Lorem ipsum <br> dolor sit amet</td>
-												</tr>
-												<tr>
-													<td>Адрес</td>
-													<td>Lorem ipsum <br> dolor sit amet</td>
+													<td>Регион</td>
+													<td class="text-end">Москва</td>
 												</tr>
 												<tr>
 													<td>Площадь</td>
-													<td>000 м2</td>
+													<td class="text-end">20,30 га</td>
+												</tr>
+												<tr>
+													<td>Дата актуальности <br> информации</td>
+													<td class="text-end">10.01.2022</td>
 												</tr>
 											</table>
-											<div class="product-item__price">35 000 000 ₽
+											<div class="product-item__price">35 млн. ₽
 											</div>
 											<a class="product-item__btn" href="#">Подробнее
 											</a>
@@ -625,21 +631,22 @@
 											</picture>
 											<!-- /picture-->
 											<h6>Pellentesque mollis nibh non nibh laoreet</h6>
+											<p>id 12345</p>
 											<table>
 												<tr>
-													<td>Тип</td>
-													<td>Lorem ipsum <br> dolor sit amet</td>
-												</tr>
-												<tr>
-													<td>Адрес</td>
-													<td>Lorem ipsum <br> dolor sit amet</td>
+													<td>Регион</td>
+													<td class="text-end">Москва</td>
 												</tr>
 												<tr>
 													<td>Площадь</td>
-													<td>000 м2</td>
+													<td class="text-end">20,30 га</td>
+												</tr>
+												<tr>
+													<td>Дата актуальности <br> информации</td>
+													<td class="text-end">10.01.2022</td>
 												</tr>
 											</table>
-											<div class="product-item__price">35 000 000 ₽
+											<div class="product-item__price">35 млн. ₽
 											</div>
 											<a class="product-item__btn" href="#">Подробнее
 											</a>
@@ -654,21 +661,22 @@
 											</picture>
 											<!-- /picture-->
 											<h6>Pellentesque mollis nibh non nibh laoreet</h6>
+											<p>id 12345</p>
 											<table>
 												<tr>
-													<td>Тип</td>
-													<td>Lorem ipsum <br> dolor sit amet</td>
-												</tr>
-												<tr>
-													<td>Адрес</td>
-													<td>Lorem ipsum <br> dolor sit amet</td>
+													<td>Регион</td>
+													<td class="text-end">Москва</td>
 												</tr>
 												<tr>
 													<td>Площадь</td>
-													<td>000 м2</td>
+													<td class="text-end">20,30 га</td>
+												</tr>
+												<tr>
+													<td>Дата актуальности <br> информации</td>
+													<td class="text-end">10.01.2022</td>
 												</tr>
 											</table>
-											<div class="product-item__price">35 000 000 ₽
+											<div class="product-item__price">35 млн. ₽
 											</div>
 											<a class="product-item__btn" href="#">Подробнее
 											</a>
@@ -683,21 +691,22 @@
 											</picture>
 											<!-- /picture-->
 											<h6>Pellentesque mollis nibh non nibh laoreet</h6>
+											<p>id 12345</p>
 											<table>
 												<tr>
-													<td>Тип</td>
-													<td>Lorem ipsum <br> dolor sit amet</td>
-												</tr>
-												<tr>
-													<td>Адрес</td>
-													<td>Lorem ipsum <br> dolor sit amet</td>
+													<td>Регион</td>
+													<td class="text-end">Москва</td>
 												</tr>
 												<tr>
 													<td>Площадь</td>
-													<td>000 м2</td>
+													<td class="text-end">20,30 га</td>
+												</tr>
+												<tr>
+													<td>Дата актуальности <br> информации</td>
+													<td class="text-end">10.01.2022</td>
 												</tr>
 											</table>
-											<div class="product-item__price">35 000 000 ₽
+											<div class="product-item__price">35 млн. ₽
 											</div>
 											<a class="product-item__btn" href="#">Подробнее
 											</a>
@@ -712,21 +721,22 @@
 											</picture>
 											<!-- /picture-->
 											<h6>Pellentesque mollis nibh non nibh laoreet</h6>
+											<p>id 12345</p>
 											<table>
 												<tr>
-													<td>Тип</td>
-													<td>Lorem ipsum <br> dolor sit amet</td>
-												</tr>
-												<tr>
-													<td>Адрес</td>
-													<td>Lorem ipsum <br> dolor sit amet</td>
+													<td>Регион</td>
+													<td class="text-end">Москва</td>
 												</tr>
 												<tr>
 													<td>Площадь</td>
-													<td>000 м2</td>
+													<td class="text-end">20,30 га</td>
+												</tr>
+												<tr>
+													<td>Дата актуальности <br> информации</td>
+													<td class="text-end">10.01.2022</td>
 												</tr>
 											</table>
-											<div class="product-item__price">35 000 000 ₽
+											<div class="product-item__price">35 млн. ₽
 											</div>
 											<a class="product-item__btn" href="#">Подробнее
 											</a>
@@ -741,21 +751,22 @@
 											</picture>
 											<!-- /picture-->
 											<h6>Pellentesque mollis nibh non nibh laoreet</h6>
+											<p>id 12345</p>
 											<table>
 												<tr>
-													<td>Тип</td>
-													<td>Lorem ipsum <br> dolor sit amet</td>
-												</tr>
-												<tr>
-													<td>Адрес</td>
-													<td>Lorem ipsum <br> dolor sit amet</td>
+													<td>Регион</td>
+													<td class="text-end">Москва</td>
 												</tr>
 												<tr>
 													<td>Площадь</td>
-													<td>000 м2</td>
+													<td class="text-end">20,30 га</td>
+												</tr>
+												<tr>
+													<td>Дата актуальности <br> информации</td>
+													<td class="text-end">10.01.2022</td>
 												</tr>
 											</table>
-											<div class="product-item__price">35 000 000 ₽
+											<div class="product-item__price">35 млн. ₽
 											</div>
 											<a class="product-item__btn" href="#">Подробнее
 											</a>
@@ -787,21 +798,22 @@
 									</picture>
 									<!-- /picture-->
 									<h6>Pellentesque mollis nibh non nibh laoreet</h6>
+									<p>id 12345</p>
 									<table>
 										<tr>
-											<td>Тип</td>
-											<td>Lorem ipsum <br> dolor sit amet</td>
-										</tr>
-										<tr>
-											<td>Адрес</td>
-											<td>Lorem ipsum <br> dolor sit amet</td>
+											<td>Регион</td>
+											<td class="text-end">Москва</td>
 										</tr>
 										<tr>
 											<td>Площадь</td>
-											<td>000 м2</td>
+											<td class="text-end">20,30 га</td>
+										</tr>
+										<tr>
+											<td>Дата актуальности <br> информации</td>
+											<td class="text-end">10.01.2022</td>
 										</tr>
 									</table>
-									<div class="product-item__price">35 000 000 ₽
+									<div class="product-item__price">35 млн. ₽
 									</div>
 									<a class="product-item__btn" href="#">Подробнее
 									</a>
@@ -816,21 +828,22 @@
 									</picture>
 									<!-- /picture-->
 									<h6>Pellentesque mollis nibh non nibh laoreet</h6>
+									<p>id 12345</p>
 									<table>
 										<tr>
-											<td>Тип</td>
-											<td>Lorem ipsum <br> dolor sit amet</td>
-										</tr>
-										<tr>
-											<td>Адрес</td>
-											<td>Lorem ipsum <br> dolor sit amet</td>
+											<td>Регион</td>
+											<td class="text-end">Москва</td>
 										</tr>
 										<tr>
 											<td>Площадь</td>
-											<td>000 м2</td>
+											<td class="text-end">20,30 га</td>
+										</tr>
+										<tr>
+											<td>Дата актуальности <br> информации</td>
+											<td class="text-end">10.01.2022</td>
 										</tr>
 									</table>
-									<div class="product-item__price">35 000 000 ₽
+									<div class="product-item__price">35 млн. ₽
 									</div>
 									<a class="product-item__btn" href="#">Подробнее
 									</a>
@@ -845,21 +858,22 @@
 									</picture>
 									<!-- /picture-->
 									<h6>Pellentesque mollis nibh non nibh laoreet</h6>
+									<p>id 12345</p>
 									<table>
 										<tr>
-											<td>Тип</td>
-											<td>Lorem ipsum <br> dolor sit amet</td>
-										</tr>
-										<tr>
-											<td>Адрес</td>
-											<td>Lorem ipsum <br> dolor sit amet</td>
+											<td>Регион</td>
+											<td class="text-end">Москва</td>
 										</tr>
 										<tr>
 											<td>Площадь</td>
-											<td>000 м2</td>
+											<td class="text-end">20,30 га</td>
+										</tr>
+										<tr>
+											<td>Дата актуальности <br> информации</td>
+											<td class="text-end">10.01.2022</td>
 										</tr>
 									</table>
-									<div class="product-item__price">35 000 000 ₽
+									<div class="product-item__price">35 млн. ₽
 									</div>
 									<a class="product-item__btn" href="#">Подробнее
 									</a>
@@ -874,21 +888,22 @@
 									</picture>
 									<!-- /picture-->
 									<h6>Pellentesque mollis nibh non nibh laoreet</h6>
+									<p>id 12345</p>
 									<table>
 										<tr>
-											<td>Тип</td>
-											<td>Lorem ipsum <br> dolor sit amet</td>
-										</tr>
-										<tr>
-											<td>Адрес</td>
-											<td>Lorem ipsum <br> dolor sit amet</td>
+											<td>Регион</td>
+											<td class="text-end">Москва</td>
 										</tr>
 										<tr>
 											<td>Площадь</td>
-											<td>000 м2</td>
+											<td class="text-end">20,30 га</td>
+										</tr>
+										<tr>
+											<td>Дата актуальности <br> информации</td>
+											<td class="text-end">10.01.2022</td>
 										</tr>
 									</table>
-									<div class="product-item__price">35 000 000 ₽
+									<div class="product-item__price">35 млн. ₽
 									</div>
 									<a class="product-item__btn" href="#">Подробнее
 									</a>
@@ -903,21 +918,22 @@
 									</picture>
 									<!-- /picture-->
 									<h6>Pellentesque mollis nibh non nibh laoreet</h6>
+									<p>id 12345</p>
 									<table>
 										<tr>
-											<td>Тип</td>
-											<td>Lorem ipsum <br> dolor sit amet</td>
-										</tr>
-										<tr>
-											<td>Адрес</td>
-											<td>Lorem ipsum <br> dolor sit amet</td>
+											<td>Регион</td>
+											<td class="text-end">Москва</td>
 										</tr>
 										<tr>
 											<td>Площадь</td>
-											<td>000 м2</td>
+											<td class="text-end">20,30 га</td>
+										</tr>
+										<tr>
+											<td>Дата актуальности <br> информации</td>
+											<td class="text-end">10.01.2022</td>
 										</tr>
 									</table>
-									<div class="product-item__price">35 000 000 ₽
+									<div class="product-item__price">35 млн. ₽
 									</div>
 									<a class="product-item__btn" href="#">Подробнее
 									</a>
@@ -932,21 +948,22 @@
 									</picture>
 									<!-- /picture-->
 									<h6>Pellentesque mollis nibh non nibh laoreet</h6>
+									<p>id 12345</p>
 									<table>
 										<tr>
-											<td>Тип</td>
-											<td>Lorem ipsum <br> dolor sit amet</td>
-										</tr>
-										<tr>
-											<td>Адрес</td>
-											<td>Lorem ipsum <br> dolor sit amet</td>
+											<td>Регион</td>
+											<td class="text-end">Москва</td>
 										</tr>
 										<tr>
 											<td>Площадь</td>
-											<td>000 м2</td>
+											<td class="text-end">20,30 га</td>
+										</tr>
+										<tr>
+											<td>Дата актуальности <br> информации</td>
+											<td class="text-end">10.01.2022</td>
 										</tr>
 									</table>
-									<div class="product-item__price">35 000 000 ₽
+									<div class="product-item__price">35 млн. ₽
 									</div>
 									<a class="product-item__btn" href="#">Подробнее
 									</a>
@@ -1264,6 +1281,50 @@
 							<button class="form-wrap__btn btn btn-primary" type="submit">Отправить заявку
 							</button>
 							<p>Отправляя заявку, вы даете свое согласие на обработку <a href="#">персональных данных</a></p>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="request2" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="form-wrap__title form-data h4">Подбор или продажа земельного участка
+						</div>
+						<p class="after-headline">Перезвоним вам в течение 15 минут в рабочее время</p>
+						<div class="form-wrap__row row">
+							<div class="col-6">
+								<label>
+									<input class="btn-check" type="radio" name="name1" autocomplete="off"/>
+									<div class="btn btn-sm w-100 btn-outline-primary">Подбор</div>
+								</label>
+							</div>
+							<div class="col-6">
+								<label>
+									<input class="btn-check" type="radio" name="name1" autocomplete="off"/>
+									<div class="btn btn-sm w-100 btn-outline-primary">Продажа</div>
+								</label>
+							</div>
+							<div class="col-12">
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя"/>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="col-12">
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Номер телефона"/>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="col-12">
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="email" type="email" placeholder="Email"/>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="col-12">
+								<button class="form-wrap__btn">Отправить заявку
+								</button>
+							</div>
 						</div>
 					</form>
 				</div>

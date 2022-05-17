@@ -109,6 +109,10 @@
 			}
 		}
 	}
+	&__wrap {
+		display: flex;
+		justify-content: space-between;
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {

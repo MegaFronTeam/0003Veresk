@@ -12,9 +12,13 @@ mixin sCatalogMain(data)
 						+e.item(href="#")
 							+pic(`sCatalogMain-${i}.jpg`, `bg`, 0)
 							h5!= t
-							+e.number
-								span 2 965
-								span Количество <br> участков
+							+e.wrap
+								+e.number
+									span 101
+									span в Москве<br>и МО
+								+e.number
+									span 10
+									span в регионах<br>(Регионы)
 				+sCatalogMainItem(1, `Многоэтажное жилищное строительство`)
 				+sCatalogMainItem(2, `Индивидуальное жилищное строительство`)
 				+sCatalogMainItem(3, `Промышленное <br> назначение`)

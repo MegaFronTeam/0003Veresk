@@ -36,6 +36,13 @@ border-radius: 10px;
 		.product-item{
 			background: #F8F8F8;
 		}
+	.tabs {
+		&__content {
+			&.active {
+				display: flex;
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -50,6 +57,9 @@ border-radius: 10px;
 	.row{
 		align-items: center;
 	}
+	&__row {
+		margin-bottom: rem(20);
+	}
 	&__btn{
 		@extend .btn, .btn-light;
 		padding: rem(4) rem(10);
@@ -59,6 +69,9 @@ border-radius: 10px;
 			background: $primary;
 			border-color: $primary;
 			color: #fff;
+		}
+		&--2 {
+			padding: rem(13) rem(28);
 		}
 	}
 }
@@ -93,6 +106,9 @@ border-radius: 10px;
 		line-height: 1.2;
 		input{
 			margin-top: 0;
+			background: $light;
+			border: 1px solid #B9B9B9;
+			border-radius: 5px;
 		}
 	}
 	&__footer{
@@ -168,6 +184,45 @@ border-radius: 10px;
 		&:after {
 			// bottom: var(--position);
 			transform: rotate3d(0,0,1, calc(-1 * var(--rotate,0)));
+		}
+	}
+	.remoteness {
+		.filter-block {
+			&__group-inner {
+				max-height: 232px;
+			}
+		}
+		.custom-input {
+			margin-bottom: 0;
+			input {
+				margin-top: 3px;
+			}
+			span {
+				font-style: italic;
+				font-size: rem(10);
+			}
+		}
+	}
+	.id {
+		border-bottom: none;
+		margin-bottom: rem(39);
+		.filter-block {
+			margin-bottom: 0;
+			&__input {
+				width: 50px;
+			}
+			&__line {
+				margin-bottom: 24px;
+			}
+			&__group-inner {
+				margin-bottom: 0;
+			}
+		}
+		.custom-input {
+			margin-bottom: 0;
+			span {
+				font-weight: 600;
+			}
 		}
 	}
 }

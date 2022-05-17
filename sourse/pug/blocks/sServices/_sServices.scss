@@ -23,12 +23,19 @@
 				margin-bottom: rem(16);
 			}
 		}
-		p {
-			font-size: rem(15);
-			margin-bottom: 0;
-			@include media-breakpoint-up(md) {
-				font-size: rem(20);
-			}
+		// p {
+		// 	font-size: rem(15);
+		// 	margin-bottom: 0;
+		// 	@include media-breakpoint-up(md) {
+		// 		font-size: rem(20);
+		// 	}
+		// }
+	}
+	.section-subtitle {
+		font-size: rem(15);
+		margin-bottom: 0;
+		@include media-breakpoint-up(md) {
+			font-size: rem(20);
 		}
 	}
 	&__content {
@@ -351,9 +358,9 @@
 				h2 {
 					max-width: 15em;
 				}
-				p {
-					max-width: 38.4em;
-				}
+				// p {
+				// 	max-width: 38.4em;
+				// }
 			}
 		}
 	}

@@ -13,7 +13,7 @@ mixin filter()
 						block
 			+item(`Регион`,`Москва`,`Московская область`,`Регионы`)
 			+item(`Шоссе`,`Алтуфьевское`,`Боровское`,`Варшавское`,`Вашутинское`,`Волковское`,`Волоколамское`,`Варшавское`,`Вашутинское`,`Волковское`,`Волоколамское`)
-			+item(`Удаленность`)
+			+item(`Удаленность`).remoteness
 				+e.line.row
 					.small.col-auto от
 					.col
@@ -32,7 +32,7 @@ mixin filter()
 					.col
 						+input()
 					.small.col-auto соток
-				+e.title Цена
+				+e.title Цена млн.
 				+e.line.row
 					.small.col-auto от
 					.col
@@ -41,11 +41,17 @@ mixin filter()
 					.col
 						+input()
 					.small.col-auto ₽
-
-		+item(`Назначение`,`Многоэтажное жилищное строительство`,`Индивидуальное жилищное строительство`,`Промышленное назначение`,`Коммерческое назначение`,`Рекреационное назначение`,`Сельскохозяйственное использование`)
-		+e.footer.text-center
-			button.btn.btn-primary.w-100.mb-2 Показать участки
-			.fw-600 Сбросить фильтр
+				+in-c("checkbox", 'Возможно совместное освоение')
+			+item(`Поиск по id`).id
+				+e.line.row
+					.small.col-auto id
+					.col
+						+input()
+				+in-c("checkbox", 'с ГПЗУ или РнС')
+			//- +item(`Назначение`,`Многоэтажное жилищное строительство`,`Индивидуальное жилищное строительство`,`Промышленное назначение`,`Коммерческое назначение`,`Рекреационное назначение`,`Сельскохозяйственное использование`)
+			+e.footer.text-center
+				button.btn.btn-primary.w-100.mb-2 Показать участки
+				.fw-600 Сбросить фильтр
 mixin sSearch(data)
 	// start sSearch
 	+b.SECTION.sSearch.section#sSearch&attributes(attributes).bg-light
@@ -55,14 +61,14 @@ mixin sSearch(data)
 				p Pellentesque mollis nibh non nibh laoreet vulputate. Mauris id&nbsp;metus dignissim, efficitur nulla quis, fermentum.
 			.h3.fw-600.mb-3 Отображение подбора
 			+e.row-head.row.g-3.mb-4
-				.col-auto
-					+e.btn(href="#").active 
-						span.d-none.d-lg-inline Подбор 
-						| по карте
-				.col-auto
-					+e.btn(href="#") 
-						span.d-none.d-lg-inline Подбор 
-						| по критериям
+				//- .col-auto
+				//- 	+e.btn(href="#").active 
+				//- 		span.d-none.d-lg-inline Подбор 
+				//- 		| по карте
+				//- .col-auto
+				//- 	+e.btn(href="#") 
+				//- 		span.d-none.d-lg-inline Подбор 
+				//- 		| по критериям
 				.col-auto.d-lg-none.ms-auto
 					button.btn.btn-outline-primary.filter-toggle-js Фильтры
 			+e.inner
@@ -71,9 +77,19 @@ mixin sSearch(data)
 						+filter()
 					.col-lg-9
 						+b.filter-head
-							.h5.fw-600.mb-4 Найдено земель:  
-								| 
-								span.text-primary 325
+							+e.row.row
+								.col
+									.h5.fw-600.mb-0 Найдено земель:  
+										| 
+										span.text-primary 325
+								.col-auto
+									+e.btn--2.active 
+										span.d-none.d-lg-inline Подбор 
+										| по карте
+								.col-auto
+									+e.btn--2 
+										span.d-none.d-lg-inline Подбор 
+										| по критериям
 							.row.g-3
 								.col-md-auto.fw-600 Сортировать: 
 								.col

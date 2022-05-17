@@ -4,6 +4,7 @@
 	--sPB: #{rem(85)};
 	--sTPB: #{rem(31)};
 	background-color: $light;
+	background-color: transparent;
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(100)};
 		--sPB: #{rem(100)};

@@ -42,4 +42,27 @@ mixin modal()
 				+e.form-footer
 					+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Отправить заявку
 					p Отправляя заявку, вы даете свое согласие на обработку #[a(href="#") персональных данных]
+
+	div(id="request2"  style="display: none" )
+		+b.modal-win
+			+form-wrap
+				+e.title.form-data.h4 Подбор или продажа земельного участка
+				p.after-headline Перезвоним вам в течение 15 минут в рабочее время
+				+e.row.row
+					.col-6
+						label
+							input.btn-check(type='radio' name='name1' autocomplete='off')
+							.btn.btn-sm.w-100.btn-outline-primary( ) Подбор
+					.col-6
+						label
+							input.btn-check(type='radio' name='name1' autocomplete='off')
+							.btn.btn-sm.w-100.btn-outline-primary() Продажа
+					.col-12
+						+input("Ваше имя", "text")
+					.col-12
+						+input("Номер телефона", "tel")
+					.col-12
+						+input("Email", "email")
+					.col-12
+						+e.BUTTON.btn Отправить заявку
 	// #request

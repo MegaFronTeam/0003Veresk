@@ -34,17 +34,18 @@ mixin product-item(t)
 	+b.product-item
 		+pic(`product-item-1.png`, `bg`, 0)
 		h6!= t
+		p id 12345
 		table
 			tr
-				td Тип
-				td Lorem ipsum <br> dolor sit amet
-			tr
-				td Адрес
-				td Lorem ipsum <br> dolor sit amet
+				td Регион
+				td.text-end Москва
 			tr
 				td Площадь
-				td 000 м2
-		+e.price 35 000 000 ₽
+				td.text-end 20,30 га
+			tr
+				td Дата актуальности <br> информации
+				td.text-end 10.01.2022
+		+e.price 35 млн. ₽
 		+e.btn(href="#") Подробнее
 
 mixin slider-controls
@@ -61,22 +62,24 @@ mixin request()
 			h4 Подбор или продажа земельного участка
 			+e.subtitle Перезвоним вам в&nbsp;течение 15&nbsp;минут <br> в&nbsp;рабочее время
 			+e.row.row
-				.col-6
-					label
-						input.btn-check(type='radio' name='name1' autocomplete='off')
-						.btn.btn-sm.w-100.btn-outline-primary( ) Подбор
-				.col-6
-					label
-						input.btn-check(type='radio' name='name1' autocomplete='off')
-						.btn.btn-sm.w-100.btn-outline-primary() Продажа
+				//- .col-6
+				//- 	label
+				//- 		input.btn-check(type='radio' name='name1' autocomplete='off')
+				//- 		.btn.btn-sm.w-100.btn-outline-primary( ) Подбор
+				//- .col-6
+				//- 	label
+				//- 		input.btn-check(type='radio' name='name1' autocomplete='off')
+				//- 		.btn.btn-sm.w-100.btn-outline-primary() Продажа
+				//- .col-12
+				//- 	+input("Ваше имя", "text")
+				//- .col-12
+				//- 	+input("Номер телефона", "tel")
+				//- .col-12
+				//- 	+input("Email", "email")
+				//- .col-12
+				//- 	+e.BUTTON.btn Отправить заявку
 				.col-12
-					+input("Ваше имя", "text")
-				.col-12
-					+input("Номер телефона", "tel")
-				.col-12
-					+input("Email", "email")
-				.col-12
-					+e.BUTTON.btn Отправить заявку
+					+e.btn(href="#request2").link-modal-js Отправить заявку
 				.col-12
 					+e.agreement Отправляя заявку, вы&nbsp;даете свое согласие на&nbsp;обработку #[a(href="#") персональных данных]
 

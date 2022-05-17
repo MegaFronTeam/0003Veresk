@@ -89,15 +89,15 @@
 		// 	}
 		// }
 		p {
-			font-size: rem(12) !important;
-			line-height: 155%;
-			margin-bottom: 1em;
+			// font-size: rem(12) !important;
+			// line-height: 155%;
+			// margin-bottom: 1em;
 			@include media-breakpoint-up(sm) {
 				font-size: rem(18) !important;
 			}
-			@include media-breakpoint-only(md) {
-				font-size: rem(13) !important;
-			}
+			// @include media-breakpoint-only(md) {
+			// 	font-size: rem(13) !important;
+			// }
 			@include media-breakpoint-up(xl) {
 				font-size: rem(20) !important;
 			}
