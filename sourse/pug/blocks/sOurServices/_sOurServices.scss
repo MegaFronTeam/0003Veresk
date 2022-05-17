@@ -1,0 +1,41 @@
+// start .sOurServices
+.sOurServices {
+	--sPT: #{rem(50)};
+	--sPB: #{rem(70)};
+	// --sTPB: #{rem()};
+	background-color: #fff;
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(108)};
+		--sPB: #{rem(156)};
+	}
+	&__row{
+		--bs-gutter-x: #{rem(17)};
+		--bs-gutter-y: #{rem(22)};
+
+	}
+	.section-title{
+		font-family: 'Sitka';
+		margin-bottom: rem(77);
+	}
+	&__item{
+		background: $light;
+		border-radius: 10px;
+		padding: rem(29) rem(29) rem(24) rem(33);
+		height: 100%;
+		img {
+			margin-bottom: rem(19);
+		}
+		h5 {
+			margin-bottom: rem(27);
+			font-weight: 600;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sOurServices

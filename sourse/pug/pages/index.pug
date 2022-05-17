@@ -6,7 +6,8 @@ include ../blocks/sContactMain/_sContactMain.pug
 include ../blocks/sCatalogMain/_sCatalogMain.pug
 include ../blocks/sSearch/_sSearch.pug
 include ../blocks/sBestDeals/_sBestDeals.pug
-include ../blocks/sAbout/_sAbout.pug
+//- include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sOurServices/_sOurServices.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -22,9 +23,9 @@ block pagecontent
 	+headerBlock()
 	+sCatalogMain()
 	+sSearch()
-	+sBestDeals()
-	+sAbout()
-	//- Block
+	+sOurServices
+	//- +sBestDeals()
+	//- +sAbout()
 	+sContactMain()
 	+footer()
 

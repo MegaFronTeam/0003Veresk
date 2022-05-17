@@ -1,0 +1,21 @@
+mixin sOurServices-item(img, title)
+	.col-md-6.col-lg-4
+		+e.item
+			+img(`img/@2x/sOurServices-img-${img}.png`)
+			h5!= title
+			a(href="#") Подробнее →
+
+mixin sOurServices(data)
+	// start sOurServices
+	+b.SECTION.sOurServices.section#sOurServices&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Наши услуги
+			+e.row.row
+				+sOurServices-item(1, 'Управление продажами')
+				+sOurServices-item(2, 'Девелопмент')
+				+sOurServices-item(3, 'Оценка')
+				+sOurServices-item(4, 'Консалтинг')
+				+sOurServices-item(5, 'Брокеридж')
+				+sOurServices-item(6, 'Кадастровые работы')
+	// end sOurServices

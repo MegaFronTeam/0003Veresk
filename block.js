@@ -28,9 +28,23 @@ const fileSources = {
 	// end {blockName}`,
 	scss: `// start .{blockName}
 .{blockName} \{
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.section-title{
+		
+	}
+	&__col{
+
+	}
+	&__item{
+
+	}
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
