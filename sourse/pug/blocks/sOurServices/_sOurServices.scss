@@ -3,7 +3,7 @@
 	--sPT: #{rem(50)};
 	--sPB: #{rem(70)};
 	// --sTPB: #{rem()};
-	background-color: #fff;
+	// background-color: #fff;
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(108)};
 		--sPB: #{rem(156)};
@@ -18,10 +18,14 @@
 		margin-bottom: rem(77);
 	}
 	&__item{
+		@include mt;
 		background: $light;
 		border-radius: 10px;
 		padding: rem(29) rem(29) rem(24) rem(33);
 		height: 100%;
+		&:hover {
+			filter: drop-shadow(0 4px 20px rgba(0,0,0,.15));
+		}
 		img {
 			margin-bottom: rem(19);
 		}

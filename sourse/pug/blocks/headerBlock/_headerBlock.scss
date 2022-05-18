@@ -36,9 +36,6 @@
 	}
 	&__text-block{
 		color: #fff;
-		@include media-breakpoint-up(lg) {
-			padding-top: 20px;
-		}
 		@include media-breakpoint-up(md) {
 			// align-self: center;
 		}
@@ -76,6 +73,11 @@
 		}
 		@include media-breakpoint-down(sm) {
 			margin-bottom: 271px;
+		}
+		.headerBlock__text-block {
+			@include media-breakpoint-up(lg) {
+				padding-top: 67px;
+			}
 		}
 		.request {
 			@include media-breakpoint-down(md) {
@@ -163,10 +165,10 @@
 .all-services {
 	.headerBlock {
 		--sPT: #{rem(117)};
-		--sPB: #{rem(74)};
+		--sPB: 0;
 		@include media-breakpoint-up(lg) {
 			--sPT: #{rem(164)};
-			--sPB: #{rem(221)};
+			// --sPB: #{rem(221)};
 		}
 	}
 }
@@ -190,9 +192,9 @@
 .headerBlock {
 	margin-bottom: rem(40 - 16);
 	max-width: 1920px;
-	--h: #{rem(599)};
-	height: var(--h);  
-	min-height: 100vh;
+	// --h: #{rem(599)};
+	// height: var(--h);  
+	// min-height: 100vh;
 	&__slide{
 		@extend .text-body, .tdn;
 	}
@@ -220,6 +222,7 @@
 	}
 	p{
 		margin-bottom: 2rem;
+		font-size: rem(26);
 	}
 	&__inner{ 
 		position: absolute; 
@@ -232,7 +235,7 @@
 			// padding-top: 140px; 
 		}
 		width: 100%;
-		height: var(--h); 
+		// height: var(--h); 
 		@include media-breakpoint-up(sm) {
 		@include mt(1s);
 		}
@@ -262,14 +265,14 @@
 		position: relative;
 		// position: static !important;
 		overflow: hidden;
-		height: var(--h);
-		min-height: 100vh;
+		// height: var(--h);
+		// min-height: 100vh;
 		// display: flex;
 		// flex-direction: column;
 		position: relative;
 		@include media-breakpoint-up(lg) {
 			// justify-content: center;
-			height: rem(720);
+			// height: rem(720);
 		}
 	}
 }
